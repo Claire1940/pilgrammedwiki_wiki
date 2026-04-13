@@ -804,7 +804,10 @@ export default function HomePageClient({
         adKey={process.env.NEXT_PUBLIC_AD_BANNER_468X60}
       />
 
-      <section id="pilgrammed-beginner-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-beginner-guide"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-5xl">
           <SectionHeading
             eyebrow={modules.pilgrammedBeginnerGuide.eyebrow}
@@ -884,7 +887,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-weapon-tier-list" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-weapon-tier-list"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedWeaponTierList.eyebrow}
@@ -993,7 +999,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-wind-update-notes" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-wind-update-notes"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-5xl">
           <SectionHeading
             eyebrow={modules.pilgrammedWindUpdateNotes.eyebrow}
@@ -1037,7 +1046,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-reforge-guide" className="scroll-mt-24 px-4 py-20">
+      <section
+        id="pilgrammed-reforge-guide"
+        className="scroll-mt-24 px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedReforgeGuide.eyebrow}
@@ -1143,7 +1155,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-soul-level-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-soul-level-guide"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-5xl">
           <SectionHeading
             eyebrow={modules.pilgrammedSoulLevelGuide.eyebrow}
@@ -1191,7 +1206,10 @@ export default function HomePageClient({
         adKey={process.env.NEXT_PUBLIC_AD_MOBILE_320X50}
       />
 
-      <section id="pilgrammed-skill-tree-guide" className="scroll-mt-24 px-4 py-20">
+      <section
+        id="pilgrammed-skill-tree-guide"
+        className="scroll-mt-24 px-4 py-20"
+      >
         <div className="container mx-auto max-w-5xl">
           <SectionHeading
             eyebrow={modules.pilgrammedSkillTreeGuide.eyebrow}
@@ -1263,7 +1281,9 @@ export default function HomePageClient({
                                     className="rounded-xl border border-border bg-black/10 p-4"
                                   >
                                     <div className="mb-2 flex flex-wrap items-center gap-2">
-                                      <p className="font-semibold">{node.name}</p>
+                                      <p className="font-semibold">
+                                        {node.name}
+                                      </p>
                                       <AccentPill>{node.type}</AccentPill>
                                     </div>
                                     <p className="mb-2 text-sm leading-6 text-muted-foreground">
@@ -1292,7 +1312,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-stats-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-stats-guide"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedStatsGuide.eyebrow}
@@ -1470,7 +1493,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-boss-locations" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-boss-locations"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedBossLocations.eyebrow}
@@ -1550,7 +1576,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-upgrades-guide" className="scroll-mt-24 px-4 py-20">
+      <section
+        id="pilgrammed-upgrades-guide"
+        className="scroll-mt-24 px-4 py-20"
+      >
         <div className="container mx-auto max-w-5xl">
           <SectionHeading
             eyebrow={modules.pilgrammedUpgradesGuide.eyebrow}
@@ -1559,33 +1588,67 @@ export default function HomePageClient({
             icon={<ArrowRight className="h-5 w-5" />}
           />
           <SectionIntro>{modules.pilgrammedUpgradesGuide.intro}</SectionIntro>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {modules.pilgrammedUpgradesGuide.items.map((item: any) => (
-              <SurfaceCard key={item.step} className="scroll-reveal">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="text-4xl font-bold text-[hsl(var(--nav-theme-light))]">
-                    {item.step}
-                  </span>
-                  <AccentPill>{item.location}</AccentPill>
+              <SurfaceCard
+                key={item.step}
+                className="overflow-hidden border-[hsl(var(--nav-theme)/0.22)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.12),transparent_42%)] p-0 scroll-reveal"
+              >
+                <div className="h-1 w-full bg-[linear-gradient(90deg,hsl(var(--nav-theme-light)),hsl(var(--nav-theme)))]" />
+                <div className="p-6">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <div>
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                        Step {item.step}
+                      </p>
+                      <h3 className="text-xl font-bold">{item.upgrade}</h3>
+                    </div>
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.12)] text-2xl font-bold text-[hsl(var(--nav-theme-light))]">
+                      {item.step}
+                    </div>
+                  </div>
+
+                  <AccentPill className="mb-4">{item.location}</AccentPill>
+
+                  <div className="space-y-3">
+                    <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.2)] bg-white/5 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Unlock
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.unlock}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-border/80 bg-black/10 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Effect
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.effect}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Why It Matters Early
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.why_get_it_early}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="mb-2 text-xl font-bold">{item.upgrade}</h3>
-                <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Unlock:</span>{" "}
-                  {item.unlock}
-                </p>
-                <p className="mb-2 text-sm leading-6 text-muted-foreground">
-                  {item.effect}
-                </p>
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {item.why_get_it_early}
-                </p>
               </SurfaceCard>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="pilgrammed-progression-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-progression-guide"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedProgressionGuide.eyebrow}
@@ -1596,24 +1659,39 @@ export default function HomePageClient({
           <SectionIntro>
             {modules.pilgrammedProgressionGuide.intro}
           </SectionIntro>
-          <div className="grid gap-4 lg:grid-cols-2">
+          <div className="grid gap-5 lg:grid-cols-2">
             {modules.pilgrammedProgressionGuide.items.map((item: any) => (
-              <SurfaceCard key={item.phase} className="scroll-reveal">
-                <div className="mb-3 flex flex-wrap items-center gap-3">
-                  <AccentPill>{item.phase}</AccentPill>
-                  <AccentPill>{item.route}</AccentPill>
+              <SurfaceCard
+                key={item.phase}
+                className="relative overflow-hidden border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_48%)] scroll-reveal"
+              >
+                <div className="pointer-events-none absolute right-5 top-4 text-7xl font-black leading-none text-[hsl(var(--nav-theme)/0.08)]">
+                  {item.phase.replace(/\D/g, "")}
                 </div>
-                <h3 className="mb-2 text-xl font-bold">{item.focus}</h3>
-                <ul className="mb-4 space-y-2 text-sm text-muted-foreground">
-                  {item.checklist.map((entry: string) => (
-                    <li key={entry} className="flex gap-2">
-                      <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
-                      <span>{entry}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
-                  <p className="text-sm leading-6">{item.payoff}</p>
+                <div className="relative">
+                  <div className="mb-4 flex flex-wrap items-center gap-3">
+                    <AccentPill>{item.phase}</AccentPill>
+                    <span className="inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.2)] bg-white/5 px-3 py-1 text-xs font-medium text-muted-foreground">
+                      {item.route}
+                    </span>
+                  </div>
+                  <h3 className="mb-4 max-w-[26rem] text-2xl font-bold">
+                    {item.focus}
+                  </h3>
+                  <ul className="mb-5 space-y-3 text-sm text-muted-foreground">
+                    {item.checklist.map((entry: string) => (
+                      <li key={entry} className="flex gap-3">
+                        <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                        <span>{entry}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Pilgrammed Payoff
+                    </p>
+                    <p className="mt-2 text-sm leading-6">{item.payoff}</p>
+                  </div>
                 </div>
               </SurfaceCard>
             ))}
@@ -1621,7 +1699,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-fishing-guide" className="scroll-mt-24 px-4 py-20">
+      <section
+        id="pilgrammed-fishing-guide"
+        className="scroll-mt-24 px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedFishingGuide.eyebrow}
@@ -1630,68 +1711,101 @@ export default function HomePageClient({
             icon={<Fish className="h-5 w-5" />}
           />
           <SectionIntro>{modules.pilgrammedFishingGuide.intro}</SectionIntro>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {modules.pilgrammedFishingGuide.items.map((item: any) => (
-              <SurfaceCard key={item.name} className="scroll-reveal">
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <h3 className="text-xl font-bold">{item.name}</h3>
-                  <AccentPill>{item.focus}</AccentPill>
+              <SurfaceCard
+                key={item.name}
+                className="relative overflow-hidden border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.09),transparent_46%)] scroll-reveal"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,hsl(var(--nav-theme-light)),hsl(var(--nav-theme)))]" />
+                <div className="mb-4 flex items-start justify-between gap-4 pt-2">
+                  <div>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      {item.focus}
+                    </p>
+                    <h3 className="text-xl font-bold">{item.name}</h3>
+                  </div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.1)]">
+                    <Fish className="h-5 w-5 text-[hsl(var(--nav-theme-light))]" />
+                  </div>
                 </div>
-                <p className="mb-3 text-sm leading-6 text-muted-foreground">
+                <p className="mb-4 text-sm leading-6 text-muted-foreground">
                   {item.details}
                 </p>
-                {"best_for" in item && (
-                  <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">
-                      Best For:
-                    </span>{" "}
-                    {item.best_for}
-                  </p>
-                )}
-                {"watch_out_for" in item && (
-                  <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">
-                      Watch Out For:
-                    </span>{" "}
-                    {item.watch_out_for}
-                  </p>
-                )}
-                {"stat_line" in item && (
-                  <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">
-                      Stat Line:
-                    </span>{" "}
-                    {item.stat_line}
-                  </p>
-                )}
-                {"how_to_unlock" in item && (
-                  <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">
-                      How To Unlock:
-                    </span>{" "}
-                    {item.how_to_unlock}
-                  </p>
-                )}
-                {"upgrade_path" in item && (
-                  <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">
-                      Upgrade Path:
-                    </span>{" "}
-                    {item.upgrade_path}
-                  </p>
-                )}
+                <div className="space-y-3">
+                  {"best_for" in item && (
+                    <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Best For
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.best_for}
+                      </p>
+                    </div>
+                  )}
+                  {"watch_out_for" in item && (
+                    <div className="rounded-2xl border border-border/80 bg-black/10 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Watch Out For
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.watch_out_for}
+                      </p>
+                    </div>
+                  )}
+                  {"stat_line" in item && (
+                    <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Stat Line
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.stat_line}
+                      </p>
+                    </div>
+                  )}
+                  {"how_to_unlock" in item && (
+                    <div className="rounded-2xl border border-border/80 bg-black/10 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        How To Unlock
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.how_to_unlock}
+                      </p>
+                    </div>
+                  )}
+                  {"upgrade_path" in item && (
+                    <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                        Upgrade Path
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {item.upgrade_path}
+                      </p>
+                    </div>
+                  )}
+                </div>
                 {"top_picks" in item && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {item.top_picks.map((entry: string) => (
-                      <AccentPill key={entry}>{entry}</AccentPill>
-                    ))}
+                  <div className="mt-4 rounded-2xl border border-[hsl(var(--nav-theme)/0.18)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Top Picks
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {item.top_picks.map((entry: string) => (
+                        <AccentPill key={entry}>{entry}</AccentPill>
+                      ))}
+                    </div>
                   </div>
                 )}
                 {"notable_rewards" in item && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {item.notable_rewards.map((entry: string) => (
-                      <AccentPill key={entry}>{entry}</AccentPill>
-                    ))}
+                  <div className="mt-4 rounded-2xl border border-[hsl(var(--nav-theme)/0.18)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Notable Rewards
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {item.notable_rewards.map((entry: string) => (
+                        <AccentPill key={entry}>{entry}</AccentPill>
+                      ))}
+                    </div>
                   </div>
                 )}
               </SurfaceCard>
@@ -1700,7 +1814,10 @@ export default function HomePageClient({
         </div>
       </section>
 
-      <section id="pilgrammed-armor-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
+      <section
+        id="pilgrammed-armor-guide"
+        className="scroll-mt-24 bg-white/[0.02] px-4 py-20"
+      >
         <div className="container mx-auto max-w-6xl">
           <SectionHeading
             eyebrow={modules.pilgrammedArmorGuide.eyebrow}
@@ -1710,37 +1827,92 @@ export default function HomePageClient({
           />
           <SectionIntro>{modules.pilgrammedArmorGuide.intro}</SectionIntro>
 
-          <div className="hidden overflow-x-auto rounded-2xl border border-border scroll-reveal md:block">
+          <div className="mb-8 grid gap-4 md:grid-cols-3">
+            <SurfaceCard className="border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_52%)] scroll-reveal">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                Pilgrammed Coverage
+              </p>
+              <p className="mt-3 text-4xl font-bold">
+                {modules.pilgrammedArmorGuide.items.length}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                Armor lanes spanning bossing, crit sustain, guns, magic,
+                daggers, and exploration-focused movement.
+              </p>
+            </SurfaceCard>
+
+            <SurfaceCard className="border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_52%)] scroll-reveal">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                Passive First
+              </p>
+              <p className="mt-3 text-lg font-semibold">
+                Build around the armor effect, then read the stat line.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                Pilgrammed armor is strongest when its passive reinforces your
+                exact combat loop instead of only adding raw defense.
+              </p>
+            </SurfaceCard>
+
+            <SurfaceCard className="border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_52%)] scroll-reveal">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                Route Awareness
+              </p>
+              <p className="mt-3 text-lg font-semibold">
+                Helmet combos, guild gates, and time-based bonuses all matter.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">
+                Several sets only hit full value after a specific unlock path,
+                companion slot, or night-time route decision.
+              </p>
+            </SurfaceCard>
+          </div>
+
+          <div className="hidden overflow-hidden rounded-3xl border border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_30%)] scroll-reveal md:block">
             <table className="w-full min-w-[1100px] text-left text-sm">
               <thead className="bg-[hsl(var(--nav-theme)/0.12)]">
                 <tr>
-                  <th className="px-4 py-3 font-semibold">Playstyle</th>
-                  <th className="px-4 py-3 font-semibold">Armor</th>
-                  <th className="px-4 py-3 font-semibold">How To Get</th>
-                  <th className="px-4 py-3 font-semibold">Signature Effect</th>
-                  <th className="px-4 py-3 font-semibold">Notable Stats</th>
-                  <th className="px-4 py-3 font-semibold">Why Use It</th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Playstyle
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Armor
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    How To Get
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Signature Effect
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Notable Stats
+                  </th>
+                  <th className="px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Why Use It
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {modules.pilgrammedArmorGuide.items.map((item: any) => (
                   <tr
                     key={item.armor}
-                    className="border-t border-border align-top"
+                    className="border-t border-border/80 align-top transition-colors hover:bg-white/[0.03]"
                   >
-                    <td className="px-4 py-4 font-semibold">
-                      {item.playstyle}
+                    <td className="px-4 py-4">
+                      <span className="inline-flex rounded-full border border-[hsl(var(--nav-theme)/0.2)] bg-[hsl(var(--nav-theme)/0.08)] px-3 py-1 text-xs font-semibold text-[hsl(var(--nav-theme-light))]">
+                        {item.playstyle}
+                      </span>
                     </td>
-                    <td className="px-4 py-4 text-[hsl(var(--nav-theme-light))]">
+                    <td className="px-4 py-4 font-semibold text-foreground">
                       {item.armor}
                     </td>
-                    <td className="px-4 py-4 text-muted-foreground">
+                    <td className="px-4 py-4 leading-6 text-muted-foreground">
                       {item.how_to_get}
                     </td>
-                    <td className="px-4 py-4 text-muted-foreground">
+                    <td className="px-4 py-4 leading-6 text-muted-foreground">
                       {item.signature_effect}
                     </td>
-                    <td className="px-4 py-4 text-muted-foreground">
+                    <td className="px-4 py-4 leading-6 text-muted-foreground">
                       {item.notable_stats}
                     </td>
                     <td className="px-4 py-4 leading-6 text-muted-foreground">
@@ -1754,32 +1926,49 @@ export default function HomePageClient({
 
           <div className="grid gap-4 md:hidden">
             {modules.pilgrammedArmorGuide.items.map((item: any) => (
-              <SurfaceCard key={item.armor} className="scroll-reveal">
-                <div className="mb-3 flex flex-wrap items-center gap-3">
-                  <h3 className="text-xl font-bold">{item.armor}</h3>
+              <SurfaceCard
+                key={item.armor}
+                className="overflow-hidden border-[hsl(var(--nav-theme)/0.18)] bg-[linear-gradient(180deg,hsl(var(--nav-theme)/0.08),transparent_44%)] scroll-reveal"
+              >
+                <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                  <AccentPill>Armor Match</AccentPill>
                   <AccentPill>{item.playstyle}</AccentPill>
                 </div>
-                <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">
-                    How To Get:
-                  </span>{" "}
-                  {item.how_to_get}
-                </p>
-                <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">
-                    Signature Effect:
-                  </span>{" "}
-                  {item.signature_effect}
-                </p>
-                <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">
-                    Notable Stats:
-                  </span>{" "}
-                  {item.notable_stats}
-                </p>
-                <p className="text-sm leading-6 text-muted-foreground">
-                  {item.why_use_it}
-                </p>
+                <h3 className="mb-4 text-xl font-bold">{item.armor}</h3>
+                <div className="space-y-3">
+                  <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      How To Get
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                      {item.how_to_get}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-border/80 bg-black/10 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Signature Effect
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                      {item.signature_effect}
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-border/80 bg-white/[0.03] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Notable Stats
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                      {item.notable_stats}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-4 rounded-2xl border border-[hsl(var(--nav-theme)/0.18)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                    Why Use It
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                    {item.why_use_it}
+                  </p>
+                </div>
               </SurfaceCard>
             ))}
           </div>

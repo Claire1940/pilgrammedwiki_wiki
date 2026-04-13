@@ -122,22 +122,22 @@
       {
         "icon": "ArrowRight",
         "title": "Pilgrammed Upgrades Guide",
-        "description": "Get Pilgrammed mobility upgrades like Dash, Climb, Jump, and Let's Fly early."
+        "description": "Route Pilgrammed Dash, Climb, Jump Enhancement, and Let's Fly in the right order."
       },
       {
         "icon": "Package",
         "title": "Pilgrammed Progression Guide",
-        "description": "Follow a clean Pilgrammed route from tutorial to midgame soul farming."
+        "description": "Use a Pilgrammed phase-by-phase roadmap from tutorial clear to Soul Level farming."
       },
       {
         "icon": "MessageCircle",
         "title": "Pilgrammed Fishing Guide",
-        "description": "Turn Pilgrammed fishing into gold, milestones, and Tailfish Island farming."
+        "description": "Scale Pilgrammed fishing into bait efficiency, Jared milestones, and Tailfish Island gold runs."
       },
       {
         "icon": "Shield",
         "title": "Pilgrammed Armor Guide",
-        "description": "Choose the Pilgrammed armor set that best matches your build and combat loop."
+        "description": "Match Pilgrammed armor passives to bossing, crit, guns, magic, daggers, and movement."
       }
     ]
   },
@@ -1251,9 +1251,9 @@
         "mobile": "stacked step cards"
       },
       "eyebrow": "Traversal",
-      "title": "Pilgrammed Upgrades Guide",
-      "subtitle": "The Wind update turned movement into permanent progression. These unlocks change how you fight, route, and explore almost immediately.",
-      "intro": "Prioritize mobility before grinding gear. Dash makes fights survivable, Climb opens shortcuts, Adagio's jump route improves vertical movement, and Let's Fly is the end point for top-tier aerial traversal.",
+      "title": "Pilgrammed Upgrades Guide: Dash, Climb, Jump, and Let's Fly",
+      "subtitle": "Build Pilgrammed movement in the right order so every later route becomes safer, faster, and easier to recover.",
+      "intro": "Pilgrammed feels dramatically better once mobility is handled first. This sequence gives you the core dodge unlock, the wall route, the vertical booster, and the final aerial extension without wasting time on gear detours.",
       "items": [
         {
           "step": 1,
@@ -1303,9 +1303,9 @@
         "mobile": "single-column checklist"
       },
       "eyebrow": "Roadmap",
-      "title": "Pilgrammed Progression Guide",
-      "subtitle": "Pilgrammed is open-ended, but the fastest early route is not random. This order gets you mobility, safe economy habits, stable XP, and your first Soul Levels.",
-      "intro": "Use quests for direction, outposts for safety, and mixed weapon loadouts for boss prep. The smoothest progression path is mobility first, then XP zones and quests, then outpost habits, then rebirth and Soul Level farming.",
+      "title": "Pilgrammed Progression Guide: Tutorial to Midgame Route",
+      "subtitle": "This Pilgrammed roadmap turns the open world into a clean checklist: mobility first, stable XP second, outpost habits third, Soul Level farming after.",
+      "intro": "Pilgrammed progression is smoother when every phase has one job. Finish the intro, secure movement, build a mixed kit, farm the right zones, use every outpost correctly, then convert rebirths into permanent Soul Levels.",
       "items": [
         {
           "phase": "Phase 1",
@@ -1391,9 +1391,9 @@
         "mobile": "1-column card stack"
       },
       "eyebrow": "Fishing",
-      "title": "Pilgrammed Fishing Guide",
-      "subtitle": "Fishing is both an economy tool and a progression side path. The system matters more after Wind because Jared milestones feed directly into your best farming setup.",
-      "intro": "Start with Jared in Big Bay, upgrade your rod line, learn what each bait actually does, and use fishing quests to snowball into Rod of Kings. Once that is online, Tailfish Island becomes one of the strongest gold routes in the game.",
+      "title": "Pilgrammed Fishing Guide: Gold, Materials, and Jared Milestones",
+      "subtitle": "Pilgrammed fishing is a full economy track once you understand rod progression, bait targeting, and Jared's milestone rewards.",
+      "intro": "Open with Jared in Big Bay, move through the rod upgrades, and treat bait choice like route planning. Once Rod of Kings and Secret Spore are online, Tailfish Island becomes a dedicated Pilgrammed gold engine.",
       "items": [
         {
           "name": "How Fishing Works",
@@ -1464,9 +1464,9 @@
         "mobile": "stacked comparison rows"
       },
       "eyebrow": "Equipment",
-      "title": "Pilgrammed Armor Guide",
-      "subtitle": "Pilgrammed armor matters most when the passive matches your weapon pattern. These are the standout picks for bossing, crit setups, guns, mage play, dagger routes, and utility movement.",
-      "intro": "Do not judge armor by raw defense alone. In Pilgrammed, the strongest pieces are the ones that convert your playstyle into extra damage, mobility, crit value, or sustain.",
+      "title": "Pilgrammed Armor Guide: Best Sets by Build Type",
+      "subtitle": "The best Pilgrammed armor pieces are the ones that reinforce your weapon loop, not the ones with the biggest defense number.",
+      "intro": "Compare armor by passive payoff first. These Pilgrammed sets cover bossing, crit sustain, Flintlock burst, mana-threshold casting, dagger super-crit routing, and movement-heavy exploration.",
       "items": [
         {
           "playstyle": "Boss-focused STR melee",
