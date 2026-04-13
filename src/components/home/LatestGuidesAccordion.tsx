@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import type { ContentItem } from '@/lib/content'
 
 interface ContentItemWithType extends ContentItem {
@@ -22,7 +21,6 @@ function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]
       aria-label="Latest articles"
     >
       {articles.map((article, index) => {
-        const url = `/${locale}/${article.contentType}/${article.slug}`
         const detailsId = `article-${article.contentType}-${article.slug}`
 
         return (
@@ -83,13 +81,9 @@ function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]
                 </span>
               </div>
 
-              {/* Read more 链接 */}
-              <Link
-                href={url}
-                className="pl-4 text-xs text-[hsl(var(--nav-theme-light))] hover:underline inline-flex items-center gap-1"
-              >
-                Read more →
-              </Link>
+              <div className="pl-4 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Expand for preview
+              </div>
             </div>
           </details>
         )
@@ -121,10 +115,10 @@ export function LatestGuidesAccordion({
         {/* 标题 */}
         <div className="text-center mb-12 scroll-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Latest <span className="text-[hsl(var(--nav-theme-light))]">Updates</span>
+            Latest <span className="text-[hsl(var(--nav-theme-light))]">Pilgrammed Updates</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Discover the newest guides, tips, and content
+            Scan the newest Pilgrammed guides, route notes, and update coverage
           </p>
         </div>
 
