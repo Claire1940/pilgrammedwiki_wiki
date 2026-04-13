@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { Suspense, lazy, useEffect, useState, type ReactNode } from 'react'
+import { Suspense, lazy, useEffect, useState, type ReactNode } from "react";
 import {
   AlertTriangle,
   ArrowRight,
@@ -9,10 +9,8 @@ import {
   ChevronDown,
   ClipboardCheck,
   Clock,
-  ExternalLink,
   Eye,
   Fish,
-  Gamepad2,
   Hammer,
   Home,
   MessageCircle,
@@ -23,16 +21,16 @@ import {
   Star,
   TrendingUp,
   Users,
-} from 'lucide-react'
-import Link from 'next/link'
-import { useMessages } from 'next-intl'
-import { NativeBannerAd, AdBanner } from '@/components/ads'
-import { SidebarAd } from '@/components/ads/SidebarAd'
-import { LatestGuidesAccordion } from '@/components/home/LatestGuidesAccordion'
-import { VideoFeature } from '@/components/home/VideoFeature'
-import { DynamicIcon } from '@/components/ui/DynamicIcon'
-import type { ContentItemWithType } from '@/lib/getLatestArticles'
-import { scrollToSection } from '@/lib/scrollToSection'
+} from "lucide-react";
+import Link from "next/link";
+import { useMessages } from "next-intl";
+import { NativeBannerAd, AdBanner } from "@/components/ads";
+import { SidebarAd } from "@/components/ads/SidebarAd";
+import { LatestGuidesAccordion } from "@/components/home/LatestGuidesAccordion";
+import { VideoFeature } from "@/components/home/VideoFeature";
+import { DynamicIcon } from "@/components/ui/DynamicIcon";
+import type { ContentItemWithType } from "@/lib/getLatestArticles";
+import { scrollToSection } from "@/lib/scrollToSection";
 import {
   HERO_IMAGE_PATH,
   HOME_METADATA,
@@ -41,49 +39,38 @@ import {
   SITE_SHORT_NAME,
   absoluteUrl,
   getSiteUrl,
-} from '@/lib/site-config'
+} from "@/lib/site-config";
 
-const HeroStats = lazy(() => import('@/components/home/HeroStats'))
-const FAQSection = lazy(() => import('@/components/home/FAQSection'))
-const CTASection = lazy(() => import('@/components/home/CTASection'))
+const HeroStats = lazy(() => import("@/components/home/HeroStats"));
+const FAQSection = lazy(() => import("@/components/home/FAQSection"));
+const CTASection = lazy(() => import("@/components/home/CTASection"));
 
 const homepageLinks = {
-  game: 'https://www.roblox.com/games/6735572261/Pilgrammed',
-  group: 'https://www.roblox.com/communities/3573124/Phexonia-Studios',
-  discord: 'https://discord.gg/pilgrammed',
-  reddit: 'https://www.reddit.com/r/RobloxPilgrammed/',
-  trailer: 'https://www.youtube.com/watch?v=ENdAdX0QgWc',
-}
+  game: "https://www.roblox.com/games/6735572261/Pilgrammed",
+  group: "https://www.roblox.com/communities/3573124/Phexonia-Studios",
+  discord: "https://discord.gg/pilgrammed",
+  reddit: "https://www.reddit.com/r/RobloxPilgrammed/",
+  trailer: "https://www.youtube.com/watch?v=ENdAdX0QgWc",
+};
 
-const sectionIds = [
-  'pilgrammed-codes',
-  'pilgrammed-beginner-guide',
-  'pilgrammed-best-builds',
-  'pilgrammed-weapon-tier-list',
-  'pilgrammed-best-weapons',
-  'pilgrammed-wind-update-notes',
-  'pilgrammed-reforge-guide',
-  'pilgrammed-soul-level-guide',
-  'pilgrammed-skill-tree-guide',
-  'pilgrammed-stats-guide',
-  'pilgrammed-boss-guide',
-  'pilgrammed-boss-locations',
-  'pilgrammed-upgrades-guide',
-  'pilgrammed-progression-guide',
-  'pilgrammed-fishing-guide',
-  'pilgrammed-armor-guide',
-] as const
+const toolCardClassName =
+  "group rounded-2xl border border-border bg-card p-6 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.45)] hover:shadow-[0_18px_50px_-28px_hsl(var(--nav-theme)/0.45)] scroll-reveal";
+const toolCardIconWrapClassName =
+  "mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)]";
+const toolCardIconClassName = "h-6 w-6 text-[hsl(var(--nav-theme-light))]";
 
-const LoadingPlaceholder = ({ height = 'h-64' }: { height?: string }) => (
-  <div className={`${height} rounded-2xl border border-border bg-white/5 animate-pulse`} />
-)
+const LoadingPlaceholder = ({ height = "h-64" }: { height?: string }) => (
+  <div
+    className={`${height} rounded-2xl border border-border bg-white/5 animate-pulse`}
+  />
+);
 
 function AccentPill({
   children,
-  className = '',
+  className = "",
 }: {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }) {
   return (
     <span
@@ -91,15 +78,15 @@ function AccentPill({
     >
       {children}
     </span>
-  )
+  );
 }
 
 function SurfaceCard({
   children,
-  className = '',
+  className = "",
 }: {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }) {
   return (
     <div
@@ -107,7 +94,7 @@ function SurfaceCard({
     >
       {children}
     </div>
-  )
+  );
 }
 
 function SectionHeading({
@@ -116,21 +103,25 @@ function SectionHeading({
   subtitle,
   icon,
 }: {
-  eyebrow: string
-  title: string
-  subtitle: string
-  icon: ReactNode
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  icon: ReactNode;
 }) {
   return (
     <div className="mb-10 text-center scroll-reveal">
       <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[hsl(var(--nav-theme)/0.3)] bg-[hsl(var(--nav-theme)/0.1)] px-4 py-2">
         <span className="text-[hsl(var(--nav-theme-light))]">{icon}</span>
-        <span className="text-sm font-medium text-[hsl(var(--nav-theme-light))]">{eyebrow}</span>
+        <span className="text-sm font-medium text-[hsl(var(--nav-theme-light))]">
+          {eyebrow}
+        </span>
       </div>
       <h2 className="mb-4 text-4xl font-bold md:text-5xl">{title}</h2>
-      <p className="mx-auto max-w-3xl text-lg text-muted-foreground">{subtitle}</p>
+      <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
+        {subtitle}
+      </p>
     </div>
-  )
+  );
 }
 
 function SectionIntro({ children }: { children: ReactNode }) {
@@ -138,7 +129,7 @@ function SectionIntro({ children }: { children: ReactNode }) {
     <p className="mx-auto mb-8 max-w-4xl text-center leading-7 text-muted-foreground scroll-reveal">
       {children}
     </p>
-  )
+  );
 }
 
 function AccordionToggle({
@@ -147,10 +138,10 @@ function AccordionToggle({
   expanded,
   onClick,
 }: {
-  title: string
-  subtitle: string
-  expanded: boolean
-  onClick: () => void
+  title: string;
+  subtitle: string;
+  expanded: boolean;
+  onClick: () => void;
 }) {
   return (
     <button
@@ -162,23 +153,27 @@ function AccordionToggle({
         <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
       </div>
       <ChevronDown
-        className={`h-5 w-5 flex-shrink-0 text-[hsl(var(--nav-theme-light))] transition-transform ${expanded ? 'rotate-180' : ''}`}
+        className={`h-5 w-5 flex-shrink-0 text-[hsl(var(--nav-theme-light))] transition-transform ${expanded ? "rotate-180" : ""}`}
       />
     </button>
-  )
+  );
 }
 
 interface HomePageClientProps {
-  latestArticles: ContentItemWithType[]
-  locale: string
+  latestArticles: ContentItemWithType[];
+  locale: string;
 }
 
-export default function HomePageClient({ latestArticles, locale }: HomePageClientProps) {
-  const t = useMessages() as any
-  const modules = t.modules as any
-  const siteUrl = getSiteUrl()
-  const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl)
-  const logoUrl = absoluteUrl(LOGO_PATH, siteUrl)
+export default function HomePageClient({
+  latestArticles,
+  locale,
+}: HomePageClientProps) {
+  const t = useMessages() as any;
+  const modules = t.modules as any;
+  const toolCards = t.tools.cards as any[];
+  const siteUrl = getSiteUrl();
+  const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl);
+  const logoUrl = absoluteUrl(LOGO_PATH, siteUrl);
 
   const footerLinks = [
     { label: t.footer.discord, href: homepageLinks.discord },
@@ -186,49 +181,49 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
     { label: t.footer.trailer, href: homepageLinks.trailer },
     { label: t.footer.robloxGroup, href: homepageLinks.group },
     { label: t.footer.playOnRoblox, href: homepageLinks.game },
-  ]
+  ];
 
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        '@type': 'WebSite',
-        '@id': `${siteUrl}/#website`,
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
         url: siteUrl,
         name: SITE_NAME,
         description: HOME_METADATA.description,
         image: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: heroImageUrl,
           width: 1920,
           height: 1080,
-          caption: 'Pilgrammed gameplay hero image',
+          caption: "Pilgrammed gameplay hero image",
         },
         potentialAction: {
-          '@type': 'SearchAction',
+          "@type": "SearchAction",
           target: `${siteUrl}/search?q={search_term_string}`,
-          'query-input': 'required name=search_term_string',
+          "query-input": "required name=search_term_string",
         },
       },
       {
-        '@type': 'Organization',
-        '@id': `${siteUrl}/#organization`,
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
         name: SITE_NAME,
         alternateName: SITE_SHORT_NAME,
         url: siteUrl,
         description: HOME_METADATA.description,
         logo: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: logoUrl,
           width: 512,
           height: 512,
         },
         image: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: heroImageUrl,
           width: 1920,
           height: 1080,
-          caption: 'Pilgrammed Wiki hero image',
+          caption: "Pilgrammed Wiki hero image",
         },
         sameAs: [
           homepageLinks.game,
@@ -239,62 +234,64 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
         ],
       },
       {
-        '@type': 'VideoGame',
+        "@type": "VideoGame",
         name: SITE_SHORT_NAME,
-        gamePlatform: ['Roblox'],
-        applicationCategory: 'Game',
-        genre: ['Action RPG', 'Open World', 'Adventure', 'Fantasy'],
+        gamePlatform: ["Roblox"],
+        applicationCategory: "Game",
+        genre: ["Action RPG", "Open World", "Adventure", "Fantasy"],
         numberOfPlayers: {
           minValue: 1,
           maxValue: 12,
         },
         publisher: {
-          '@type': 'Organization',
-          name: 'Phexonia Studios',
+          "@type": "Organization",
+          name: "Phexonia Studios",
           url: homepageLinks.group,
         },
         offers: {
-          '@type': 'Offer',
-          price: '0',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
           url: homepageLinks.game,
         },
       },
     ],
-  }
+  };
 
-  const [expandedPanels, setExpandedPanels] = useState<Record<string, number | null>>({
+  const [expandedPanels, setExpandedPanels] = useState<
+    Record<string, number | null>
+  >({
     wind: 0,
     skills: 0,
     bosses: 0,
-  })
+  });
 
   const togglePanel = (group: string, index: number) => {
     setExpandedPanels((current) => ({
       ...current,
       [group]: current[group] === index ? null : index,
-    }))
-  }
+    }));
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('scroll-reveal-visible')
+            entry.target.classList.add("scroll-reveal-visible");
           }
-        })
+        });
       },
-      { threshold: 0.1 }
-    )
+      { threshold: 0.1 },
+    );
 
-    document.querySelectorAll('.scroll-reveal').forEach((element) => {
-      observer.observe(element)
-    })
+    document.querySelectorAll(".scroll-reveal").forEach((element) => {
+      observer.observe(element);
+    });
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -305,16 +302,22 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
 
       <aside
         className="fixed top-20 z-10 hidden w-40 xl:block"
-        style={{ left: 'calc((100vw - 896px) / 2 - 180px)' }}
+        style={{ left: "calc((100vw - 896px) / 2 - 180px)" }}
       >
-        <SidebarAd type="sidebar-160x300" adKey={process.env.NEXT_PUBLIC_AD_SIDEBAR_160X300} />
+        <SidebarAd
+          type="sidebar-160x300"
+          adKey={process.env.NEXT_PUBLIC_AD_SIDEBAR_160X300}
+        />
       </aside>
 
       <aside
         className="fixed top-20 z-10 hidden w-40 xl:block"
-        style={{ right: 'calc((100vw - 896px) / 2 - 180px)' }}
+        style={{ right: "calc((100vw - 896px) / 2 - 180px)" }}
       >
-        <SidebarAd type="sidebar-160x600" adKey={process.env.NEXT_PUBLIC_AD_SIDEBAR_160X600} />
+        <SidebarAd
+          type="sidebar-160x600"
+          adKey={process.env.NEXT_PUBLIC_AD_SIDEBAR_160X600}
+        />
       </aside>
 
       <section className="relative overflow-hidden px-4 pb-24 pt-32">
@@ -329,7 +332,9 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
               <span className="text-sm font-medium">{t.hero.badge}</span>
             </div>
 
-            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">{t.hero.title}</h1>
+            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl">
+              {t.hero.title}
+            </h1>
             <p className="mx-auto mb-10 max-w-3xl text-xl text-muted-foreground md:text-2xl">
               {t.hero.description}
             </p>
@@ -362,13 +367,17 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
         </div>
       </section>
 
-      <NativeBannerAd adKey={process.env.NEXT_PUBLIC_AD_NATIVE_BANNER || ''} />
+      <NativeBannerAd adKey={process.env.NEXT_PUBLIC_AD_NATIVE_BANNER || ""} />
 
       <section className="px-4 py-12">
         <div className="container mx-auto max-w-4xl scroll-reveal">
           <div className="mb-6 text-center">
-            <h2 className="mb-2 text-3xl font-bold md:text-4xl">{t.gameFeature.title}</h2>
-            <p className="mx-auto max-w-2xl text-muted-foreground">{t.gameFeature.description}</p>
+            <h2 className="mb-2 text-3xl font-bold md:text-4xl">
+              {t.gameFeature.title}
+            </h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground">
+              {t.gameFeature.description}
+            </p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-border">
             <VideoFeature
@@ -380,43 +389,375 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
         </div>
       </section>
 
-      <LatestGuidesAccordion articles={latestArticles} locale={locale} max={30} />
+      <LatestGuidesAccordion
+        articles={latestArticles}
+        locale={locale}
+        max={30}
+      />
 
-      <AdBanner type="banner-728x90" adKey={process.env.NEXT_PUBLIC_AD_BANNER_728X90} />
+      <AdBanner
+        type="banner-728x90"
+        adKey={process.env.NEXT_PUBLIC_AD_BANNER_728X90}
+      />
 
       <section className="bg-white/[0.02] px-4 py-20">
         <div className="container mx-auto max-w-5xl">
           <div className="mb-12 text-center scroll-reveal">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-              {t.tools.title}{' '}
-              <span className="text-[hsl(var(--nav-theme-light))]">{t.tools.titleHighlight}</span>
+              {t.tools.title}{" "}
+              <span className="text-[hsl(var(--nav-theme-light))]">
+                {t.tools.titleHighlight}
+              </span>
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">{t.tools.subtitle}</p>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              {t.tools.subtitle}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {t.tools.cards.map((card: any, index: number) => (
-              <button
-                key={card.title}
-                onClick={() => scrollToSection(sectionIds[index])}
-                className="group rounded-2xl border border-border bg-card p-6 text-left transition-all duration-300 hover:border-[hsl(var(--nav-theme)/0.45)] hover:shadow-[0_18px_50px_-28px_hsl(var(--nav-theme)/0.45)] scroll-reveal"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[hsl(var(--nav-theme)/0.1)] transition-colors group-hover:bg-[hsl(var(--nav-theme)/0.2)]">
-                  <DynamicIcon
-                    name={card.icon}
-                    className="h-6 w-6 text-[hsl(var(--nav-theme-light))]"
-                  />
-                </div>
-                <h3 className="mb-2 font-semibold">{card.title}</h3>
-                <p className="text-sm text-muted-foreground">{card.description}</p>
-              </button>
-            ))}
+            <a
+              href="#pilgrammed-codes"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-codes");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "0ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[0].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[0].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[0].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-beginner-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-beginner-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "50ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[1].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[1].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[1].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-best-builds"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-best-builds");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "100ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[2].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[2].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[2].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-weapon-tier-list"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-weapon-tier-list");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "150ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[3].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[3].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[3].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-best-weapons"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-best-weapons");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "200ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[4].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[4].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[4].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-wind-update-notes"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-wind-update-notes");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "250ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[5].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[5].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[5].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-reforge-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-reforge-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "300ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[6].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[6].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[6].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-soul-level-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-soul-level-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "350ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[7].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[7].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[7].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-skill-tree-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-skill-tree-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "400ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[8].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[8].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[8].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-stats-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-stats-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "450ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[9].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[9].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[9].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-boss-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-boss-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "500ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[10].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[10].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[10].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-boss-locations"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-boss-locations");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "550ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[11].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[11].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[11].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-upgrades-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-upgrades-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "600ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[12].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[12].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[12].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-progression-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-progression-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "650ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[13].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[13].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[13].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-fishing-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-fishing-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "700ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[14].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[14].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[14].description}
+              </p>
+            </a>
+
+            <a
+              href="#pilgrammed-armor-guide"
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection("pilgrammed-armor-guide");
+              }}
+              className={toolCardClassName}
+              style={{ animationDelay: "750ms" }}
+            >
+              <div className={toolCardIconWrapClassName}>
+                <DynamicIcon
+                  name={toolCards[15].icon}
+                  className={toolCardIconClassName}
+                />
+              </div>
+              <h3 className="mb-2 font-semibold">{toolCards[15].title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {toolCards[15].description}
+              </p>
+            </a>
           </div>
         </div>
       </section>
 
-      <AdBanner type="banner-300x250" adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250} />
+      <AdBanner
+        type="banner-300x250"
+        adKey={process.env.NEXT_PUBLIC_AD_BANNER_300X250}
+      />
 
       <section id="pilgrammed-codes" className="scroll-mt-24 px-4 py-20">
         <div className="container mx-auto max-w-5xl">
@@ -434,7 +775,9 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <h3 className="text-lg font-bold">{item.name}</h3>
                   <AccentPill>{item.badge}</AccentPill>
                 </div>
-                <p className="mb-4 text-sm text-muted-foreground">{item.summary}</p>
+                <p className="mb-4 text-sm text-muted-foreground">
+                  {item.summary}
+                </p>
                 <div className="rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
                   <p className="text-sm leading-6">{item.action}</p>
                 </div>
@@ -444,7 +787,10 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
         </div>
       </section>
 
-      <AdBanner type="banner-468x60" adKey={process.env.NEXT_PUBLIC_AD_BANNER_468X60} />
+      <AdBanner
+        type="banner-468x60"
+        adKey={process.env.NEXT_PUBLIC_AD_BANNER_468X60}
+      />
 
       <section id="pilgrammed-beginner-guide" className="scroll-mt-24 bg-white/[0.02] px-4 py-20">
         <div className="container mx-auto max-w-5xl">
@@ -466,7 +812,9 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                 </div>
                 <div>
                   <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
-                  <p className="leading-7 text-muted-foreground">{item.description}</p>
+                  <p className="leading-7 text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -487,24 +835,34 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             {modules.pilgrammedBestBuilds.items.map((item: any) => (
               <SurfaceCard key={item.name} className="scroll-reveal">
                 <div className="mb-4 flex flex-wrap items-center gap-3">
-                  <h3 className="text-2xl font-bold text-[hsl(var(--nav-theme-light))]">{item.name}</h3>
+                  <h3 className="text-2xl font-bold text-[hsl(var(--nav-theme-light))]">
+                    {item.name}
+                  </h3>
                   <AccentPill>{item.role}</AccentPill>
                 </div>
                 <div className="space-y-4 text-sm leading-6 text-muted-foreground">
                   <div>
-                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Setup</p>
+                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      Setup
+                    </p>
                     <p>{item.setup}</p>
                   </div>
                   <div>
-                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Core Sequence</p>
+                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      Core Sequence
+                    </p>
                     <p>{item.core_sequence}</p>
                   </div>
                   <div>
-                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Why It Works</p>
+                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      Why It Works
+                    </p>
                     <p>{item.why_it_works}</p>
                   </div>
                   <div>
-                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Best For</p>
+                    <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      Best For
+                    </p>
                     <p>{item.best_for}</p>
                   </div>
                 </div>
@@ -532,7 +890,10 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                 </div>
                 <div className="space-y-3">
                   {tier.entries.map((entry: string) => (
-                    <div key={entry} className="rounded-xl border border-border bg-black/10 p-4 text-sm leading-6 text-muted-foreground">
+                    <div
+                      key={entry}
+                      className="rounded-xl border border-border bg-black/10 p-4 text-sm leading-6 text-muted-foreground"
+                    >
                       {entry}
                     </div>
                   ))}
@@ -554,29 +915,66 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
           <SectionIntro>{modules.pilgrammedBestWeapons.intro}</SectionIntro>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {modules.pilgrammedBestWeapons.items.map((item: any) => (
-              <SurfaceCard key={item.weapon} className="scroll-reveal">
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                  <AccentPill>{item.stage}</AccentPill>
-                  <AccentPill>{item.tier} Tier</AccentPill>
+              <SurfaceCard
+                key={item.weapon}
+                className="scroll-reveal overflow-hidden"
+              >
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <div>
+                    <p className="mb-3 text-xs uppercase tracking-[0.28em] text-[hsl(var(--nav-theme-light))]">
+                      {item.stage}
+                    </p>
+                    <h3 className="mb-2 text-2xl font-bold">{item.weapon}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {item.class} • {item.scaling} scaling
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.3)] bg-[hsl(var(--nav-theme)/0.12)] px-4 py-3 text-center">
+                    <p className="text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                      Tier
+                    </p>
+                    <p className="mt-1 text-2xl font-bold text-[hsl(var(--nav-theme-light))]">
+                      {item.tier}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="mb-1 text-xl font-bold">{item.weapon}</h3>
-                <p className="mb-4 text-sm text-muted-foreground">
-                  {item.class} • {item.scaling} • {item.attack_speed}
-                </p>
-                <div className="mb-4 grid grid-cols-2 gap-3 text-sm">
-                  <div className="rounded-xl border border-border bg-black/10 p-3">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">Damage</p>
+
+                <div className="mb-4 grid gap-3 text-sm sm:grid-cols-3">
+                  <div className="rounded-2xl border border-border bg-black/10 p-3">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Damage
+                    </p>
                     <p className="mt-1 font-semibold">{item.base_damage}</p>
                   </div>
-                  <div className="rounded-xl border border-border bg-black/10 p-3">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">Best For</p>
+                  <div className="rounded-2xl border border-border bg-black/10 p-3">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Speed
+                    </p>
+                    <p className="mt-1 font-semibold">{item.attack_speed}</p>
+                  </div>
+                  <div className="rounded-2xl border border-border bg-black/10 p-3 sm:col-span-1">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[hsl(var(--nav-theme-light))]">
+                      Best For
+                    </p>
                     <p className="mt-1 font-semibold">{item.best_for}</p>
                   </div>
                 </div>
-                <p className="mb-3 text-sm leading-6 text-muted-foreground">
-                  <span className="font-semibold text-foreground">Acquisition:</span> {item.acquisition}
-                </p>
-                <p className="text-sm leading-6 text-muted-foreground">{item.why_it_matters}</p>
+
+                <div className="mb-4 rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                  <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                    Acquisition
+                  </p>
+                  <p className="text-sm leading-6">{item.acquisition}</p>
+                </div>
+
+                <div className="rounded-2xl border border-border bg-black/10 p-4">
+                  <p className="mb-1 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                    Why It Matters
+                  </p>
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    {item.why_it_matters}
+                  </p>
+                </div>
               </SurfaceCard>
             ))}
           </div>
@@ -592,32 +990,37 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             icon={<Clock className="h-5 w-5" />}
           />
           <SectionIntro>{modules.pilgrammedWindUpdateNotes.intro}</SectionIntro>
-          <div className="space-y-4">
-            {modules.pilgrammedWindUpdateNotes.items.map((item: any, index: number) => {
-              const expanded = expandedPanels.wind === index
-              return (
-                <div key={item.section} className="scroll-reveal">
-                  <AccordionToggle
-                    title={item.section}
-                    subtitle={item.summary}
-                    expanded={expanded}
-                    onClick={() => togglePanel('wind', index)}
-                  />
-                  {expanded && (
-                    <SurfaceCard className="mt-3">
-                      <ul className="space-y-3">
-                        {item.bullets.map((bullet: string) => (
-                          <li key={bullet} className="flex gap-3 text-sm leading-6 text-muted-foreground">
-                            <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </SurfaceCard>
-                  )}
-                </div>
-              )
-            })}
+          <div className="grid gap-4 lg:grid-cols-2 lg:items-start">
+            {modules.pilgrammedWindUpdateNotes.items.map(
+              (item: any, index: number) => {
+                const expanded = expandedPanels.wind === index;
+                return (
+                  <div key={item.section} className="self-start scroll-reveal">
+                    <AccordionToggle
+                      title={item.section}
+                      subtitle={item.summary}
+                      expanded={expanded}
+                      onClick={() => togglePanel("wind", index)}
+                    />
+                    {expanded && (
+                      <SurfaceCard className="mt-3 border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.06)]">
+                        <ul className="space-y-3">
+                          {item.bullets.map((bullet: string) => (
+                            <li
+                              key={bullet}
+                              className="flex gap-3 text-sm leading-6 text-muted-foreground"
+                            >
+                              <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </SurfaceCard>
+                    )}
+                  </div>
+                );
+              },
+            )}
           </div>
         </div>
       </section>
@@ -632,27 +1035,73 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
           />
           <SectionIntro>{modules.pilgrammedReforgeGuide.intro}</SectionIntro>
 
+          <div className="mb-6 grid gap-4 scroll-reveal md:grid-cols-3">
+            <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Wind Baseline
+              </p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Legendary is gone, so modifier synergy matters more than rarity
+                color.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Talvern Value
+              </p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Guild rank discounts now scale all the way to 75% at Legend.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Gem Removal
+              </p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Legend rank drops gem removal to 25 Gold, which changes reroll
+                planning.
+              </p>
+            </div>
+          </div>
+
           <div className="hidden overflow-x-auto rounded-2xl border border-border scroll-reveal md:block">
             <table className="w-full min-w-[920px] text-left text-sm">
               <thead className="bg-[hsl(var(--nav-theme)/0.12)]">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Target</th>
-                  <th className="px-4 py-3 font-semibold">Recommended Reforge</th>
+                  <th className="px-4 py-3 font-semibold">
+                    Recommended Reforge
+                  </th>
                   <th className="px-4 py-3 font-semibold">Effect</th>
                   <th className="px-4 py-3 font-semibold">Best For</th>
                   <th className="px-4 py-3 font-semibold">Notes</th>
                 </tr>
               </thead>
               <tbody>
-                {modules.pilgrammedReforgeGuide.items.map((item: any) => (
-                  <tr key={item.target} className="border-t border-border align-top">
-                    <td className="px-4 py-4 font-semibold">{item.target}</td>
-                    <td className="px-4 py-4 text-[hsl(var(--nav-theme-light))]">{item.recommended_reforge}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.effect}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.best_for}</td>
-                    <td className="px-4 py-4 leading-6 text-muted-foreground">{item.notes}</td>
-                  </tr>
-                ))}
+                {modules.pilgrammedReforgeGuide.items.map(
+                  (item: any, index: number) => (
+                    <tr
+                      key={item.target}
+                      className={`border-t border-border align-top ${
+                        index % 2 === 0 ? "bg-black/10" : "bg-transparent"
+                      }`}
+                    >
+                      <td className="px-4 py-4 font-semibold">{item.target}</td>
+                      <td className="px-4 py-4 text-[hsl(var(--nav-theme-light))]">
+                        {item.recommended_reforge}
+                      </td>
+                      <td className="px-4 py-4 text-muted-foreground">
+                        {item.effect}
+                      </td>
+                      <td className="px-4 py-4 text-muted-foreground">
+                        {item.best_for}
+                      </td>
+                      <td className="px-4 py-4 leading-6 text-muted-foreground">
+                        {item.notes}
+                      </td>
+                    </tr>
+                  ),
+                )}
               </tbody>
             </table>
           </div>
@@ -664,11 +1113,18 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <h3 className="text-lg font-bold">{item.target}</h3>
                   <AccentPill>{item.recommended_reforge}</AccentPill>
                 </div>
-                <p className="mb-2 text-sm text-muted-foreground">{item.effect}</p>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Best For:</span> {item.best_for}
+                  {item.effect}
                 </p>
-                <p className="text-sm leading-6 text-muted-foreground">{item.notes}</p>
+                <p className="mb-2 text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">
+                    Best For:
+                  </span>{" "}
+                  {item.best_for}
+                </p>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.notes}
+                </p>
               </SurfaceCard>
             ))}
           </div>
@@ -684,27 +1140,44 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             icon={<TrendingUp className="h-5 w-5" />}
           />
           <SectionIntro>{modules.pilgrammedSoulLevelGuide.intro}</SectionIntro>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2">
             {modules.pilgrammedSoulLevelGuide.items.map((item: any) => (
-              <SurfaceCard key={item.step} className="scroll-reveal">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="text-4xl font-bold text-[hsl(var(--nav-theme-light))]">{item.step}</span>
-                  <AccentPill>Soul Level Step</AccentPill>
+              <SurfaceCard
+                key={item.step}
+                className="scroll-reveal relative overflow-hidden"
+              >
+                <div className="pointer-events-none absolute right-4 top-2 text-7xl font-bold text-[hsl(var(--nav-theme)/0.08)]">
+                  {item.step}
+                </div>
+                <div className="relative">
+                  <AccentPill className="mb-4">
+                    Soul Level Step {item.step}
+                  </AccentPill>
                 </div>
                 <h3 className="mb-3 text-xl font-bold">{item.heading}</h3>
-                <div className="mb-4 flex flex-wrap gap-2">
+                <div className="mb-4 grid gap-2 sm:grid-cols-2">
                   {item.key_numbers.map((entry: string) => (
-                    <AccentPill key={entry}>{entry}</AccentPill>
+                    <div
+                      key={entry}
+                      className="rounded-2xl border border-[hsl(var(--nav-theme)/0.22)] bg-[hsl(var(--nav-theme)/0.08)] px-4 py-3 text-sm font-medium"
+                    >
+                      {entry}
+                    </div>
                   ))}
                 </div>
-                <p className="text-sm leading-7 text-muted-foreground">{item.body}</p>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  {item.body}
+                </p>
               </SurfaceCard>
             ))}
           </div>
         </div>
       </section>
 
-      <AdBanner type="banner-320x50" adKey={process.env.NEXT_PUBLIC_AD_MOBILE_320X50} />
+      <AdBanner
+        type="banner-320x50"
+        adKey={process.env.NEXT_PUBLIC_AD_MOBILE_320X50}
+      />
 
       <section id="pilgrammed-skill-tree-guide" className="scroll-mt-24 px-4 py-20">
         <div className="container mx-auto max-w-5xl">
@@ -716,66 +1189,86 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
           />
           <SectionIntro>{modules.pilgrammedSkillTreeGuide.intro}</SectionIntro>
           <div className="space-y-4">
-            {modules.pilgrammedSkillTreeGuide.items.map((item: any, index: number) => {
-              const expanded = expandedPanels.skills === index
-              return (
-                <div key={item.title} className="scroll-reveal">
-                  <AccordionToggle
-                    title={item.title}
-                    subtitle={item.summary}
-                    expanded={expanded}
-                    onClick={() => togglePanel('skills', index)}
-                  />
-                  {expanded && (
-                    <SurfaceCard className="mt-3">
-                      <div className="mb-4 flex flex-wrap gap-2">
-                        {item.best_for.map((entry: string) => (
-                          <AccentPill key={entry}>{entry}</AccentPill>
-                        ))}
-                      </div>
+            {modules.pilgrammedSkillTreeGuide.items.map(
+              (item: any, index: number) => {
+                const expanded = expandedPanels.skills === index;
+                return (
+                  <div key={item.title} className="scroll-reveal">
+                    <AccordionToggle
+                      title={item.title}
+                      subtitle={item.summary}
+                      expanded={expanded}
+                      onClick={() => togglePanel("skills", index)}
+                    />
+                    {expanded && (
+                      <SurfaceCard className="mt-3">
+                        <div className="mb-4 flex flex-wrap gap-2">
+                          {item.best_for.map((entry: string) => (
+                            <AccentPill key={entry}>{entry}</AccentPill>
+                          ))}
+                        </div>
 
-                      <div className="grid gap-4 lg:grid-cols-2">
-                        <div>
-                          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Main Nodes</p>
-                          <div className="space-y-3">
-                            {item.main_nodes.map((node: any) => (
-                              <div key={node.name} className="rounded-xl border border-border bg-black/10 p-4">
-                                <div className="mb-2 flex flex-wrap items-center gap-2">
-                                  <p className="font-semibold">{node.name}</p>
-                                  <AccentPill>{node.type}</AccentPill>
+                        <div className="grid gap-4 lg:grid-cols-2">
+                          <div>
+                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                              Main Nodes
+                            </p>
+                            <div className="space-y-3">
+                              {item.main_nodes.map((node: any) => (
+                                <div
+                                  key={node.name}
+                                  className="rounded-xl border border-border bg-black/10 p-4"
+                                >
+                                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                                    <p className="font-semibold">{node.name}</p>
+                                    <AccentPill>{node.type}</AccentPill>
+                                  </div>
+                                  <p className="mb-2 text-sm leading-6 text-muted-foreground">
+                                    {node.base}
+                                  </p>
+                                  <p className="text-sm leading-6 text-muted-foreground">
+                                    {node.aced}
+                                  </p>
                                 </div>
-                                <p className="mb-2 text-sm leading-6 text-muted-foreground">{node.base}</p>
-                                <p className="text-sm leading-6 text-muted-foreground">{node.aced}</p>
-                              </div>
-                            ))}
+                              ))}
+                            </div>
+                          </div>
+
+                          <div>
+                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                              Optional Nodes
+                            </p>
+                            <div className="space-y-3">
+                              {item.optional_nodes.map((node: any) => (
+                                <div
+                                  key={node.name}
+                                  className="rounded-xl border border-border bg-black/10 p-4"
+                                >
+                                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                                    <p className="font-semibold">{node.name}</p>
+                                    <AccentPill>{node.type}</AccentPill>
+                                  </div>
+                                  <p className="mb-2 text-sm leading-6 text-muted-foreground">
+                                    {node.base}
+                                  </p>
+                                  <p className="text-sm leading-6 text-muted-foreground">
+                                    {node.aced}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
 
-                        <div>
-                          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Optional Nodes</p>
-                          <div className="space-y-3">
-                            {item.optional_nodes.map((node: any) => (
-                              <div key={node.name} className="rounded-xl border border-border bg-black/10 p-4">
-                                <div className="mb-2 flex flex-wrap items-center gap-2">
-                                  <p className="font-semibold">{node.name}</p>
-                                  <AccentPill>{node.type}</AccentPill>
-                                </div>
-                                <p className="mb-2 text-sm leading-6 text-muted-foreground">{node.base}</p>
-                                <p className="text-sm leading-6 text-muted-foreground">{node.aced}</p>
-                              </div>
-                            ))}
-                          </div>
+                        <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                          <p className="text-sm leading-6">{item.takeaway}</p>
                         </div>
-                      </div>
-
-                      <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
-                        <p className="text-sm leading-6">{item.takeaway}</p>
-                      </div>
-                    </SurfaceCard>
-                  )}
-                </div>
-              )
-            })}
+                      </SurfaceCard>
+                    )}
+                  </div>
+                );
+              },
+            )}
           </div>
         </div>
       </section>
@@ -804,16 +1297,31 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
               </thead>
               <tbody>
                 {modules.pilgrammedStatsGuide.items.map((item: any) => (
-                  <tr key={item.stat} className="border-t border-border align-top">
+                  <tr
+                    key={item.stat}
+                    className="border-t border-border align-top"
+                  >
                     <td className="px-4 py-4">
                       <p className="font-semibold">{item.stat}</p>
-                      <p className="text-xs text-muted-foreground">{item.full_name}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {item.full_name}
+                      </p>
                     </td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.primary_role}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.exact_effect}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.secondary_effects}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.best_for}</td>
-                    <td className="px-4 py-4 leading-6 text-muted-foreground">{item.practical_pick}</td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.primary_role}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.exact_effect}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.secondary_effects}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.best_for}
+                    </td>
+                    <td className="px-4 py-4 leading-6 text-muted-foreground">
+                      {item.practical_pick}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -827,13 +1335,24 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <h3 className="text-xl font-bold">{item.stat}</h3>
                   <AccentPill>{item.full_name}</AccentPill>
                 </div>
-                <p className="mb-2 text-sm text-muted-foreground">{item.primary_role}</p>
-                <p className="mb-2 text-sm text-muted-foreground">{item.exact_effect}</p>
-                <p className="mb-2 text-sm text-muted-foreground">{item.secondary_effects}</p>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Best For:</span> {item.best_for}
+                  {item.primary_role}
                 </p>
-                <p className="text-sm leading-6 text-muted-foreground">{item.practical_pick}</p>
+                <p className="mb-2 text-sm text-muted-foreground">
+                  {item.exact_effect}
+                </p>
+                <p className="mb-2 text-sm text-muted-foreground">
+                  {item.secondary_effects}
+                </p>
+                <p className="mb-2 text-sm text-muted-foreground">
+                  <span className="font-semibold text-foreground">
+                    Best For:
+                  </span>{" "}
+                  {item.best_for}
+                </p>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.practical_pick}
+                </p>
               </SurfaceCard>
             ))}
           </div>
@@ -850,73 +1369,83 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
           />
           <SectionIntro>{modules.pilgrammedBossGuide.intro}</SectionIntro>
           <div className="space-y-4">
-            {modules.pilgrammedBossGuide.items.map((item: any, index: number) => {
-              const expanded = expandedPanels.bosses === index
-              return (
-                <div key={item.title} className="scroll-reveal">
-                  <AccordionToggle
-                    title={item.title}
-                    subtitle={item.summary}
-                    expanded={expanded}
-                    onClick={() => togglePanel('bosses', index)}
-                  />
-                  {expanded && (
-                    <SurfaceCard className="mt-3">
-                      <div className="mb-4 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
-                        <AccentPill>Region: {item.region}</AccentPill>
-                        <AccentPill>HP: {item.stats.hp}</AccentPill>
-                        <AccentPill>DEF: {item.stats.def}</AccentPill>
-                        <AccentPill>Damage Taken: {item.stats.damage_taken}</AccentPill>
-                        <AccentPill>Gold: {item.stats.gold}</AccentPill>
-                        <AccentPill>XP: {item.stats.xp}</AccentPill>
-                      </div>
-
-                      <div className="grid gap-4 lg:grid-cols-3">
-                        <div className="rounded-xl border border-border bg-black/10 p-4">
-                          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Drops</p>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            {item.drops.map((entry: string) => (
-                              <li key={entry} className="flex gap-2">
-                                <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
-                                <span>{entry}</span>
-                              </li>
-                            ))}
-                          </ul>
+            {modules.pilgrammedBossGuide.items.map(
+              (item: any, index: number) => {
+                const expanded = expandedPanels.bosses === index;
+                return (
+                  <div key={item.title} className="scroll-reveal">
+                    <AccordionToggle
+                      title={item.title}
+                      subtitle={item.summary}
+                      expanded={expanded}
+                      onClick={() => togglePanel("bosses", index)}
+                    />
+                    {expanded && (
+                      <SurfaceCard className="mt-3">
+                        <div className="mb-4 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
+                          <AccentPill>Region: {item.region}</AccentPill>
+                          <AccentPill>HP: {item.stats.hp}</AccentPill>
+                          <AccentPill>DEF: {item.stats.def}</AccentPill>
+                          <AccentPill>
+                            Damage Taken: {item.stats.damage_taken}
+                          </AccentPill>
+                          <AccentPill>Gold: {item.stats.gold}</AccentPill>
+                          <AccentPill>XP: {item.stats.xp}</AccentPill>
                         </div>
 
-                        <div className="rounded-xl border border-border bg-black/10 p-4">
-                          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Worth It For</p>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            {item.worth_it_for.map((entry: string) => (
-                              <li key={entry} className="flex gap-2">
-                                <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
-                                <span>{entry}</span>
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="grid gap-4 lg:grid-cols-3">
+                          <div className="rounded-xl border border-border bg-black/10 p-4">
+                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                              Drops
+                            </p>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              {item.drops.map((entry: string) => (
+                                <li key={entry} className="flex gap-2">
+                                  <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                                  <span>{entry}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          <div className="rounded-xl border border-border bg-black/10 p-4">
+                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                              Worth It For
+                            </p>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              {item.worth_it_for.map((entry: string) => (
+                                <li key={entry} className="flex gap-2">
+                                  <Check className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                                  <span>{entry}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          <div className="rounded-xl border border-border bg-black/10 p-4">
+                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                              Watch For
+                            </p>
+                            <ul className="space-y-2 text-sm text-muted-foreground">
+                              {item.watch_for.map((entry: string) => (
+                                <li key={entry} className="flex gap-2">
+                                  <AlertTriangle className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
+                                  <span>{entry}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
 
-                        <div className="rounded-xl border border-border bg-black/10 p-4">
-                          <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">Watch For</p>
-                          <ul className="space-y-2 text-sm text-muted-foreground">
-                            {item.watch_for.map((entry: string) => (
-                              <li key={entry} className="flex gap-2">
-                                <AlertTriangle className="mt-1 h-4 w-4 flex-shrink-0 text-[hsl(var(--nav-theme-light))]" />
-                                <span>{entry}</span>
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
+                          <p className="text-sm leading-6">{item.fight_note}</p>
                         </div>
-                      </div>
-
-                      <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
-                        <p className="text-sm leading-6">{item.fight_note}</p>
-                      </div>
-                    </SurfaceCard>
-                  )}
-                </div>
-              )
-            })}
+                      </SurfaceCard>
+                    )}
+                  </div>
+                );
+              },
+            )}
           </div>
         </div>
       </section>
@@ -938,16 +1467,22 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <AccentPill>{item.region}</AccentPill>
                 </div>
                 <p className="mb-3 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Arena:</span> {item.arena}
+                  <span className="font-semibold text-foreground">Arena:</span>{" "}
+                  {item.arena}
                 </p>
-                <p className="mb-4 text-sm leading-6 text-muted-foreground">{item.fast_route}</p>
+                <p className="mb-4 text-sm leading-6 text-muted-foreground">
+                  {item.fast_route}
+                </p>
                 <div className="mb-4 flex flex-wrap gap-2">
                   {item.landmarks.map((entry: string) => (
                     <AccentPill key={entry}>{entry}</AccentPill>
                   ))}
                 </div>
                 <p className="mb-3 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Spawn Method:</span> {item.spawn_method}
+                  <span className="font-semibold text-foreground">
+                    Spawn Method:
+                  </span>{" "}
+                  {item.spawn_method}
                 </p>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {item.notes.map((entry: string) => (
@@ -976,15 +1511,22 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             {modules.pilgrammedUpgradesGuide.items.map((item: any) => (
               <SurfaceCard key={item.step} className="scroll-reveal">
                 <div className="mb-4 flex items-center justify-between">
-                  <span className="text-4xl font-bold text-[hsl(var(--nav-theme-light))]">{item.step}</span>
+                  <span className="text-4xl font-bold text-[hsl(var(--nav-theme-light))]">
+                    {item.step}
+                  </span>
                   <AccentPill>{item.location}</AccentPill>
                 </div>
                 <h3 className="mb-2 text-xl font-bold">{item.upgrade}</h3>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Unlock:</span> {item.unlock}
+                  <span className="font-semibold text-foreground">Unlock:</span>{" "}
+                  {item.unlock}
                 </p>
-                <p className="mb-2 text-sm leading-6 text-muted-foreground">{item.effect}</p>
-                <p className="text-sm leading-6 text-muted-foreground">{item.why_get_it_early}</p>
+                <p className="mb-2 text-sm leading-6 text-muted-foreground">
+                  {item.effect}
+                </p>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.why_get_it_early}
+                </p>
               </SurfaceCard>
             ))}
           </div>
@@ -999,7 +1541,9 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             subtitle={modules.pilgrammedProgressionGuide.subtitle}
             icon={<Package className="h-5 w-5" />}
           />
-          <SectionIntro>{modules.pilgrammedProgressionGuide.intro}</SectionIntro>
+          <SectionIntro>
+            {modules.pilgrammedProgressionGuide.intro}
+          </SectionIntro>
           <div className="grid gap-4 lg:grid-cols-2">
             {modules.pilgrammedProgressionGuide.items.map((item: any) => (
               <SurfaceCard key={item.phase} className="scroll-reveal">
@@ -1041,40 +1585,57 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <h3 className="text-xl font-bold">{item.name}</h3>
                   <AccentPill>{item.focus}</AccentPill>
                 </div>
-                <p className="mb-3 text-sm leading-6 text-muted-foreground">{item.details}</p>
-                {'best_for' in item && (
+                <p className="mb-3 text-sm leading-6 text-muted-foreground">
+                  {item.details}
+                </p>
+                {"best_for" in item && (
                   <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">Best For:</span> {item.best_for}
+                    <span className="font-semibold text-foreground">
+                      Best For:
+                    </span>{" "}
+                    {item.best_for}
                   </p>
                 )}
-                {'watch_out_for' in item && (
+                {"watch_out_for" in item && (
                   <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">Watch Out For:</span> {item.watch_out_for}
+                    <span className="font-semibold text-foreground">
+                      Watch Out For:
+                    </span>{" "}
+                    {item.watch_out_for}
                   </p>
                 )}
-                {'stat_line' in item && (
+                {"stat_line" in item && (
                   <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">Stat Line:</span> {item.stat_line}
+                    <span className="font-semibold text-foreground">
+                      Stat Line:
+                    </span>{" "}
+                    {item.stat_line}
                   </p>
                 )}
-                {'how_to_unlock' in item && (
+                {"how_to_unlock" in item && (
                   <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">How To Unlock:</span> {item.how_to_unlock}
+                    <span className="font-semibold text-foreground">
+                      How To Unlock:
+                    </span>{" "}
+                    {item.how_to_unlock}
                   </p>
                 )}
-                {'upgrade_path' in item && (
+                {"upgrade_path" in item && (
                   <p className="mb-2 text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">Upgrade Path:</span> {item.upgrade_path}
+                    <span className="font-semibold text-foreground">
+                      Upgrade Path:
+                    </span>{" "}
+                    {item.upgrade_path}
                   </p>
                 )}
-                {'top_picks' in item && (
+                {"top_picks" in item && (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {item.top_picks.map((entry: string) => (
                       <AccentPill key={entry}>{entry}</AccentPill>
                     ))}
                   </div>
                 )}
-                {'notable_rewards' in item && (
+                {"notable_rewards" in item && (
                   <div className="mt-3 flex flex-wrap gap-2">
                     {item.notable_rewards.map((entry: string) => (
                       <AccentPill key={entry}>{entry}</AccentPill>
@@ -1111,13 +1672,28 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
               </thead>
               <tbody>
                 {modules.pilgrammedArmorGuide.items.map((item: any) => (
-                  <tr key={item.armor} className="border-t border-border align-top">
-                    <td className="px-4 py-4 font-semibold">{item.playstyle}</td>
-                    <td className="px-4 py-4 text-[hsl(var(--nav-theme-light))]">{item.armor}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.how_to_get}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.signature_effect}</td>
-                    <td className="px-4 py-4 text-muted-foreground">{item.notable_stats}</td>
-                    <td className="px-4 py-4 leading-6 text-muted-foreground">{item.why_use_it}</td>
+                  <tr
+                    key={item.armor}
+                    className="border-t border-border align-top"
+                  >
+                    <td className="px-4 py-4 font-semibold">
+                      {item.playstyle}
+                    </td>
+                    <td className="px-4 py-4 text-[hsl(var(--nav-theme-light))]">
+                      {item.armor}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.how_to_get}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.signature_effect}
+                    </td>
+                    <td className="px-4 py-4 text-muted-foreground">
+                      {item.notable_stats}
+                    </td>
+                    <td className="px-4 py-4 leading-6 text-muted-foreground">
+                      {item.why_use_it}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -1132,15 +1708,26 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
                   <AccentPill>{item.playstyle}</AccentPill>
                 </div>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">How To Get:</span> {item.how_to_get}
+                  <span className="font-semibold text-foreground">
+                    How To Get:
+                  </span>{" "}
+                  {item.how_to_get}
                 </p>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Signature Effect:</span> {item.signature_effect}
+                  <span className="font-semibold text-foreground">
+                    Signature Effect:
+                  </span>{" "}
+                  {item.signature_effect}
                 </p>
                 <p className="mb-2 text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">Notable Stats:</span> {item.notable_stats}
+                  <span className="font-semibold text-foreground">
+                    Notable Stats:
+                  </span>{" "}
+                  {item.notable_stats}
                 </p>
-                <p className="text-sm leading-6 text-muted-foreground">{item.why_use_it}</p>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  {item.why_use_it}
+                </p>
               </SurfaceCard>
             ))}
           </div>
@@ -1167,14 +1754,21 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
         />
       </Suspense>
 
-      <AdBanner type="banner-728x90" adKey={process.env.NEXT_PUBLIC_AD_BANNER_728X90} />
+      <AdBanner
+        type="banner-728x90"
+        adKey={process.env.NEXT_PUBLIC_AD_BANNER_728X90}
+      />
 
       <footer className="border-t border-border bg-white/[0.02]">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-8 grid grid-cols-1 gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 text-xl font-bold text-[hsl(var(--nav-theme-light))]">{t.footer.title}</h3>
-              <p className="text-sm text-muted-foreground">{t.footer.description}</p>
+              <h3 className="mb-4 text-xl font-bold text-[hsl(var(--nav-theme-light))]">
+                {t.footer.title}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {t.footer.description}
+              </p>
             </div>
 
             <div>
@@ -1199,22 +1793,34 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
               <h4 className="mb-4 font-semibold">{t.footer.legal}</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/about" className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]">
+                  <Link
+                    href="/about"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
+                  >
                     {t.footer.about}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]">
+                  <Link
+                    href="/privacy-policy"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
+                  >
                     {t.footer.privacy}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms-of-service" className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]">
+                  <Link
+                    href="/terms-of-service"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
+                  >
                     {t.footer.terms}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/copyright" className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]">
+                  <Link
+                    href="/copyright"
+                    className="text-muted-foreground transition hover:text-[hsl(var(--nav-theme-light))]"
+                  >
                     {t.footer.copyrightNotice}
                   </Link>
                 </li>
@@ -1222,12 +1828,16 @@ export default function HomePageClient({ latestArticles, locale }: HomePageClien
             </div>
 
             <div>
-              <p className="mb-2 text-sm text-muted-foreground">{t.footer.copyright}</p>
-              <p className="text-xs text-muted-foreground">{t.footer.disclaimer}</p>
+              <p className="mb-2 text-sm text-muted-foreground">
+                {t.footer.copyright}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {t.footer.disclaimer}
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }

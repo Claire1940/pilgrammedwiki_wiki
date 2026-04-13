@@ -181,11 +181,6 @@
           "action": "Surface those channels here first, then convert the module into a normal code list when the first verified drop lands."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/promo-codes](https://pilgrammed.wiki/promo-codes)",
-        "[https://www.destructoid.com/pilgrammed-codes/](https://www.destructoid.com/pilgrammed-codes/)",
-        "[https://twinfinite.net/roblox/pilgrammed-codes/](https://twinfinite.net/roblox/pilgrammed-codes/)"
-      ],
       "cta": {
         "label": "View Codes Status",
         "href": "/pilgrammed-codes"
@@ -241,11 +236,6 @@
           "description": "At level cap, rebirth instead of stalling. Each Soul Fragment adds +50% XP, five fragments buy one Soul Level, the cap is Level 13, and Psychocrab is not part of an efficient fragment route."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)",
-        "[https://www.destructoid.com/pilgrammed-the-raindrops-beginners-guide/](https://www.destructoid.com/pilgrammed-the-raindrops-beginners-guide/)",
-        "[https://www.roblox.com/games/6735572261/Pilgrammed](https://www.roblox.com/games/6735572261/Pilgrammed)"
-      ],
       "cta": {
         "label": "Read Beginner Guide",
         "href": "/pilgrammed-beginner-guide"
@@ -281,11 +271,6 @@
           "why_it_works": "The Catatome interaction creates the documented Galvanized 20 burst window, which the public meta guide describes as the highest damage ceiling in the current patch.",
           "best_for": "Burst phases, boss punish windows, and players comfortable with fast inputs, animation timing, and weapon swapping."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed.wiki/database-list](https://pilgrammed.wiki/database-list)",
-        "[https://pilgrammed.wiki/database-grid](https://pilgrammed.wiki/database-grid)"
       ],
       "cta": {
         "label": "View Best Builds",
@@ -344,11 +329,6 @@
             "Standard Starter Weapons — serviceable only at the start, with the tier list treating them as temporary tools rather than real meta choices."
           ]
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/database-list](https://pilgrammed.wiki/database-list)",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category%3AWeapons](https://pilgrammed-rblx.fandom.com/wiki/Category%3AWeapons)"
       ],
       "cta": {
         "label": "View Weapon Tiers",
@@ -454,11 +434,6 @@
           "why_it_matters": "Its four firing modes make it one of the most flexible weapons in the game, and it also feeds current hybrid ranged setups."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/database-grid](https://pilgrammed.wiki/database-grid)",
-        "[https://pilgrammed.wiki/database-list](https://pilgrammed.wiki/database-list)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Weapons"
-      ],
       "cta": {
         "label": "See the full weapon shortlist",
         "href": "/pilgrammed-best-weapons"
@@ -552,11 +527,6 @@
           ]
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/patch-notes](https://pilgrammed.wiki/patch-notes)",
-        "[https://pilgrammed.wiki/](https://pilgrammed.wiki/)",
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)"
-      ],
       "cta": {
         "label": "Read the Wind patch breakdown",
         "href": "/pilgrammed-wind-update-notes"
@@ -626,12 +596,6 @@
           "notes": "In current Wind meta coverage, Patient is also the named pairing for the Blood Gem Haunted Scythe lifesteal setup."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Reforging](https://pilgrammed-rblx.fandom.com/wiki/Reforging)",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed.wiki/patch-notes](https://pilgrammed.wiki/patch-notes)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Talvern](https://pilgrammed-rblx.fandom.com/wiki/Talvern)"
-      ],
       "cta": {
         "label": "Open the reforge guide",
         "href": "/pilgrammed-reforge-guide"
@@ -672,20 +636,13 @@
         {
           "step": 3,
           "heading": "Know what every level gives you",
-          "key_numbers": [
-            "+10 HP per level",
-            "+2 Mana per level"
-          ],
+          "key_numbers": ["+10 HP per level", "+2 Mana per level"],
           "body": "Soul Levels are steady permanent growth. Going from Level 0 to Level 13 gives a total of +130 HP and +26 Mana before any extra bonuses from skills or gear."
         },
         {
           "step": 4,
           "heading": "Use the first real milestone before hard bosses",
-          "key_numbers": [
-            "Soul Level 5",
-            "+50 HP",
-            "+10 Mana"
-          ],
+          "key_numbers": ["Soul Level 5", "+50 HP", "+10 Mana"],
           "body": "Current Wind progression guides recommend hitting Soul Level 5 before committing to bosses such as Old Fart, N, or Snow Cultist."
         },
         {
@@ -701,19 +658,9 @@
         {
           "step": 6,
           "heading": "Understand your cap totals before you plan gear",
-          "key_numbers": [
-            "Base HP 280",
-            "Base Mana 50",
-            "Cap HP 410"
-          ],
+          "key_numbers": ["Base HP 280", "Base Mana 50", "Cap HP 410"],
           "body": "The current calculator uses 280 base HP and 50 base Mana before Soul Levels. At cap, HP reaches 410 and mana gains total +26 on top of base."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/tool-calculator](https://pilgrammed.wiki/tool-calculator)",
-        "[https://pilgrammed.wiki/patch-notes](https://pilgrammed.wiki/patch-notes)",
-        "[https://pilgrammed.wiki/](https://pilgrammed.wiki/)",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)"
       ],
       "cta": {
         "label": "Plan your Soul Levels",
@@ -781,11 +728,7 @@
         {
           "title": "Low-Defense Crit Melee",
           "summary": "A fast melee package for daggers, rapiers, and other styles that want crit value without investing into defense.",
-          "best_for": [
-            "daggers",
-            "rapiers",
-            "light melee"
-          ],
+          "best_for": ["daggers", "rapiers", "light melee"],
           "main_nodes": [
             {
               "name": "Delicate",
@@ -811,11 +754,7 @@
         {
           "title": "Bow and Gun Pressure",
           "summary": "A ranged package built around charge timing, repositioning, and not losing your whole turn to a stun.",
-          "best_for": [
-            "bows",
-            "guns",
-            "ranged hybrids"
-          ],
+          "best_for": ["bows", "guns", "ranged hybrids"],
           "main_nodes": [
             {
               "name": "Archery",
@@ -841,11 +780,7 @@
         {
           "title": "Close-Range Mage",
           "summary": "A spell package for players who cast near enemies instead of playing at maximum distance.",
-          "best_for": [
-            "staves",
-            "Mana Blade setups",
-            "close-range casting"
-          ],
+          "best_for": ["staves", "Mana Blade setups", "close-range casting"],
           "main_nodes": [
             {
               "name": "Wizardry",
@@ -871,11 +806,7 @@
         {
           "title": "Frontline Bruiser",
           "summary": "A survivability-first package for slow weapons, party frontline duty, and boss learning runs.",
-          "best_for": [
-            "heavy melee",
-            "frontline play",
-            "boss practice"
-          ],
+          "best_for": ["heavy melee", "frontline play", "boss practice"],
           "main_nodes": [
             {
               "name": "Juggernaut",
@@ -928,23 +859,6 @@
           ],
           "takeaway": "Use this when the safest answer is repeated repositioning. The skill pages specifically call out Slippery for N-style dodge fights, and N's boss page highlights Athlete Aced as almost essential."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Skills",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Stats](https://pilgrammed-rblx.fandom.com/wiki/Stats)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Delicate](https://pilgrammed-rblx.fandom.com/wiki/Delicate)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Rally](https://pilgrammed-rblx.fandom.com/wiki/Rally)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Vexation](https://pilgrammed-rblx.fandom.com/wiki/Vexation)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Athlete](https://pilgrammed-rblx.fandom.com/wiki/Athlete)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Fearmonger](https://pilgrammed-rblx.fandom.com/wiki/Fearmonger)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Archery](https://pilgrammed-rblx.fandom.com/wiki/Archery)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Wizardry](https://pilgrammed-rblx.fandom.com/wiki/Wizardry)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Juggernaut](https://pilgrammed-rblx.fandom.com/wiki/Juggernaut)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Resilient](https://pilgrammed-rblx.fandom.com/wiki/Resilient)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Focus](https://pilgrammed-rblx.fandom.com/wiki/Focus)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Slippery](https://pilgrammed-rblx.fandom.com/wiki/Slippery)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Tank](https://pilgrammed-rblx.fandom.com/wiki/Tank)"
       ],
       "cta": {
         "label": "See full tree",
@@ -1011,11 +925,6 @@
           "practical_pick": "AGI is the best quality-of-life stat when your build lives or dies on spacing, reload timing, and clean dodges."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Stats](https://pilgrammed-rblx.fandom.com/wiki/Stats)",
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Armor"
-      ],
       "cta": {
         "label": "Compare all stats",
         "href": "/pilgrammed-stats-guide"
@@ -1047,10 +956,7 @@
             "gold": 50,
             "xp": 500
           },
-          "drops": [
-            "Ice Crown",
-            "Icicle Rod or Icedagger"
-          ],
+          "drops": ["Ice Crown", "Icicle Rod or Icedagger"],
           "worth_it_for": [
             "Reliable frost gear farming in the snow region",
             "Fast repeat attempts because the boss stays asleep until you choose to start the fight"
@@ -1129,10 +1035,7 @@
             "gold": 250,
             "xp": 2000
           },
-          "drops": [
-            "Snowflurry or Snowshatters",
-            "4-8 Chaos Essence"
-          ],
+          "drops": ["Snowflurry or Snowshatters", "4-8 Chaos Essence"],
           "worth_it_for": [
             "Guaranteed endgame-tier weapon result from Snowflurry or Snowshatters",
             "Repeatable Chaos Essence farming once the route is mastered"
@@ -1156,10 +1059,7 @@
             "gold": 150,
             "xp": 2000
           },
-          "drops": [
-            "Braincoral Visage",
-            "5-9 Iridescent Shard"
-          ],
+          "drops": ["Braincoral Visage", "5-9 Iridescent Shard"],
           "worth_it_for": [
             "A guaranteed first-time Braincoral Visage",
             "Cavern material farming when you specifically want Iridescent Shards"
@@ -1212,10 +1112,7 @@
             "gold": 250,
             "xp": 2000
           },
-          "drops": [
-            "Wicked Limb or Bloodtwin",
-            "16-32 Chaos Essence"
-          ],
+          "drops": ["Wicked Limb or Bloodtwin", "16-32 Chaos Essence"],
           "worth_it_for": [
             "A huge direct Chaos Essence payout",
             "Guaranteed weapon result from a boss with no defense stat",
@@ -1228,18 +1125,6 @@
           ],
           "fight_note": "Quest-gated through Innocuous Induction and summoned at the top of Chaos Hideout."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Bosses",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed.wiki/tool-canvas-map](https://pilgrammed.wiki/tool-canvas-map)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Ice_King](https://pilgrammed-rblx.fandom.com/wiki/Ice_King)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Magma_Turtle](https://pilgrammed-rblx.fandom.com/wiki/Magma_Turtle)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Shock_Marauder](https://pilgrammed-rblx.fandom.com/wiki/Shock_Marauder)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Snow_Cultist](https://pilgrammed-rblx.fandom.com/wiki/Snow_Cultist)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Psychocrab](https://pilgrammed-rblx.fandom.com/wiki/Psychocrab)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Old_Fart](https://pilgrammed-rblx.fandom.com/wiki/Old_Fart)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/N](https://pilgrammed-rblx.fandom.com/wiki/N)"
       ],
       "cta": {
         "label": "Open boss hub",
@@ -1265,10 +1150,7 @@
           "region": "The Snow Highlands",
           "arena": "West side of The Snow Highlands, below Mountain Peak",
           "fast_route": "Enter the Snow Highlands boss zone and keep moving west until you are below Mountain Peak.",
-          "landmarks": [
-            "Mountain Peak",
-            "Snow Highlands boss zone"
-          ],
+          "landmarks": ["Mountain Peak", "Snow Highlands boss zone"],
           "spawn_method": "Static boss that sleeps until attacked",
           "notes": [
             "Also appears in Sky Battlegrounds",
@@ -1280,25 +1162,16 @@
           "region": "Volcano",
           "arena": "East side of Volcano, inside the ruins of a destroyed village",
           "fast_route": "Push east through Volcano until you reach the ruined settlement; the boss arena is there.",
-          "landmarks": [
-            "Volcano east",
-            "ruined village"
-          ],
+          "landmarks": ["Volcano east", "ruined village"],
           "spawn_method": "Static world boss",
-          "notes": [
-            "Also appears in The Big Iron and Sky Battlegrounds"
-          ]
+          "notes": ["Also appears in The Big Iron and Sky Battlegrounds"]
         },
         {
           "boss": "Shock Marauder",
           "region": "The Suslands",
           "arena": "Rare natural spawn in the zone or forced summon near your position",
           "fast_route": "For the reliable route, defeat Viperhead first, then buy a Copper Crystal from Verdant in Stonesurgeon and use it to summon the fight.",
-          "landmarks": [
-            "Stonesurgeon",
-            "Verdant",
-            "Copper Crystal"
-          ],
+          "landmarks": ["Stonesurgeon", "Verdant", "Copper Crystal"],
           "spawn_method": "Rare spawn or summon-based",
           "notes": [
             "The summon route is far more consistent than waiting for a natural spawn"
@@ -1326,11 +1199,7 @@
           "region": "Cobalt Cavern",
           "arena": "Hidden cave behind a waterfall",
           "fast_route": "Go behind one of the waterfalls in Cobalt Cavern, enter the hidden cave with the golden chest, then break the false wall behind that chest with a pickaxe or weapon.",
-          "landmarks": [
-            "waterfall",
-            "golden chest",
-            "false wall"
-          ],
+          "landmarks": ["waterfall", "golden chest", "false wall"],
           "spawn_method": "Secret static boss",
           "notes": [
             "This is one of the easiest bosses to miss because the path is hidden behind scenery"
@@ -1348,9 +1217,7 @@
             "three purple sigils"
           ],
           "spawn_method": "Static once the Field is opened",
-          "notes": [
-            "The gate stays locked until all three sigils are broken"
-          ]
+          "notes": ["The gate stays locked until all three sigils are broken"]
         },
         {
           "boss": "N",
@@ -1368,18 +1235,6 @@
             "This is a quest-gated route, not a simple overworld walk-up"
           ]
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/tool-canvas-map](https://pilgrammed.wiki/tool-canvas-map)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Bosses",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category](https://pilgrammed-rblx.fandom.com/wiki/Category):Locations",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Ice_King](https://pilgrammed-rblx.fandom.com/wiki/Ice_King)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Magma_Turtle](https://pilgrammed-rblx.fandom.com/wiki/Magma_Turtle)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Shock_Marauder](https://pilgrammed-rblx.fandom.com/wiki/Shock_Marauder)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Snow_Cultist](https://pilgrammed-rblx.fandom.com/wiki/Snow_Cultist)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Psychocrab](https://pilgrammed-rblx.fandom.com/wiki/Psychocrab)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Old_Fart](https://pilgrammed-rblx.fandom.com/wiki/Old_Fart)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/N](https://pilgrammed-rblx.fandom.com/wiki/N)"
       ],
       "cta": {
         "label": "Open full map",
@@ -1432,11 +1287,6 @@
           "effect": "Adds a secondary air jump and extends your air dive.",
           "why_get_it_early": "This is the highest-value traversal upgrade for hidden routes, aerial correction, and late exploration."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Upgrades](https://pilgrammed-rblx.fandom.com/wiki/Upgrades)",
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)",
-        "[https://pilgrammed.wiki/tool-canvas-map](https://pilgrammed.wiki/tool-canvas-map)"
       ],
       "cta": {
         "label": "Open Upgrade Guide",
@@ -1526,14 +1376,6 @@
           "payoff": "Soul Level 5 already means +50 HP and +10 Mana, which makes mid-to-late progression noticeably easier."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category%3AQuests](https://pilgrammed-rblx.fandom.com/wiki/Category%3AQuests)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category%3ALocations](https://pilgrammed-rblx.fandom.com/wiki/Category%3ALocations)",
-        "[https://www.destructoid.com/pilgrammed-the-raindrops-beginners-guide/](https://www.destructoid.com/pilgrammed-the-raindrops-beginners-guide/)",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed.wiki/tool-canvas-map](https://pilgrammed.wiki/tool-canvas-map)"
-      ],
       "cta": {
         "label": "Open Progression Guide",
         "href": "/pilgrammed-progression-guide"
@@ -1607,15 +1449,6 @@
           "upgrade_path": "Finish 20 Jared milestones first, then move your dedicated fishing sessions to Tailfish Island."
         }
       ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Fishing](https://pilgrammed-rblx.fandom.com/wiki/Fishing)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Fishing_Quest](https://pilgrammed-rblx.fandom.com/wiki/Fishing_Quest)",
-        "[https://pilgrammed.wiki/guide-basic](https://pilgrammed.wiki/guide-basic)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Fishing_Rod](https://pilgrammed-rblx.fandom.com/wiki/Fishing_Rod)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Advanced_Rod](https://pilgrammed-rblx.fandom.com/wiki/Advanced_Rod)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Rod_of_Kings](https://pilgrammed-rblx.fandom.com/wiki/Rod_of_Kings)",
-        "[https://pilgrammed.wiki/tool-data-feed](https://pilgrammed.wiki/tool-data-feed)"
-      ],
       "cta": {
         "label": "Open Fishing Guide",
         "href": "/pilgrammed-fishing-guide"
@@ -1683,17 +1516,6 @@
           "notable_stats": "+15 STR, +8 DEF, +4 AGI, +15% Regen, +10% Max Speed",
           "why_use_it": "Night Count is excellent for movement-heavy routes, night exploration, and players who value travel comfort as much as combat."
         }
-      ],
-      "source_urls": [
-        "[https://pilgrammed-rblx.fandom.com/wiki/Category%3AArmor](https://pilgrammed-rblx.fandom.com/wiki/Category%3AArmor)",
-        "[https://pilgrammed.wiki/database-grid](https://pilgrammed.wiki/database-grid)",
-        "[https://pilgrammed.wiki/guide-advanced](https://pilgrammed.wiki/guide-advanced)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Viking](https://pilgrammed-rblx.fandom.com/wiki/Viking)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Patchwork](https://pilgrammed-rblx.fandom.com/wiki/Patchwork)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Pirate_Captain](https://pilgrammed-rblx.fandom.com/wiki/Pirate_Captain)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Diver](https://pilgrammed-rblx.fandom.com/wiki/Diver)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Rogue](https://pilgrammed-rblx.fandom.com/wiki/Rogue)",
-        "[https://pilgrammed-rblx.fandom.com/wiki/Night_Count](https://pilgrammed-rblx.fandom.com/wiki/Night_Count)"
       ],
       "cta": {
         "label": "Open Armor Guide",
