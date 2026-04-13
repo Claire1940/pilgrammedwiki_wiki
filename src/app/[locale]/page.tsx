@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildModuleLinkMap } from "@/lib/buildModuleLinkMap";
 import { getLatestArticles } from "@/lib/getLatestArticles";
 import type { Language } from "@/lib/content";
 import { type Locale } from "@/i18n/routing";
@@ -70,6 +71,13 @@ export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
 
   const latestArticles = await getLatestArticles(locale as Language, 30);
+  const moduleLinkMap = await buildModuleLinkMap(locale as Language);
 
-  return <HomePageClient latestArticles={latestArticles} locale={locale} />;
+  return (
+    <HomePageClient
+      latestArticles={latestArticles}
+      locale={locale}
+      moduleLinkMap={moduleLinkMap}
+    />
+  );
 }

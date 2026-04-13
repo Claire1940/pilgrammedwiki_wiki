@@ -29,6 +29,7 @@ import { SidebarAd } from "@/components/ads/SidebarAd";
 import { LatestGuidesAccordion } from "@/components/home/LatestGuidesAccordion";
 import { VideoFeature } from "@/components/home/VideoFeature";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
+import type { ModuleLinkMap } from "@/lib/buildModuleLinkMap";
 import type { ContentItemWithType } from "@/lib/getLatestArticles";
 import { scrollToSection } from "@/lib/scrollToSection";
 import {
@@ -100,11 +101,13 @@ function SurfaceCard({
 function SectionHeading({
   eyebrow,
   title,
+  titleHref,
   subtitle,
   icon,
 }: {
   eyebrow: string;
   title: string;
+  titleHref?: string | null;
   subtitle: string;
   icon: ReactNode;
 }) {
@@ -116,7 +119,18 @@ function SectionHeading({
           {eyebrow}
         </span>
       </div>
-      <h2 className="mb-4 text-4xl font-bold md:text-5xl">{title}</h2>
+      <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+        {titleHref ? (
+          <Link
+            href={titleHref}
+            className="transition-colors hover:text-[hsl(var(--nav-theme-light))]"
+          >
+            {title}
+          </Link>
+        ) : (
+          title
+        )}
+      </h2>
       <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
         {subtitle}
       </p>
@@ -162,16 +176,19 @@ function AccordionToggle({
 interface HomePageClientProps {
   latestArticles: ContentItemWithType[];
   locale: string;
+  moduleLinkMap: ModuleLinkMap;
 }
 
 export default function HomePageClient({
   latestArticles,
   locale,
+  moduleLinkMap,
 }: HomePageClientProps) {
   const t = useMessages() as any;
   const modules = t.modules as any;
   const toolCards = t.tools.cards as any[];
   const bossLocationItems = modules.pilgrammedBossLocations.items as any[];
+  const getModuleHref = (moduleKey: string) => moduleLinkMap[moduleKey]?.url;
   const siteUrl = getSiteUrl();
   const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl);
   const logoUrl = absoluteUrl(LOGO_PATH, siteUrl);
@@ -776,6 +793,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedCodes.eyebrow}
             title={modules.pilgrammedCodes.title}
+            titleHref={getModuleHref("pilgrammedCodes")}
             subtitle={modules.pilgrammedCodes.subtitle}
             icon={<ClipboardCheck className="h-5 w-5" />}
           />
@@ -812,6 +830,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedBeginnerGuide.eyebrow}
             title={modules.pilgrammedBeginnerGuide.title}
+            titleHref={getModuleHref("pilgrammedBeginnerGuide")}
             subtitle={modules.pilgrammedBeginnerGuide.subtitle}
             icon={<BookOpen className="h-5 w-5" />}
           />
@@ -842,6 +861,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedBestBuilds.eyebrow}
             title={modules.pilgrammedBestBuilds.title}
+            titleHref={getModuleHref("pilgrammedBestBuilds")}
             subtitle={modules.pilgrammedBestBuilds.subtitle}
             icon={<Sparkles className="h-5 w-5" />}
           />
@@ -895,6 +915,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedWeaponTierList.eyebrow}
             title={modules.pilgrammedWeaponTierList.title}
+            titleHref={getModuleHref("pilgrammedWeaponTierList")}
             subtitle={modules.pilgrammedWeaponTierList.subtitle}
             icon={<Hammer className="h-5 w-5" />}
           />
@@ -927,6 +948,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedBestWeapons.eyebrow}
             title={modules.pilgrammedBestWeapons.title}
+            titleHref={getModuleHref("pilgrammedBestWeapons")}
             subtitle={modules.pilgrammedBestWeapons.subtitle}
             icon={<Star className="h-5 w-5" />}
           />
@@ -1007,6 +1029,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedWindUpdateNotes.eyebrow}
             title={modules.pilgrammedWindUpdateNotes.title}
+            titleHref={getModuleHref("pilgrammedWindUpdateNotes")}
             subtitle={modules.pilgrammedWindUpdateNotes.subtitle}
             icon={<Clock className="h-5 w-5" />}
           />
@@ -1054,6 +1077,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedReforgeGuide.eyebrow}
             title={modules.pilgrammedReforgeGuide.title}
+            titleHref={getModuleHref("pilgrammedReforgeGuide")}
             subtitle={modules.pilgrammedReforgeGuide.subtitle}
             icon={<Settings className="h-5 w-5" />}
           />
@@ -1163,6 +1187,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedSoulLevelGuide.eyebrow}
             title={modules.pilgrammedSoulLevelGuide.title}
+            titleHref={getModuleHref("pilgrammedSoulLevelGuide")}
             subtitle={modules.pilgrammedSoulLevelGuide.subtitle}
             icon={<TrendingUp className="h-5 w-5" />}
           />
@@ -1214,6 +1239,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedSkillTreeGuide.eyebrow}
             title={modules.pilgrammedSkillTreeGuide.title}
+            titleHref={getModuleHref("pilgrammedSkillTreeGuide")}
             subtitle={modules.pilgrammedSkillTreeGuide.subtitle}
             icon={<Users className="h-5 w-5" />}
           />
@@ -1320,6 +1346,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedStatsGuide.eyebrow}
             title={modules.pilgrammedStatsGuide.title}
+            titleHref={getModuleHref("pilgrammedStatsGuide")}
             subtitle={modules.pilgrammedStatsGuide.subtitle}
             icon={<Eye className="h-5 w-5" />}
           />
@@ -1406,6 +1433,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedBossGuide.eyebrow}
             title={modules.pilgrammedBossGuide.title}
+            titleHref={getModuleHref("pilgrammedBossGuide")}
             subtitle={modules.pilgrammedBossGuide.subtitle}
             icon={<AlertTriangle className="h-5 w-5" />}
           />
@@ -1501,6 +1529,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedBossLocations.eyebrow}
             title={modules.pilgrammedBossLocations.title}
+            titleHref={getModuleHref("pilgrammedBossLocations")}
             subtitle={modules.pilgrammedBossLocations.subtitle}
             icon={<Home className="h-5 w-5" />}
           />
@@ -1584,6 +1613,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedUpgradesGuide.eyebrow}
             title={modules.pilgrammedUpgradesGuide.title}
+            titleHref={getModuleHref("pilgrammedUpgradesGuide")}
             subtitle={modules.pilgrammedUpgradesGuide.subtitle}
             icon={<ArrowRight className="h-5 w-5" />}
           />
@@ -1653,6 +1683,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedProgressionGuide.eyebrow}
             title={modules.pilgrammedProgressionGuide.title}
+            titleHref={getModuleHref("pilgrammedProgressionGuide")}
             subtitle={modules.pilgrammedProgressionGuide.subtitle}
             icon={<Package className="h-5 w-5" />}
           />
@@ -1707,6 +1738,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedFishingGuide.eyebrow}
             title={modules.pilgrammedFishingGuide.title}
+            titleHref={getModuleHref("pilgrammedFishingGuide")}
             subtitle={modules.pilgrammedFishingGuide.subtitle}
             icon={<Fish className="h-5 w-5" />}
           />
@@ -1822,6 +1854,7 @@ export default function HomePageClient({
           <SectionHeading
             eyebrow={modules.pilgrammedArmorGuide.eyebrow}
             title={modules.pilgrammedArmorGuide.title}
+            titleHref={getModuleHref("pilgrammedArmorGuide")}
             subtitle={modules.pilgrammedArmorGuide.subtitle}
             icon={<Shield className="h-5 w-5" />}
           />
