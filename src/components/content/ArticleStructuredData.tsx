@@ -1,4 +1,11 @@
 import type { ContentFrontmatter, ContentType } from '@/lib/content'
+import {
+	SITE_NAME,
+	absoluteUrl,
+	getSiteUrl,
+	HERO_IMAGE_PATH,
+	LOGO_PATH,
+} from '@/lib/site-config'
 
 interface ArticleStructuredDataProps {
 	frontmatter: ContentFrontmatter
@@ -13,11 +20,15 @@ export function ArticleStructuredData({
 	locale,
 	slug,
 }: ArticleStructuredDataProps) {
-	const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lucidblocks.wiki'
+	const siteUrl = getSiteUrl()
 	const articleUrl =
 		locale === 'en'
 			? `${siteUrl}/${contentType}/${slug}`
 			: `${siteUrl}/${locale}/${contentType}/${slug}`
+	const listUrl = locale === 'en' ? `${siteUrl}/${contentType}` : `${siteUrl}/${locale}/${contentType}`
+	const fallbackImage = absoluteUrl(HERO_IMAGE_PATH, siteUrl)
+	const logoUrl = absoluteUrl(LOGO_PATH, siteUrl)
+	const imageUrl = frontmatter.image ? absoluteUrl(frontmatter.image, siteUrl) : fallbackImage
 
 	const breadcrumbData = {
 		'@context': 'https://schema.org',
@@ -33,7 +44,7 @@ export function ArticleStructuredData({
 				'@type': 'ListItem',
 				position: 2,
 				name: contentType.charAt(0).toUpperCase() + contentType.slice(1),
-				item: `${siteUrl}/${contentType}`,
+				item: listUrl,
 			},
 			{
 				'@type': 'ListItem',
@@ -49,19 +60,19 @@ export function ArticleStructuredData({
 		'@type': 'Article',
 		headline: frontmatter.title,
 		description: frontmatter.description,
-		image: frontmatter.image || `${siteUrl}/default-article-image.jpg`,
+		image: imageUrl,
 		datePublished: frontmatter.date,
 		dateModified: ('lastModified' in frontmatter && frontmatter.lastModified) || frontmatter.date,
 		author: {
 			'@type': 'Organization',
-			name: 'Lucid Blocks Wiki Team',
+			name: `${SITE_NAME} Team`,
 		},
 		publisher: {
 			'@type': 'Organization',
-			name: 'Lucid Blocks Wiki',
+			name: SITE_NAME,
 			logo: {
 				'@type': 'ImageObject',
-				url: `${siteUrl}/images/hero.webp`,
+				url: logoUrl,
 			},
 		},
 		mainEntityOfPage: {

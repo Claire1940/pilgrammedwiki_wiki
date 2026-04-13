@@ -31,11 +31,28 @@ import { scrollToSection } from '@/lib/scrollToSection'
 import { DynamicIcon } from '@/components/ui/DynamicIcon'
 import type { ContentItemWithType } from '@/lib/getLatestArticles'
 import type { ModuleLinkMap } from '@/lib/buildModuleLinkMap'
+import {
+  HERO_IMAGE_PATH,
+  HOME_METADATA,
+  LOGO_PATH,
+  SITE_NAME,
+  SITE_SHORT_NAME,
+  absoluteUrl,
+  getSiteUrl,
+} from '@/lib/site-config'
 
 // Lazy load heavy components
 const HeroStats = lazy(() => import('@/components/home/HeroStats'))
 const FAQSection = lazy(() => import('@/components/home/FAQSection'))
 const CTASection = lazy(() => import('@/components/home/CTASection'))
+
+const homepageLinks = {
+  game: 'https://www.roblox.com/games/6735572261/Pilgrammed',
+  group: 'https://www.roblox.com/communities/3573124/Phexonia-Studios',
+  discord: 'https://discord.gg/pilgrammed',
+  reddit: 'https://www.reddit.com/r/RobloxPilgrammed/',
+  trailer: 'https://www.youtube.com/watch?v=ENdAdX0QgWc',
+}
 
 // Loading placeholder
 const LoadingPlaceholder = ({ height = 'h-64' }: { height?: string }) => (
@@ -77,73 +94,88 @@ interface HomePageClientProps {
 
 export default function HomePageClient({ latestArticles, moduleLinkMap, locale }: HomePageClientProps) {
   const t = useMessages() as any
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lucidblocks.wiki'
+  const siteUrl = getSiteUrl()
+  const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl)
+  const logoUrl = absoluteUrl(LOGO_PATH, siteUrl)
+  const footerLinks = [
+    { label: t.footer.discord, href: homepageLinks.discord },
+    { label: t.footer.twitter, href: homepageLinks.reddit },
+    { label: t.footer.steamCommunity, href: homepageLinks.trailer },
+    { label: t.footer.steamStore, href: homepageLinks.game },
+  ]
 
   // Structured data
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        '@type': 'WebSite',
-        '@id': `${siteUrl}/#website`,
-        url: siteUrl,
-        name: "Lucid Blocks Wiki",
-        description: "Complete Lucid Blocks Wiki covering crafting, biomes, creatures, items, achievements, lore, and survival tips for the surreal voxel sandbox on Steam.",
-        image: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/images/hero.webp`,
-          width: 1920,
-          height: 1080,
-          caption: "Lucid Blocks - Surreal Voxel Survival Sandbox",
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        "url": siteUrl,
+        "name": SITE_NAME,
+        "description": HOME_METADATA.description,
+        "image": {
+          "@type": "ImageObject",
+          "url": heroImageUrl,
+          "width": 1920,
+          "height": 1080,
+          "caption": "Pilgrammed gameplay hero image",
         },
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: `${siteUrl}/search?q={search_term_string}`,
-          'query-input': 'required name=search_term_string',
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `${siteUrl}/search?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
         },
       },
       {
-        '@type': 'Organization',
-        '@id': `${siteUrl}/#organization`,
-        name: "Lucid Blocks Wiki",
-        alternateName: "Lucid Blocks",
-        url: siteUrl,
-        description: "Complete Lucid Blocks Wiki resource hub for crafting, biomes, creatures, items, achievements, and survival guides",
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/android-chrome-512x512.png`,
-          width: 512,
-          height: 512,
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        "name": SITE_NAME,
+        "alternateName": SITE_SHORT_NAME,
+        "url": siteUrl,
+        "description": HOME_METADATA.description,
+        "logo": {
+          "@type": "ImageObject",
+          "url": logoUrl,
+          "width": 512,
+          "height": 512,
         },
-        image: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}/images/hero.webp`,
-          width: 1920,
-          height: 1080,
-          caption: "Lucid Blocks Wiki - Surreal Voxel Survival Sandbox",
+        "image": {
+          "@type": "ImageObject",
+          "url": heroImageUrl,
+          "width": 1920,
+          "height": 1080,
+          "caption": "Pilgrammed Wiki hero image",
         },
-        sameAs: [
-          'https://store.steampowered.com/app/3495730/Lucid_Blocks/',
-          'https://discord.com/invite/lucidblocks',
-          'https://www.reddit.com/r/LucidBlocks/',
-          'https://www.youtube.com/@lucy_b_locks',
+        "sameAs": [
+          homepageLinks.game,
+          homepageLinks.group,
+          homepageLinks.discord,
+          homepageLinks.reddit,
+          homepageLinks.trailer,
         ],
       },
       {
-        '@type': 'VideoGame',
-        name: "Lucid Blocks",
-        gamePlatform: ['PC', 'Steam'],
-        applicationCategory: 'Game',
-        genre: ['Survival', 'Sandbox', 'Adventure', 'Psychedelic'],
-        numberOfPlayers: {
-          minValue: 1,
-          maxValue: 1,
+        "@type": "VideoGame",
+        "name": SITE_SHORT_NAME,
+        "gamePlatform": ["Roblox"],
+        "applicationCategory": "Game",
+        "genre": ["Action RPG", "Open World", "Adventure", "Fantasy"],
+        "numberOfPlayers": {
+          "minValue": 1,
+          "maxValue": 12,
         },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock',
-          url: 'https://store.steampowered.com/app/3495730/Lucid_Blocks/',
+        "publisher": {
+          "@type": "Organization",
+          "name": "Phexonia Studios",
+          "url": homepageLinks.group,
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": homepageLinks.game,
         },
       },
     ],
@@ -226,17 +258,19 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button
-                onClick={() => scrollToSection('beginner-guide')}
+              <a
+                href={homepageLinks.discord}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4
                            bg-[hsl(var(--nav-theme))] hover:bg-[hsl(var(--nav-theme)/0.9)]
                            text-white rounded-lg font-semibold text-lg transition-colors"
               >
-                <BookOpen className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
                 {t.hero.getFreeCodesCTA}
-              </button>
+              </a>
               <a
-                href="https://store.steampowered.com/app/3495730/Lucid_Blocks/"
+                href={homepageLinks.game}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4
@@ -264,9 +298,9 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
         <div className="scroll-reveal container mx-auto max-w-4xl">
           <div className="relative rounded-2xl overflow-hidden">
             <VideoFeature
-              videoId="7C7fybRM_No"
-              title="LUCID BLOCKS | AVAILABLE NOW"
-              posterImage="/images/hero.webp"
+              videoId="ENdAdX0QgWc"
+              title="Pilgrammed - Gameplay Trailer"
+              posterImage={HERO_IMAGE_PATH}
             />
           </div>
         </div>
@@ -832,13 +866,13 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
                 <h3 className="font-bold text-yellow-400 mb-2">Still having issues?</h3>
                 <p className="text-sm text-muted-foreground mb-3">Report bugs with your logs through the official channels:</p>
                 <div className="flex flex-wrap gap-3">
-                  <a href="https://discord.com/invite/lucidblocks" target="_blank" rel="noopener noreferrer"
+                  <a href={homepageLinks.discord} target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors">
                     <MessageCircle className="w-4 h-4" /> Discord <ExternalLink className="w-3 h-3" />
                   </a>
-                  <a href="https://store.steampowered.com/app/3495730/Lucid_Blocks/" target="_blank" rel="noopener noreferrer"
+                  <a href={homepageLinks.group} target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[hsl(var(--nav-theme)/0.1)] border border-[hsl(var(--nav-theme)/0.3)] text-sm hover:bg-[hsl(var(--nav-theme)/0.2)] transition-colors">
-                    Steam Community <ExternalLink className="w-3 h-3" />
+                    Phexonia Studios <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
               </div>
@@ -864,6 +898,8 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
           description={t.cta.description}
           joinCommunity={t.cta.joinCommunity}
           joinGame={t.cta.joinGame}
+          communityUrl={homepageLinks.discord}
+          gameUrl={homepageLinks.game}
         />
       </Suspense>
 
@@ -886,46 +922,18 @@ export default function HomePageClient({ latestArticles, moduleLinkMap, locale }
             <div>
               <h4 className="font-semibold mb-4">{t.footer.community}</h4>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <a
-                    href="https://discord.com/invite/lucidblocks"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
-                  >
-                    {t.footer.discord}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://x.com/lucidblocks"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
-                  >
-                    {t.footer.twitter}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://steamcommunity.com/app/3495730"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
-                  >
-                    {t.footer.steamCommunity}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://store.steampowered.com/app/3495730/Lucid_Blocks/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
-                  >
-                    {t.footer.steamStore}
-                  </a>
-                </li>
+                {footerLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-[hsl(var(--nav-theme-light))] transition"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 

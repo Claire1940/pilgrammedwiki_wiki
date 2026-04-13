@@ -33,27 +33,27 @@
     "readMore": "Read More"
   },
   "hero": {
-    "badge": "Surreal Voxel Survival Sandbox",
-    "title": "Lucid Blocks Wiki",
-    "description": "Explore dreamlike biomes, fuse items with Apotheosis, build freely, and survive strange creatures in this surreal open-world sandbox on Steam.",
-    "getFreeCodesCTA": "Explore Crafting Guide",
-    "playOnSteamCTA": "Play on Steam",
+    "badge": "Roblox Open-World Fantasy RPG",
+    "title": "Pilgrammed Wiki",
+    "description": "Explore weapons, builds, bosses, quests, maps, secrets, and upgrades for Pilgrammed, the Roblox open-world RPG from Phexonia Studios.",
+    "getFreeCodesCTA": "Join Pilgrammed Discord",
+    "playOnSteamCTA": "Play Pilgrammed on Roblox",
     "stats": {
       "stat1": {
-        "value": "1,325",
-        "label": "Players Online"
+        "value": "65.3M+",
+        "label": "Total Visits"
       },
       "stat2": {
-        "value": "1,986",
-        "label": "Peak CCU"
+        "value": "253K+",
+        "label": "Favorites"
       },
       "stat3": {
-        "value": "97%",
-        "label": "Positive Reviews"
+        "value": "91.8%",
+        "label": "Rating"
       },
       "stat4": {
-        "value": "Mar 12, 2026",
-        "label": "Release Date"
+        "value": "24.3K+",
+        "label": "All-Time Peak CCU"
       }
     }
   },
@@ -784,26 +784,26 @@
     ]
   },
   "cta": {
-    "title": "Ready to Explore Lucid Blocks?",
-    "description": "Join the Lucid Blocks community on Discord for guides, updates, and discussions!",
-    "joinCommunity": "Join Discord",
-    "joinGame": "Play on Steam"
+    "title": "Ready to Explore Pilgrammed?",
+    "description": "Join the Pilgrammed Discord community, follow new discoveries, and jump straight into the Roblox adventure.",
+    "joinCommunity": "Join Pilgrammed Discord",
+    "joinGame": "Play Pilgrammed on Roblox"
   },
   "footer": {
-    "title": "Lucid Blocks Wiki",
-    "description": "Your complete resource hub for Lucid Blocks crafting, biomes, creatures, achievements, and survival guides.",
+    "title": "Pilgrammed Wiki",
+    "description": "Your community resource hub for Pilgrammed weapons, builds, bosses, quests, maps, and progression guides.",
     "resources": "Resources",
     "community": "Community",
     "legal": "Legal",
     "discord": "Discord",
-    "twitter": "X / Twitter",
-    "steamCommunity": "Steam Community",
-    "steamStore": "Steam Store",
+    "twitter": "Reddit",
+    "steamCommunity": "Gameplay Trailer",
+    "steamStore": "Play on Roblox",
     "about": "About",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "copyrightNotice": "Copyright",
-    "copyright": "© 2026 Lucid Blocks Wiki. Not affiliated with the developers of Lucid Blocks.",
+    "copyright": "© 2026 Pilgrammed Wiki. Not affiliated with Phexonia Studios or Roblox.",
     "disclaimer": "Unofficial fan-made resource website."
   },
   "pages": {

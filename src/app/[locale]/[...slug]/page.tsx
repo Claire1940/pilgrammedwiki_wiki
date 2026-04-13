@@ -18,6 +18,15 @@ import { ListStructuredData } from '@/components/content/ListStructuredData'
 import { routing, type Locale } from '@/i18n/routing'
 import { buildLanguageAlternates } from '@/lib/i18n-utils'
 import type { Metadata } from 'next'
+import {
+  HERO_IMAGE_PATH,
+  SITE_NAME,
+  absoluteUrl,
+  buildArticleFallbackTitle,
+  getContentTypeMetadata,
+  getSiteUrl,
+  sanitizeArticleHeading,
+} from '@/lib/site-config'
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string[] }>
@@ -214,7 +223,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale, slug } = await params
   const contentType = slug[0]
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lucidblocks.wiki'
+  const siteUrl = getSiteUrl()
+  const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl)
 
   if (!isValidContentType(contentType)) {
     return { title: 'Not Found' }
@@ -223,56 +233,45 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const isListPage = slug.length === 1
 
   if (isListPage) {
-    // 列表页元数据
-    const t = await getTranslations(`pages.${contentType}`)
+    const contentTypeMeta = getContentTypeMetadata(contentType)
+    const path = `/${contentType}`
 
-    try {
-      const title = t('metaTitle')
-      const description = t('metaDescription')
-      const path = `/${contentType}`
-
-      return {
-        title,
-        description,
-        alternates: buildLanguageAlternates(path, locale as Locale, siteUrl),
-        openGraph: {
-          title,
-          description,
-          url: `${siteUrl}${locale === 'en' ? path : `/${locale}${path}`}`,
-        },
-        robots: {
+    return {
+      title: contentTypeMeta.title,
+      description: contentTypeMeta.description,
+      alternates: buildLanguageAlternates(path, locale as Locale, siteUrl),
+      openGraph: {
+        type: 'website',
+        siteName: SITE_NAME,
+        title: contentTypeMeta.title,
+        description: contentTypeMeta.description,
+        images: [
+          {
+            url: heroImageUrl,
+            width: 1920,
+            height: 1080,
+            alt: `${contentTypeMeta.title} hero image`,
+          },
+        ],
+        url: `${siteUrl}${locale === 'en' ? path : `/${locale}${path}`}`,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: contentTypeMeta.title,
+        description: contentTypeMeta.description,
+        images: [heroImageUrl],
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
           index: true,
           follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-          },
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
         },
-      }
-    } catch {
-      // 如果翻译不存在，使用默认值
-      const defaultTitle = `${contentType.charAt(0).toUpperCase() + contentType.slice(1)} - Lucid Blocks Wiki`
-      const path = `/${contentType}`
-
-      return {
-        title: defaultTitle,
-        description: `Browse all ${contentType} content for Lucid Blocks Wiki`,
-        alternates: buildLanguageAlternates(path, locale as Locale, siteUrl),
-        robots: {
-          index: true,
-          follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-          },
-        },
-      }
+      },
     }
   } else {
     // 详情页元数据（从 MDX import 获取）
@@ -288,16 +287,38 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       )
 
       const fullPath = `/${slug.join('/')}`
+      const fallbackTitle = buildArticleFallbackTitle(currentSlug, contentType)
+      const title = sanitizeArticleHeading(metadata.title, fallbackTitle)
+      const description = sanitizeArticleHeading(
+        metadata.description,
+        `Read ${title} on ${SITE_NAME} for Roblox bosses, weapons, quests, builds, and progression tips.`
+      )
+      const imageUrl = metadata.image ? absoluteUrl(metadata.image, siteUrl) : heroImageUrl
 
       return {
-        title: `${metadata.title} - Lucid Blocks Wiki`,
-        description: metadata.description,
+        title: `${title} | ${SITE_NAME}`,
+        description,
         alternates: buildLanguageAlternates(fullPath, locale as Locale, siteUrl),
         openGraph: {
-          title: metadata.title,
-          description: metadata.description,
-          images: metadata.image ? [metadata.image] : [],
+          type: 'article',
+          siteName: SITE_NAME,
+          title,
+          description,
+          images: [
+            {
+              url: imageUrl,
+              width: 1920,
+              height: 1080,
+              alt: title,
+            },
+          ],
           url: `${siteUrl}${locale === 'en' ? fullPath : `/${locale}${fullPath}`}`,
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title,
+          description,
+          images: [imageUrl],
         },
         robots: {
           index: true,
@@ -323,16 +344,38 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           )
 
           const fullPath = `/${slug.join('/')}`
+          const fallbackTitle = buildArticleFallbackTitle(currentSlug, contentType)
+          const title = sanitizeArticleHeading(metadata.title, fallbackTitle)
+          const description = sanitizeArticleHeading(
+            metadata.description,
+            `Read ${title} on ${SITE_NAME} for Roblox bosses, weapons, quests, builds, and progression tips.`
+          )
+          const imageUrl = metadata.image ? absoluteUrl(metadata.image, siteUrl) : heroImageUrl
 
           return {
-            title: `${metadata.title} - Lucid Blocks Wiki`,
-            description: metadata.description,
+            title: `${title} | ${SITE_NAME}`,
+            description,
             alternates: buildLanguageAlternates(fullPath, locale as Locale, siteUrl),
             openGraph: {
-              title: metadata.title,
-              description: metadata.description,
-              images: metadata.image ? [metadata.image] : [],
+              type: 'article',
+              siteName: SITE_NAME,
+              title,
+              description,
+              images: [
+                {
+                  url: imageUrl,
+                  width: 1920,
+                  height: 1080,
+                  alt: title,
+                },
+              ],
               url: `${siteUrl}${locale === 'en' ? fullPath : `/${locale}${fullPath}`}`,
+            },
+            twitter: {
+              card: 'summary_large_image',
+              title,
+              description,
+              images: [imageUrl],
             },
             robots: {
               index: true,

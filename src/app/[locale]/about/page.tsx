@@ -2,6 +2,16 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { buildLanguageAlternates } from '@/lib/i18n-utils'
 import { type Locale } from '@/i18n/routing'
+import {
+  HERO_IMAGE_PATH,
+  HOME_METADATA,
+  PILGRAMMED_LINKS,
+  SITE_EMAILS,
+  SITE_NAME,
+  SITE_SHORT_NAME,
+  absoluteUrl,
+  getSiteUrl,
+} from '@/lib/site-config'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -9,18 +19,19 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lucidblocks.wiki'
+  const siteUrl = getSiteUrl()
   const path = '/about'
+  const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl)
 
   return {
-    title: 'About Lucid Blocks Wiki - Your Ultimate Steam Game Resource',
-    description: 'Learn about Lucid Blocks Wiki, a community-driven resource hub providing comprehensive guides, crafting tips, creature info, and strategies for the Lucid Blocks Steam game.',
+    title: `About ${SITE_NAME}`,
+    description:
+      'Learn about Pilgrammed Wiki, an unofficial fan-made resource focused on Pilgrammed weapons, bosses, quests, maps, builds, and progression guides.',
     keywords: [
-      'about Lucid Blocks Wiki',
-      'Lucid Blocks community',
-      'Steam game wiki',
-      'game resource hub',
-      'Lucid Blocks team',
+      'about Pilgrammed Wiki',
+      'Pilgrammed community wiki',
+      'Pilgrammed guides',
+      'Roblox game resource',
     ],
     robots: {
       index: false,
@@ -35,25 +46,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'website',
-      locale: locale,
+      locale,
       url: locale === 'en' ? `${siteUrl}${path}` : `${siteUrl}/${locale}${path}`,
-      siteName: 'Lucid Blocks Wiki',
-      title: 'About Lucid Blocks Wiki',
-      description: 'Learn about our mission to provide the best Lucid Blocks game resources and guides.',
+      siteName: SITE_NAME,
+      title: `About ${SITE_NAME}`,
+      description: HOME_METADATA.description,
       images: [
         {
-          url: `${siteUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: 'Lucid Blocks Wiki',
+          url: heroImageUrl,
+          width: 1920,
+          height: 1080,
+          alt: 'Pilgrammed Wiki hero image',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'About Lucid Blocks Wiki',
-      description: 'Learn about our mission to provide the best Lucid Blocks game resources.',
-      images: [`${siteUrl}/og-image.jpg`],
+      title: `About ${SITE_NAME}`,
+      description: HOME_METADATA.description,
+      images: [heroImageUrl],
     },
     alternates: buildLanguageAlternates(path, locale as Locale, siteUrl),
   }
@@ -62,258 +73,194 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
       <section className="relative py-20 px-4 border-b border-border">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Lucid Blocks Wiki
+            About {SITE_NAME}
           </h1>
           <p className="text-slate-300 text-lg mb-2">
-            Your community-driven resource center for Lucid Blocks
+            An unofficial fan-made knowledge base for {SITE_SHORT_NAME}
+          </p>
+          <p className="text-slate-400 text-sm">
+            Updated for Pilgrammed players on April 13, 2026
           </p>
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="prose prose-invert prose-slate max-w-none">
-            <h2>Welcome to Lucid Blocks Wiki</h2>
+            <h2>What This Site Is</h2>
             <p>
-              Lucid Blocks Wiki is an <strong>unofficial, fan-made resource website</strong> dedicated to helping players
-              master the Steam game "Lucid Blocks". We are a community-driven platform that provides comprehensive guides,
-              crafting tips, biome information, creature details, and strategic insights to enhance your gaming experience.
+              Pilgrammed Wiki is an independent resource hub built to help players understand the
+              Roblox RPG Pilgrammed. The site focuses on the search intent players actually have:
+              weapons, builds, bosses, quests, maps, secrets, progression routes, and community
+              discoveries.
             </p>
             <p>
-              Whether you're a new player just starting your survival journey or a seasoned veteran looking to optimize your strategies,
-              Lucid Blocks Wiki is here to support you every step of the way.
+              We are not the official game team. This site is maintained as a fan project for
+              players who want a faster way to find high-signal reference material.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="py-12 px-4 bg-slate-900/30">
         <div className="container mx-auto max-w-4xl">
           <div className="prose prose-invert prose-slate max-w-none">
-            <h2>Our Mission</h2>
+            <h2>What We Cover</h2>
             <p>
-              Our mission is simple: <strong>to empower Lucid Blocks players with accurate, up-to-date information
-              and powerful tools</strong> that help them succeed in the game. We strive to:
-            </p>
-            <ul>
-              <li><strong>Provide reliable information:</strong> Keep our content updated with the latest game changes, new items, and balance updates</li>
-              <li><strong>Build useful tools:</strong> Develop guides, crafting calculators, and planners that help players make informed decisions</li>
-              <li><strong>Foster community:</strong> Create a welcoming space where players can learn, share strategies, and grow together</li>
-              <li><strong>Stay accessible:</strong> Keep all resources free and easy to use for players of all skill levels</li>
-            </ul>
-
-            <h2>Our Vision</h2>
-            <p>
-              We envision Lucid Blocks Wiki as the <strong>go-to destination</strong> for every Lucid Blocks player seeking
-              to improve their gameplay. We want to be the resource that players trust and rely on, whether they need
-              crafting guides, want to explore new biomes, or are looking for advanced survival tactics.
+              Our editorial goal is simple: publish concise, searchable pages that help players get
+              back into the game faster. That includes:
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* What We Offer */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">What We Offer</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Feature Card 1 */}
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">🔨</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Crafting Guides</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Weapons and Builds</h3>
               <p className="text-slate-300">
-                Comprehensive crafting recipes and Apotheosis fusion guides to help you create powerful items.
-                Master the art of item synthesis!
+                Loadout ideas, stat priorities, and practical equipment recommendations for
+                different Pilgrammed playstyles.
               </p>
             </div>
-
-            {/* Feature Card 2 */}
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">🌍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Biome Information</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Bosses and Drops</h3>
               <p className="text-slate-300">
-                Detailed guides on all biomes, their unique features, resources, and dangers.
-                Explore every corner of the surreal world safely.
+                Boss locations, encounter notes, reward tracking, and prep information before major
+                fights.
               </p>
             </div>
-
-            {/* Feature Card 3 */}
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">🦋</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Creature Database</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Quests and NPCs</h3>
               <p className="text-slate-300">
-                Complete information on all creatures, their behaviors, drops, and how to deal with them.
-                Know your friends from your foes.
+                Quest steps, trigger requirements, and route planning for players who want steady
+                progression without dead ends.
               </p>
             </div>
-
-            {/* Feature Card 4 */}
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Achievement Guides</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Maps and Secrets</h3>
               <p className="text-slate-300">
-                Step-by-step guides to unlock all 19 achievements in the game.
-                Complete your collection with our detailed walkthroughs.
+                Location overviews, exploration notes, and hidden-content references drawn from
+                public community research.
               </p>
             </div>
-
-            {/* Feature Card 5 */}
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">📚</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Survival Strategies</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Progression Guides</h3>
               <p className="text-slate-300">
-                Essential survival tips, building strategies, and exploration guides.
-                Learn how to thrive in the surreal sandbox world.
+                Beginner routes, mid-game priorities, and upgrade planning built for fast lookup.
               </p>
             </div>
-
-            {/* Feature Card 6 */}
             <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-800">
-              <div className="text-2xl mb-3">🌍</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Multilingual Support</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Community Resources</h3>
               <p className="text-slate-300">
-                Content available in multiple languages including English, Russian, Portuguese,
-                German, Spanish, Japanese, Korean, and French.
+                Links to the official Roblox entry, Discord, Reddit, and other public channels that
+                matter to active Pilgrammed players.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Community Section */}
-      <section className="py-12 px-4 bg-slate-900/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="prose prose-invert prose-slate max-w-none">
-            <h2>Community-Driven</h2>
-            <p>
-              Lucid Blocks Wiki is built <strong>by the community, for the community</strong>. We welcome contributions,
-              feedback, and suggestions from players of all skill levels. Our content is constantly evolving based on:
-            </p>
-            <ul>
-              <li><strong>Player feedback:</strong> Your suggestions help us improve and expand our resources</li>
-              <li><strong>Community discoveries:</strong> New strategies, hidden mechanics, and pro tips shared by players</li>
-              <li><strong>Game updates:</strong> We monitor official updates and adjust our content accordingly</li>
-              <li><strong>Meta shifts:</strong> We track gameplay trends and update guides based on real player experiences</li>
-            </ul>
-            <p>
-              <strong>Want to contribute?</strong> Whether you've discovered a new crafting recipe, found a hidden biome,
-              or have suggestions for new guides, we'd love to hear from you! Reach out through our contact channels below.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
       <section className="py-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="prose prose-invert prose-slate max-w-none">
-            <h2>About the Team</h2>
+            <h2>How We Source Information</h2>
             <p>
-              Lucid Blocks Wiki is maintained by a dedicated team of passionate gamers and developers who love
-              Lucid Blocks as much as you do. We're players first, constantly testing strategies, exploring game
-              mechanics, and staying updated with the latest discoveries.
+              We combine official platform references, public community channels, and in-game
+              player research. When the game changes, our goal is to update high-impact pages first:
+              bosses, progression blockers, map discoveries, and popular build questions.
             </p>
             <p>
-              Our team combines expertise in:
+              Because Pilgrammed evolves through updates and community discoveries, some entries may
+              lag behind live gameplay. When in doubt, verify against the official Roblox page or
+              active community channels.
             </p>
-            <ul>
-              <li><strong>Game analysis:</strong> Deep understanding of Lucid Blocks mechanics and strategies</li>
-              <li><strong>Web development:</strong> Building fast, user-friendly tools and interfaces</li>
-              <li><strong>Content creation:</strong> Writing clear, helpful guides and tutorials</li>
-              <li><strong>Community management:</strong> Listening to player feedback and fostering a positive environment</li>
-            </ul>
-            <p className="text-slate-400 italic text-sm">
-              Project Codename: "Dreamscape" – Navigating the surreal together.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Disclaimer */}
-      <section className="py-12 px-4 bg-slate-900/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="prose prose-invert prose-slate max-w-none">
             <h2>Important Disclaimer</h2>
             <p className="text-yellow-400/90">
-              <strong>Lucid Blocks Wiki is an unofficial fan-made website.</strong> We are NOT affiliated with,
-              endorsed by, or associated with the developers of Lucid Blocks or any official entities.
-            </p>
-            <p>
-              All game content, trademarks, characters, and assets are the property of their respective owners.
-              We use game-related content under fair use principles for informational and educational purposes only.
-            </p>
-            <p>
-              Lucid Blocks Wiki is a non-profit, community resource created by fans, for fans.
+              <strong>{SITE_NAME} is unofficial.</strong> We are not affiliated with, endorsed by,
+              or sponsored by Phexonia Studios or Roblox.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-slate-900/30">
         <div className="container mx-auto max-w-4xl">
           <div className="prose prose-invert prose-slate max-w-none">
             <h2>Get in Touch</h2>
             <p>
-              We'd love to hear from you! Whether you have questions, suggestions, found a bug, or just want to say hi:
+              Questions, corrections, and content suggestions are welcome:
             </p>
-            <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
-              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
-                <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
-                <a href="mailto:contact@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">
-                  contact@lucidblocks.wiki
-                </a>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
-                <h3 className="text-lg font-semibold text-white mb-2">Bug Reports</h3>
-                <a href="mailto:support@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">
-                  support@lucidblocks.wiki
-                </a>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
-                <h3 className="text-lg font-semibold text-white mb-2">Content Submissions</h3>
-                <a href="mailto:contribute@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">
-                  contribute@lucidblocks.wiki
-                </a>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
-                <h3 className="text-lg font-semibold text-white mb-2">Partnerships</h3>
-                <a href="mailto:partnerships@lucidblocks.wiki" className="text-[hsl(var(--nav-theme-light))] hover:underline">
-                  partnerships@lucidblocks.wiki
-                </a>
-              </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4 my-6">
+            <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
+              <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
+              <a
+                href={`mailto:${SITE_EMAILS.contact}`}
+                className="text-[hsl(var(--nav-theme-light))] hover:underline"
+              >
+                {SITE_EMAILS.contact}
+              </a>
             </div>
-            <p className="text-slate-400 text-sm">
-              <strong>Response Time:</strong> We aim to respond to all inquiries within 2-3 business days.
-            </p>
+            <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
+              <h3 className="text-lg font-semibold text-white mb-2">Bug Reports</h3>
+              <a
+                href={`mailto:${SITE_EMAILS.support}`}
+                className="text-[hsl(var(--nav-theme-light))] hover:underline"
+              >
+                {SITE_EMAILS.support}
+              </a>
+            </div>
+            <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
+              <h3 className="text-lg font-semibold text-white mb-2">Content Submissions</h3>
+              <a
+                href={`mailto:${SITE_EMAILS.contribute}`}
+                className="text-[hsl(var(--nav-theme-light))] hover:underline"
+              >
+                {SITE_EMAILS.contribute}
+              </a>
+            </div>
+            <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
+              <h3 className="text-lg font-semibold text-white mb-2">Partnerships</h3>
+              <a
+                href={`mailto:${SITE_EMAILS.partnerships}`}
+                className="text-[hsl(var(--nav-theme-light))] hover:underline"
+              >
+                {SITE_EMAILS.partnerships}
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 px-4 bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-y border-border">
+      <section className="py-12 px-4 border-y border-border bg-[hsl(var(--nav-theme)/0.08)]">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Official Pilgrammed Links</h2>
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-            Stay updated with the latest guides, tips, and Lucid Blocks news.
-            Bookmark this site and check back regularly for new content!
+            Start with the official Roblox game page, then use Discord and Reddit to track live
+            discoveries and community discussion.
           </p>
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-[hsl(var(--nav-theme-light))] text-white font-semibold hover:opacity-90 transition"
-          >
-            Explore Resources
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={PILGRAMMED_LINKS.game}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-[hsl(var(--nav-theme))] text-white font-semibold hover:opacity-90 transition"
+            >
+              Play on Roblox
+            </a>
+            <a
+              href={PILGRAMMED_LINKS.discord}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-border text-white font-semibold hover:bg-white/10 transition"
+            >
+              Join Discord
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Back to Home */}
       <section className="py-8 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <Link href="/" className="text-[hsl(var(--nav-theme-light))] hover:underline">
