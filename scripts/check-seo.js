@@ -165,14 +165,20 @@ function checkImages() {
 
   const publicDir = path.join(projectRoot, 'public')
 
-  // 检查 OG Image
-  const ogImagePath = path.join(publicDir, 'og-image.jpg')
-  if (fs.existsSync(ogImagePath)) {
-    const stats = fs.statSync(ogImagePath)
+  // 检查站点实际使用的 OG / Hero 图片
+  const candidateImages = [
+    path.join(publicDir, 'og-image.jpg'),
+    path.join(publicDir, 'images', 'hero.png'),
+    path.join(publicDir, 'images', 'hero.webp'),
+  ]
+  const existingImage = candidateImages.find(imagePath => fs.existsSync(imagePath))
+
+  if (existingImage) {
+    const stats = fs.statSync(existingImage)
     const sizeKB = (stats.size / 1024).toFixed(2)
-    addResult('passed', 'Images', `✓ og-image.jpg 存在 (${sizeKB} KB)`)
+    addResult('passed', 'Images', `✓ Open Graph 图片存在 (${path.relative(publicDir, existingImage)} / ${sizeKB} KB)`)
   } else {
-    addResult('errors', 'Images', '✗ og-image.jpg 不存在')
+    addResult('errors', 'Images', '✗ 未找到可用的 Open Graph 图片（已检查 og-image.jpg、images/hero.png、images/hero.webp）')
   }
 
   // 检查 Favicon
@@ -216,17 +222,23 @@ function checkHreflangs() {
 function checkStructuredData() {
   log('\n📊 检查结构化数据...', 'cyan')
 
-  // 检查是否有 JSON-LD 配置
-  const layoutPath = path.join(projectRoot, 'src', 'app', '[locale]', 'layout.tsx')
-  if (fs.existsSync(layoutPath)) {
-    const content = fs.readFileSync(layoutPath, 'utf-8')
+  const filesToCheck = [
+    path.join(projectRoot, 'src', 'app', '[locale]', 'layout.tsx'),
+    path.join(projectRoot, 'src', 'app', '[locale]', 'HomePageClient.tsx'),
+  ]
+  const combinedContent = filesToCheck
+    .filter(filePath => fs.existsSync(filePath))
+    .map(filePath => fs.readFileSync(filePath, 'utf-8'))
+    .join('\n')
 
-    // 检查是否有 Organization schema
-    if (content.includes('Organization') || content.includes('WebSite')) {
-      addResult('passed', 'Structured', '✓ 包含结构化数据配置')
-    } else {
-      addResult('warnings', 'Structured', '⚠ 未找到结构化数据（建议添加 Organization/WebSite schema）')
-    }
+  if (
+    combinedContent.includes('Organization') &&
+    combinedContent.includes('WebSite') &&
+    combinedContent.includes('SearchAction')
+  ) {
+    addResult('passed', 'Structured', '✓ 包含 WebSite / Organization / SearchAction 结构化数据')
+  } else {
+    addResult('warnings', 'Structured', '⚠ 未找到完整结构化数据（建议同时包含 WebSite、Organization、SearchAction）')
   }
 }
 
@@ -251,15 +263,17 @@ function checkPageStructure() {
   }
 
   // 检查 FAQ
-  if (translations.faq?.items && translations.faq.items.length > 0) {
-    addResult('passed', 'Content', `✓ FAQ 包含 ${translations.faq.items.length} 个问题`)
+  const faqItems = translations.faq?.items || translations.faq?.questions || []
+  if (faqItems.length > 0) {
+    addResult('passed', 'Content', `✓ FAQ 包含 ${faqItems.length} 个问题`)
   } else {
     addResult('warnings', 'Content', '⚠ 缺少 FAQ 内容')
   }
 
   // 检查工具/资源
-  if (translations.tools?.items && translations.tools.items.length > 0) {
-    addResult('passed', 'Content', `✓ 工具/资源包含 ${translations.tools.items.length} 个项目`)
+  const toolItems = translations.tools?.items || translations.tools?.cards || []
+  if (toolItems.length > 0) {
+    addResult('passed', 'Content', `✓ 工具/资源包含 ${toolItems.length} 个项目`)
   } else {
     addResult('warnings', 'Content', '⚠ 缺少工具/资源内容')
   }

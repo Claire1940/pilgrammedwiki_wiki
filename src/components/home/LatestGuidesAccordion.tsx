@@ -1,32 +1,40 @@
-'use client'
+"use client";
 
-import type { ContentItem } from '@/lib/content'
+import { Link } from "@/i18n/navigation";
+import type { ContentItem } from "@/lib/content";
+import { useTranslations } from "next-intl";
 
 interface ContentItemWithType extends ContentItem {
-  contentType: string
+  contentType: string;
 }
 
 interface LatestGuidesAccordionProps {
-  articles: ContentItemWithType[]
-  locale: string
-  max?: number
-  className?: string
+  articles: ContentItemWithType[];
+  locale: string;
+  max?: number;
+  className?: string;
 }
 
-function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]; locale: string }) {
+function AccordionColumn({
+  articles,
+  locale,
+}: { articles: ContentItemWithType[]; locale: string }) {
+  const t = useTranslations("common");
+
   return (
     <div
       className="bg-white/5 border border-border rounded-xl overflow-hidden"
       role="region"
-      aria-label="Latest articles"
+      aria-label={t("latestArticles")}
     >
       {articles.map((article, index) => {
-        const detailsId = `article-${article.contentType}-${article.slug}`
+        const detailsId = `article-${article.contentType}-${article.slug}`;
+        const articleHref = `/${article.contentType}/${article.slug}`;
 
         return (
           <details
             key={`${article.contentType}-${article.slug}`}
-            className={`group ${index !== articles.length - 1 ? 'border-b border-border' : ''}`}
+            className={`group ${index !== articles.length - 1 ? "border-b border-border" : ""}`}
           >
             <summary
               className="cursor-pointer py-4 px-6 text-sm font-medium
@@ -48,7 +56,12 @@ function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </summary>
 
@@ -69,11 +82,14 @@ function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]
               <div className="pl-4 flex items-center gap-4 text-xs text-muted-foreground mb-2">
                 {article.frontmatter.date && (
                   <span>
-                    {new Date(article.frontmatter.date).toLocaleDateString(locale, {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric'
-                    })}
+                    {new Date(article.frontmatter.date).toLocaleDateString(
+                      locale,
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      },
+                    )}
                   </span>
                 )}
                 <span className="text-[hsl(var(--nav-theme-light))] uppercase tracking-wider">
@@ -82,32 +98,39 @@ function AccordionColumn({ articles, locale }: { articles: ContentItemWithType[]
               </div>
 
               <div className="pl-4 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
-                Expand for preview
+                {t("expandForPreview")}
               </div>
+              <Link
+                href={articleHref}
+                className="mt-3 inline-flex pl-4 text-sm font-semibold text-[hsl(var(--nav-theme-light))] transition-colors hover:text-white"
+              >
+                {t("readArticle")}
+              </Link>
             </div>
           </details>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
 
 export function LatestGuidesAccordion({
   articles,
   locale,
   max = 30,
-  className = ''
+  className = "",
 }: LatestGuidesAccordionProps) {
-  const displayArticles = articles.slice(0, max)
+  const t = useTranslations("common");
+  const displayArticles = articles.slice(0, max);
 
   if (displayArticles.length === 0) {
-    return null
+    return null;
   }
 
   // 分成两列：前半放左列，后半放右列
-  const midpoint = Math.ceil(displayArticles.length / 2)
-  const leftColumn = displayArticles.slice(0, midpoint)
-  const rightColumn = displayArticles.slice(midpoint)
+  const midpoint = Math.ceil(displayArticles.length / 2);
+  const leftColumn = displayArticles.slice(0, midpoint);
+  const rightColumn = displayArticles.slice(midpoint);
 
   return (
     <section className={`px-4 py-20 ${className}`}>
@@ -115,10 +138,10 @@ export function LatestGuidesAccordion({
         {/* 标题 */}
         <div className="text-center mb-12 scroll-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Latest <span className="text-[hsl(var(--nav-theme-light))]">Pilgrammed Updates</span>
+            {t("latestUpdatesTitle")}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Scan the newest Pilgrammed guides, route notes, and update coverage
+            {t("latestUpdatesDescription")}
           </p>
         </div>
 
@@ -129,8 +152,7 @@ export function LatestGuidesAccordion({
             <AccordionColumn articles={rightColumn} locale={locale} />
           )}
         </div>
-
       </div>
     </section>
-  )
+  );
 }

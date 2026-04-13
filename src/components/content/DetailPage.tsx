@@ -8,7 +8,6 @@ import {
   extractPlaceholderMetadata,
   getTailwindRgbString,
 } from "@/lib/imageUtils";
-import { extractPrimaryKeyword } from "@/lib/utils";
 import { SidebarAd } from "@/components/ads/SidebarAd";
 import { AdBanner } from "@/components/ads";
 import { NAVIGATION_CONFIG } from "@/config/navigation";
@@ -96,7 +95,7 @@ export async function DetailPage({
           </nav>
 
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            {extractPrimaryKeyword(frontmatter.title)}
+            {frontmatter.title}
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
@@ -169,7 +168,7 @@ export async function DetailPage({
         {/* 文章底部广告区域 */}
         <div className="border-t border-border pt-12 mt-12 space-y-8">
           <div className="text-center text-sm text-muted-foreground mb-4">
-            Advertisement
+            {t("common.advertisement")}
           </div>
 
           {/* 广告 1: 728×90 横幅 */}

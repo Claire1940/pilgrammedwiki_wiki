@@ -1,22 +1,29 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import type { ContentItem } from '@/lib/content'
+import { Link } from "@/i18n/navigation";
+import type { ContentItem } from "@/lib/content";
+import { useTranslations } from "next-intl";
 
 interface ContentItemWithType extends ContentItem {
-  contentType: string
+  contentType: string;
 }
 
 interface LatestGuidesProps {
-  articles: ContentItemWithType[]
-  locale: string
-  className?: string
+  articles: ContentItemWithType[];
+  locale: string;
+  className?: string;
 }
 
-export function LatestGuides({ articles, locale, className = '' }: LatestGuidesProps) {
+export function LatestGuides({
+  articles,
+  locale,
+  className = "",
+}: LatestGuidesProps) {
+  const t = useTranslations("common");
+
   // 如果没有文章，不渲染
   if (articles.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -24,16 +31,16 @@ export function LatestGuides({ articles, locale, className = '' }: LatestGuidesP
       <div className="container mx-auto">
         <div className="text-center mb-12 scroll-reveal">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Latest <span className="text-[hsl(var(--nav-theme-light))]">Updates</span>
+            {t("latestUpdatesTitle")}
           </h2>
           <p className="text-muted-foreground text-lg">
-            Discover the newest guides, tips, and content
+            {t("latestUpdatesDescription")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal">
           {articles.map((article) => {
-            const url = `/${locale}/${article.contentType}/${article.slug}`
+            const url = `/${article.contentType}/${article.slug}`;
 
             return (
               <Link
@@ -55,11 +62,14 @@ export function LatestGuides({ articles, locale, className = '' }: LatestGuidesP
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
                     {article.frontmatter.date && (
                       <span className="text-xs text-muted-foreground">
-                        {new Date(article.frontmatter.date).toLocaleDateString(locale, {
-                          year: 'numeric',
-                          month: 'short',
-                          day: 'numeric'
-                        })}
+                        {new Date(article.frontmatter.date).toLocaleDateString(
+                          locale,
+                          {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          },
+                        )}
                       </span>
                     )}
 
@@ -69,11 +79,10 @@ export function LatestGuides({ articles, locale, className = '' }: LatestGuidesP
                   </div>
                 </div>
               </Link>
-            )
+            );
           })}
         </div>
-
       </div>
     </section>
-  )
+  );
 }

@@ -5,17 +5,18 @@ export const HERO_IMAGE_PATH = "/images/hero.webp";
 export const LOGO_PATH = "/android-chrome-512x512.png";
 
 export const HOME_METADATA = {
-  title: "Pilgrammed Wiki - Bosses, Weapons & Quests",
+  title: "Pilgrammed Wiki - Codes, Bosses, Weapons, Quests & Builds",
   description:
-    "Pilgrammed Wiki covers beginner guides, weapons, builds, bosses, quests, maps, secrets, and upgrades for the Roblox open-world RPG by Phexonia Studios.",
+    "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, upgrades, and smart progression routes for the Roblox open-world RPG by Phexonia Studios.",
   keywords: [
     "Pilgrammed",
     "Pilgrammed Wiki",
+    "Pilgrammed codes",
     "Roblox RPG",
-    "Pilgrammed weapons",
-    "Pilgrammed bosses",
-    "Pilgrammed quests",
     "Pilgrammed builds",
+    "Pilgrammed bosses",
+    "Pilgrammed weapons",
+    "Pilgrammed quests",
   ],
 } as const;
 

@@ -1,13 +1,13 @@
 {
   "seo": {
     "home": {
-      "title": "Pilgrammed Wiki - Bosses, Weapons & Quests",
-      "description": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and progression routes for the Roblox open-world RPG by Phexonia Studios.",
+      "title": "Pilgrammed Wiki - Codes, Bosses, Weapons, Quests & Builds",
+      "description": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and smart progression routes for the Roblox open-world RPG by Phexonia Studios.",
       "keywords": "Pilgrammed, Pilgrammed wiki, Pilgrammed codes, Pilgrammed builds, Pilgrammed weapons, Pilgrammed bosses, Pilgrammed progression",
-      "ogTitle": "Pilgrammed Wiki - Bosses, Weapons & Quests",
-      "ogDescription": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and progression routes for the Roblox open-world RPG by Phexonia Studios.",
-      "twitterTitle": "Pilgrammed Wiki - Bosses, Weapons & Quests",
-      "twitterDescription": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and progression routes for the Roblox open-world RPG by Phexonia Studios."
+      "ogTitle": "Pilgrammed Wiki - Codes, Bosses, Weapons, Quests & Builds",
+      "ogDescription": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and smart progression routes for the Roblox open-world RPG by Phexonia Studios.",
+      "twitterTitle": "Pilgrammed Wiki - Codes, Bosses, Weapons, Quests & Builds",
+      "twitterDescription": "Pilgrammed Wiki tracks codes, builds, weapons, bosses, soul levels, quests, and smart progression routes for the Roblox open-world RPG by Phexonia Studios."
     }
   },
   "nav": {
@@ -31,7 +31,16 @@
     "notFoundDescription": "The page you are looking for does not exist.",
     "backToHome": "Back to Home",
     "relatedArticles": "Related Articles",
-    "readMore": "Read More"
+    "readMore": "Read More",
+    "readArticle": "Read Article",
+    "latestArticles": "Latest Articles",
+    "latestUpdatesTitle": "Latest Pilgrammed Updates",
+    "latestUpdatesDescription": "Scan the newest Pilgrammed guides, route notes, and update coverage.",
+    "expandForPreview": "Expand for preview",
+    "advertisement": "Advertisement",
+    "moreWikis": "More Wikis",
+    "noArticlesYet": "No articles yet",
+    "selectLanguage": "Select language"
   },
   "hero": {
     "badge": "Roblox Open-World Fantasy RPG",
