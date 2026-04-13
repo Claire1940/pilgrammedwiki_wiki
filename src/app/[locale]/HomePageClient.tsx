@@ -171,9 +171,21 @@ export default function HomePageClient({
   const t = useMessages() as any;
   const modules = t.modules as any;
   const toolCards = t.tools.cards as any[];
+  const bossLocationItems = modules.pilgrammedBossLocations.items as any[];
   const siteUrl = getSiteUrl();
   const heroImageUrl = absoluteUrl(HERO_IMAGE_PATH, siteUrl);
   const logoUrl = absoluteUrl(LOGO_PATH, siteUrl);
+  const staticBossCount = bossLocationItems.filter((item) =>
+    item.spawn_method.toLowerCase().includes("static"),
+  ).length;
+  const summonBossCount = bossLocationItems.filter((item) =>
+    item.spawn_method.toLowerCase().includes("summon"),
+  ).length;
+  const hiddenBossCount = bossLocationItems.filter(
+    (item) =>
+      item.spawn_method.toLowerCase().includes("secret") ||
+      item.arena.toLowerCase().includes("hidden"),
+  ).length;
 
   const footerLinks = [
     { label: t.footer.discord, href: homepageLinks.discord },
@@ -1192,6 +1204,9 @@ export default function HomePageClient({
             {modules.pilgrammedSkillTreeGuide.items.map(
               (item: any, index: number) => {
                 const expanded = expandedPanels.skills === index;
+                const optionalNodes = Array.isArray(item.optional_nodes)
+                  ? item.optional_nodes
+                  : [];
                 return (
                   <div key={item.title} className="scroll-reveal">
                     <AccordionToggle
@@ -1208,7 +1223,9 @@ export default function HomePageClient({
                           ))}
                         </div>
 
-                        <div className="grid gap-4 lg:grid-cols-2">
+                        <div
+                          className={`grid gap-4 ${optionalNodes.length > 0 ? "lg:grid-cols-2" : ""}`}
+                        >
                           <div>
                             <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
                               Main Nodes
@@ -1234,30 +1251,32 @@ export default function HomePageClient({
                             </div>
                           </div>
 
-                          <div>
-                            <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
-                              Optional Nodes
-                            </p>
-                            <div className="space-y-3">
-                              {item.optional_nodes.map((node: any) => (
-                                <div
-                                  key={node.name}
-                                  className="rounded-xl border border-border bg-black/10 p-4"
-                                >
-                                  <div className="mb-2 flex flex-wrap items-center gap-2">
-                                    <p className="font-semibold">{node.name}</p>
-                                    <AccentPill>{node.type}</AccentPill>
+                          {optionalNodes.length > 0 && (
+                            <div>
+                              <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                                Optional Nodes
+                              </p>
+                              <div className="space-y-3">
+                                {optionalNodes.map((node: any) => (
+                                  <div
+                                    key={node.name}
+                                    className="rounded-xl border border-border bg-black/10 p-4"
+                                  >
+                                    <div className="mb-2 flex flex-wrap items-center gap-2">
+                                      <p className="font-semibold">{node.name}</p>
+                                      <AccentPill>{node.type}</AccentPill>
+                                    </div>
+                                    <p className="mb-2 text-sm leading-6 text-muted-foreground">
+                                      {node.base}
+                                    </p>
+                                    <p className="text-sm leading-6 text-muted-foreground">
+                                      {node.aced}
+                                    </p>
                                   </div>
-                                  <p className="mb-2 text-sm leading-6 text-muted-foreground">
-                                    {node.base}
-                                  </p>
-                                  <p className="text-sm leading-6 text-muted-foreground">
-                                    {node.aced}
-                                  </p>
-                                </div>
-                              ))}
+                                ))}
+                              </div>
                             </div>
-                          </div>
+                          )}
                         </div>
 
                         <div className="mt-4 rounded-xl border border-[hsl(var(--nav-theme)/0.25)] bg-[hsl(var(--nav-theme)/0.08)] p-4">
@@ -1382,8 +1401,9 @@ export default function HomePageClient({
                     />
                     {expanded && (
                       <SurfaceCard className="mt-3">
-                        <div className="mb-4 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
+                        <div className="mb-4 grid gap-3 md:grid-cols-3 xl:grid-cols-7">
                           <AccentPill>Region: {item.region}</AccentPill>
+                          <AccentPill>Element: {item.stats.element}</AccentPill>
                           <AccentPill>HP: {item.stats.hp}</AccentPill>
                           <AccentPill>DEF: {item.stats.def}</AccentPill>
                           <AccentPill>
@@ -1459,8 +1479,40 @@ export default function HomePageClient({
             icon={<Home className="h-5 w-5" />}
           />
           <SectionIntro>{modules.pilgrammedBossLocations.intro}</SectionIntro>
+          <div className="mb-8 grid gap-4 md:grid-cols-3">
+            <SurfaceCard className="scroll-reveal">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Static Hunts
+              </p>
+              <p className="mb-2 text-3xl font-bold">{staticBossCount}</p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Pilgrammed bosses you can route to directly once you enter the
+                right region.
+              </p>
+            </SurfaceCard>
+            <SurfaceCard className="scroll-reveal">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Hidden Routes
+              </p>
+              <p className="mb-2 text-3xl font-bold">{hiddenBossCount}</p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Secret or scenery-hidden Pilgrammed boss paths worth memorizing
+                before a farming run.
+              </p>
+            </SurfaceCard>
+            <SurfaceCard className="scroll-reveal">
+              <p className="mb-2 text-xs uppercase tracking-[0.24em] text-[hsl(var(--nav-theme-light))]">
+                Summon Setups
+              </p>
+              <p className="mb-2 text-3xl font-bold">{summonBossCount}</p>
+              <p className="text-sm leading-6 text-muted-foreground">
+                Pilgrammed boss routes gated by sigils, items, or summon steps
+                instead of simple walk-up access.
+              </p>
+            </SurfaceCard>
+          </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {modules.pilgrammedBossLocations.items.map((item: any) => (
+            {bossLocationItems.map((item: any) => (
               <SurfaceCard key={item.boss} className="scroll-reveal">
                 <div className="mb-3 flex items-center justify-between gap-3">
                   <h3 className="text-xl font-bold">{item.boss}</h3>

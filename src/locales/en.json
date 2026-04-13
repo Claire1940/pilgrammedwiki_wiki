@@ -102,22 +102,22 @@
       {
         "icon": "Users",
         "title": "Pilgrammed Skill Tree Guide",
-        "description": "Use focused Pilgrammed skill packages for scythe, crit, mage, and ranged builds."
+        "description": "Use Pilgrammed skill packages grouped by build type, from Wind scythes to dodge-heavy bossing."
       },
       {
         "icon": "Eye",
         "title": "Pilgrammed Stats Guide",
-        "description": "Understand what STR, DEX, INT, DEF, and AGI really do in Pilgrammed."
+        "description": "See how Pilgrammed STR, DEX, INT, DEF, and AGI shape damage, defense, mana, and movement."
       },
       {
         "icon": "AlertTriangle",
         "title": "Pilgrammed Boss Guide",
-        "description": "Check major Pilgrammed bosses, their drops, and the main mechanic to respect."
+        "description": "Check Pilgrammed boss drops, farming value, and the mechanic most likely to end the run."
       },
       {
         "icon": "Home",
         "title": "Pilgrammed Boss Locations",
-        "description": "Navigate straight to Pilgrammed boss arenas with landmark-based route notes."
+        "description": "Find Pilgrammed boss arenas faster with landmark notes, hidden entrances, and summon routes."
       },
       {
         "icon": "ArrowRight",
@@ -677,7 +677,7 @@
         "mobile": "single-column stacked accordion"
       },
       "eyebrow": "Build Planner",
-      "title": "Pilgrammed Skill Tree Guide",
+      "title": "Pilgrammed Skill Tree Guide: Best Skill Packages by Build Type",
       "subtitle": "Use these grouped skill packages to respec faster and match your tree to your weapon style.",
       "intro": "Pilgrammed rewards focused trees more than spread-out point spending. These build packages turn the raw offense, defense, and misc skills into practical loadouts for crit melee, bows, magic, boss survival, and the current Wind meta heavy-melee setup.",
       "items": [
@@ -875,7 +875,7 @@
         "mobile": "stacked stat cards"
       },
       "eyebrow": "Core Stats",
-      "title": "Pilgrammed Stats Guide",
+      "title": "Pilgrammed Stats Guide: How STR, DEX, INT, DEF, and AGI Actually Work",
       "subtitle": "A clean lookup table for the five character stats that shape melee, ranged, magic, defense, and movement.",
       "intro": "Character stats sit on top of your weapon stats and decide whether your build wins through melee damage, ranged pressure, spell output, survivability, or mobility. Most of these stat effects scale in 0.5% steps, so stacking the right stat matters much more than spreading points evenly.",
       "items": [
@@ -940,7 +940,7 @@
         "mobile": "single-column stacked accordion"
       },
       "eyebrow": "Boss Strategies",
-      "title": "Pilgrammed Boss Guide",
+      "title": "Pilgrammed Boss Guide: Major Bosses, Drops, and Danger Points",
       "subtitle": "Use this as a fast boss-by-boss sheet for loot priority, danger points, and farming value.",
       "intro": "Pilgrammed bosses are progression checks and loot farms at the same time. This guide focuses on what each fight gives you, why players return to it, and the single mechanic most likely to end a run. In the current Wind routing, Old Fart, N, and Snow Cultist are treated as endgame checkpoints, while Psychocrab is explicitly not a Soul Fragment leveling stop.",
       "items": [
@@ -1141,7 +1141,7 @@
         "mobile": "stacked route cards"
       },
       "eyebrow": "World Map",
-      "title": "Pilgrammed Boss Locations",
+      "title": "Pilgrammed Boss Locations: Faster Landmark Routes to Major Bosses",
       "subtitle": "A route-first locator for the major bosses players most often search by name plus location.",
       "intro": "These route cards turn the interactive map and boss pages into quick travel hints. Each entry tells you which region to enter, what landmark to aim for, and whether the fight is static, hidden, or summon-based so you can move straight from search intent to navigation.",
       "items": [
