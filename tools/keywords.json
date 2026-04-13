@@ -1,46 +1,127 @@
 {
+  "pageCountAfterMerge": 88,
   "categories": [
     {
-      "category": "Guides",
+      "category": "guide",
       "keywords": [
-        "lucid blocks guide"
+        "pilgrammed inventory",
+        "pilgrammed loadout",
+        "pilgrammed progression guide",
+        "pilgrammed guilds",
+        "pilgrammed tips and tricks",
+        "pilgrammed max level",
+        "pilgrammed guide",
+        "pilgrammed quest guide",
+        "pilgrammed quests in order",
+        "pilgrammed parrying",
+        "pilgrammed upgrades",
+        "pilgrammed fishing",
+        "pilgrammed can you trade"
       ]
     },
     {
-      "category": "Crafting",
+      "category": "build",
       "keywords": [
-        "lucid blocks crafting recipes",
-        "lucid blocks apotheosis"
+        "pilgrammed skill tree",
+        "pilgrammed mage build",
+        "pilgrammed stats",
+        "pilgrammed best build",
+        "pilgrammed techniques",
+        "pilgrammed classes",
+        "pilgrammed reforge",
+        "pilgrammed elements",
+        "pilgrammed tank build",
+        "pilgrammed gun build",
+        "pilgrammed dagger build",
+        "pilgrammed healer build",
+        "pilgrammed agility",
+        "pilgrammed dexterity",
+        "pilgrammed intellect",
+        "pilgrammed vampire race"
       ]
     },
     {
-      "category": "Items",
+      "category": "weapons",
       "keywords": [
-        "lucid blocks faith wand",
-        "lucid blocks bee glider",
-        "lucid blocks chest",
-        "lucid blocks osmium"
+        "pilgrammed weapons",
+        "pilgrammed best weapons",
+        "pilgrammed weapon tier list",
+        "pilgrammed all weapons",
+        "pilgrammed early game weapons",
+        "pilgrammed kai fist",
+        "pilgrammed coffinhilt",
+        "pilgrammed nos dywyll",
+        "pilgrammed catatome",
+        "pilgrammed black stiletto",
+        "pilgrammed prism bow",
+        "pilgrammed blunderbuss",
+        "pilgrammed pitch dagger",
+        "pilgrammed bows",
+        "pilgrammed daggers",
+        "pilgrammed vine wand"
       ]
     },
     {
-      "category": "Biomes",
+      "category": "bosses",
       "keywords": [
-        "lucid blocks tiamana leyline"
+        "pilgrammed shock marauder",
+        "pilgrammed jim",
+        "pilgrammed kai lazurai",
+        "pilgrammed old fart",
+        "pilgrammed unfair fight",
+        "pilgrammed ice boss",
+        "pilgrammed viperhead",
+        "pilgrammed hobo",
+        "pilgrammed granny",
+        "pilgrammed highway son",
+        "pilgrammed bosses",
+        "pilgrammed prism troll",
+        "pilgrammed snow cultist"
       ]
     },
     {
-      "category": "Building",
+      "category": "items",
       "keywords": [
-        "lucid blocks qualia"
+        "pilgrammed iron",
+        "pilgrammed diamond ring",
+        "pilgrammed great red feather",
+        "pilgrammed power bracelet",
+        "pilgrammed armor",
+        "pilgrammed potions",
+        "pilgrammed lantern",
+        "pilgrammed titan brace",
+        "pilgrammed arcane essence",
+        "pilgrammed explosive gem",
+        "pilgrammed insignia gem",
+        "pilgrammed elite shield",
+        "pilgrammed pocket mirror",
+        "pilgrammed gems",
+        "pilgrammed accessories",
+        "pilgrammed magic token",
+        "pilgrammed icy tear",
+        "pilgrammed lance fragment"
       ]
     },
     {
-      "category": "Support",
+      "category": "locations",
       "keywords": [
-        "lucid blocks steam deck",
-        "lucid blocks full screen",
-        "lucid blocks multiplayer",
-        "lucid blocks android"
+        "pilgrammed map",
+        "pilgrammed waypoint",
+        "pilgrammed forest",
+        "pilgrammed kings den",
+        "pilgrammed volcano",
+        "pilgrammed strange chasm",
+        "pilgrammed elite barracks",
+        "pilgrammed dark green retreat",
+        "pilgrammed ice temple",
+        "pilgrammed junk pits",
+        "pilgrammed catacombs"
+      ]
+    },
+    {
+      "category": "codes",
+      "keywords": [
+        "pilgrammed codes"
       ]
     }
   ]

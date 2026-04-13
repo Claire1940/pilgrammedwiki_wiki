@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Pilgrammed Potions: Advanced Brewing & Modulo Theory Guide 2026",
+  description: "Master the complex mechanics of Pilgrammed potions. Learn about status levels, modifier function orders, and the advanced Modulo Theory for brewing.",
+  category: "Guide",
+  image: "https://placehold.co/800x400/3b82f6/fff?text=Pilgrammed+Potions+Guide",
+  date: "2026-04-13",
+  author: "Pilgrammed Wiki Team"
+}
+
+Mastering the art of **pilgrammed potions** requires a deep understanding of hidden mechanics that go far beyond simply tossing ingredients into a cauldron. Whether you are looking to maximize your melee damage for a difficult boss fight or bolster your defense to survive the late-game trials, knowing how base ingredients interact with modifiers is essential. In this 2026 guide, we will break down the mathematical foundations of brewing, including the elusive "Modulo Theory" that dictates how modifiers are applied to your concoctions. By following these advanced brewing strategies, you can optimize your **pilgrammed potions** to achieve the highest possible status levels and durations allowed by the game's engine.
+
+## The Anatomy of a Potion
+
+Every potion in the game is defined by four fundamental components. Understanding these variables is the first step toward becoming a master alchemist. When you interact with a cauldron, the game calculates the final output based on the specific combination and order of the items you provide.
+
+1.  **Status Level:** This is the numerical value (e.g., 0.75, 1.5, 2.25) that determines the potency of the buff or debuff.
+2.  **Effect Name and Effect:** The specific buff granted, such as "Strength" or "Metallic." The effect itself is usually proportional to the status level.
+3.  **Base Ingredient:** The primary item that defines what the potion actually does.
+4.  **Duration:** How long the effect lasts in seconds.
+
+The relationship between the status level and the actual buff is unique to each effect. For example, in the current 2026 meta, every level of "Strength" provides a 5% increase to melee damage, whereas every level of "Metallic" provides exactly four extra defense points.
+
+| Base Ingredient | Effect Name | Base Status Level | Base Duration |
+| :--- | :--- | :--- | :--- |
+| **Rage Berry** | Strength | 0.75 | 12 Seconds |
+| **Scrap Metal** | Metallic | 1.00 | 15 Seconds |
+| **Raw Colio** | Metallic | 2.25 | 15 Seconds |
+
+> **💡 Tip:** Adding multiple of the same base ingredient does not simply add the stats together. The game uses a linear regression equation unique to each ingredient to determine the diminishing returns on status level and duration.
+
+## Understanding Modifiers and Functions
+
+Modifiers are ingredients that alter the properties of the base ingredient. These include various slimes, venom glands, and shrimp. When a modifier is added to the cauldron, the status level is processed through a mathematical function, often denoted as $f(x)$. 
+
+The primary modifiers used in high-level brewing are:
+*   **Magma Slime (M)**
+*   **Pink Slime (P)**
+*   **Green Slime (G)**
+*   **Blue Slime (B)**
+*   **Venom Gland (V)**
+*   **Shrimp (S)**
+
+The order in which you place these modifiers into the cauldron significantly changes the final result. This is because the functions are applied sequentially, and swapping the positions of two slimes can lead to a completely different status level.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, margin: "2rem 0", borderRadius: "0.5rem", overflow: "hidden"}}>
+  <iframe
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+    src="https://www.youtube.com/embed/_JS7xAnvlYU"
+    title="How I lost my mind over Pilgrammed’s Potions (pilgrammed math)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## The Modulo Theory of Function Order
+
+The most complex aspect of crafting **pilgrammed potions** is the "Modulo Theory." This theory explains how the game assigns modifiers to specific "slots" in the calculation order. To determine the function order, you must look at the total number of modifiers used and apply a modulo operator (the remainder after division).
+
+### The Five Rules of Function Order
+
+To calculate the order yourself, follow these established rules for 2026 brewing:
+
+1.  **The Modulo Rule:** The total amount of modifiers determines the modulo we work with. The modulus must always be an even number. If you have 1 or 3 modifiers, round up to 2 or 4.
+2.  **Top-to-Bottom Consideration:** The modifier at the top of the cauldron list is considered first, and the bottom one is considered last.
+3.  **Slot Assignment:** Each modifier has an assigned number. After passing this number through the modulo function, the result represents the slot it occupies.
+4.  **Occupancy Conflict:** If a slot is already taken, the modifier is placed in the next available slot based on its cauldron order.
+5.  **External Priority:** When Magma Slime (M) and Pink Slime (P) are the first two modifiers in a cauldron with more than two modifiers, the second one is always considered first.
+
+| Modifier Type | Modifier Name | Assigned Number | Typical Slot |
+| :--- | :--- | :--- | :--- |
+| **Miscellaneous** | Blue Slime (B) | 1 | Outermost |
+| **External** | Magma/Pink Slime | 2 | Second-to-last |
+| **Internal** | Green Slime/Venom | 3 | Third-to-last |
+| **Miscellaneous** | Shrimp (S) | 0 (or X) | Innermost |
+
+## Calculating Potion Duration
+
+While status levels follow strict slot-based functions, duration is generally multiplicative. Each modifier has its own impact on how long the potion lasts. For example, Green Slime has a very consistent duration function, while Venom Glands can be more unpredictable.
+
+When combining multiple modifiers, you take the duration function for each individual modifier and multiply the results together. This is why it is extremely difficult to create a potion that has both an incredibly high status level and a long duration; the math often forces a trade-off between the two.
+
+> **⚠️ Warning:** Always check your duration approximations. Actual in-game duration can vary from the item description by 0.6 to 1.2 seconds due to server-side processing and rounding.
+
+## Advanced Recipes and Limitations
+
+A common goal for players is to create a potion with over 25% melee damage that lasts longer than 10 seconds. Through "proof by exhaustion" and the use of modern potion calculators, it has been determined that this specific threshold is nearly impossible to reach with current 2026 ingredients. The combinations that provide a status level of 5.0 or higher (required for 25% damage) invariably suffer from duration penalties that drop them below the 10-second mark.
+
+To experiment with your own builds, you can visit the [official Pilgrammed Roblox page](https://www.roblox.com/games/11135891462/Pilgrammed-V0-5) to test these theories in real-time.
+
+### Recommended Modifier Combinations
+
+| Goal | Ingredients | Function Order Result |
+| :--- | :--- | :--- |
+| **Max Strength** | Rage Berry + M + P | PM (Function M first, then P) |
+| **Max Defense** | Raw Colio + G + V | VG (Function G first, then V) |
+| **Balanced Buff** | Base + B + G + S | BVGS |
+
+## Summary of Brewing Mechanics
+
+The depth of the potion system is what keeps the community engaged. By understanding that modifiers like Blue Slime and Shrimp act as "Miscellaneous" anchors while slimes act as "Internals" or "Externals," you can begin to predict the outcome of your brews without wasting rare materials. Remember that the cauldron doesn't just look at what you put in, but *where* you put it.
+
+## FAQ
+
+**Q: Does the placement of the base ingredient matter in Pilgrammed potions?**
+
+A: No, the placement of the base ingredient (like Rage Berry or Scrap Metal) does not affect the function order of the modifiers. You can place it in any slot within the cauldron.
+
+**Q: Why did my potion give a lower value even though I used the same slimes?**
+
+A: This is likely due to the "Function Order" explained by Modulo Theory. If you changed the order in which you added the slimes to the cauldron, the game applied the mathematical functions in a different sequence, resulting in a different final status level.
+
+**Q: What is the best modifier for increasing potion duration?**
+
+A: Green Slime is generally considered the most reliable modifier for duration. However, for the best results, you should use a combination of modifiers and calculate their multiplicative effect using the standard duration equations.
+
+**Q: Are splash potions covered by the Modulo Theory?**
+
+A: No, splash potions and sulfur-based mixtures follow an entirely different set of rules and fields. The Modulo Theory and slot assignments discussed here apply specifically to status level potions.

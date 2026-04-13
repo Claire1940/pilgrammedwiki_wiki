@@ -1,0 +1,123 @@
+export const metadata = {
+  title: "Status do Pilgrammed: O Guia Definitivo de Redução de Dano 2026",
+  description: "Domine a matemática complexa por trás dos status do Pilgrammed. Aprenda como a defesa, a redução de dano e a mitigação interagem para otimizar sua build em 2026.",
+  category: "Guide",
+  image: "https://placehold.co/800x400/3b82f6/fff?text=Pilgrammed+Stats+Guide",
+  date: "2026-04-13",
+  author: "Pilgrammed Wiki Team"
+}
+
+Entender como seu personagem sobrevive a encontros de alto nível é a base de qualquer build de sucesso. Embora muitos jogadores se concentrem apenas na vida bruta, a maneira como os **status do pilgrammed** lidam com o dano recebido é muito mais sutil do que simplesmente ter um número de defesa alto. No meta atual de 2026, confiar em um único status não é mais suficiente para sobreviver aos chefes mais difíceis e inimigos de elite do jogo.
+
+Para otimizar verdadeiramente sua sobrevivência, você deve entender a interação entre três mecânicas distintas: Defesa Fixa (Flat Defense), Redução de Dano (Damage Reduction) e Mitigação. Esses **status do pilgrammed** funcionam em uma sequência específica para determinar exatamente quanto de vida você perde quando um inimigo ataca. Este guia detalhará as fórmulas matemáticas, as propriedades ocultas de equipamentos populares como o Chapéu de Clérigo (Cleric Hat) e a realidade frustrante dos retornos decrescentes ao acumular bônus defensivos.
+
+## Os Três Pilares da Defesa no Pilgrammed
+
+Ao abrir seu menu para olhar seus **status do pilgrammed**, o número de "Defesa" é o que a maioria dos jogadores nota primeiro. No entanto, este valor único alimenta simultaneamente duas camadas defensivas diferentes. Além disso, itens especializados fornecem uma terceira camada chamada "Mitigação", que atua como um multiplicador final para sua segurança.
+
+### 1. Defesa Fixa (Flat Defense)
+A Defesa Fixa é a camada mais direta. Para cada ponto de Defesa que você possui, o dano recebido é reduzido em exatamente **0,5**. Se um inimigo ataca com 10 de dano e você tem 10 de Defesa, a parte da Defesa Fixa reduz esse golpe em 5.
+
+### 2. Redução de Dano (DR)
+Enquanto a Defesa Fixa subtrai um número específico, a Redução de Dano (DR) reduz o dano restante por uma porcentagem. Cada ponto do status de Defesa concede a você **0,2% de Redução de Dano**. Ao contrário da Defesa Fixa, esta camada escala com a intensidade do golpe, tornando-a vital para sobreviver a chefes que batem pesado.
+
+### 3. Mitigação
+A Mitigação é uma propriedade única encontrada em itens específicos de alto nível. Ela é inteiramente separada do status de Defesa padrão e atua como um multiplicador final (entre 0 e 1) sobre o dano que você teria recebido de outra forma. Por ser aplicada por último, é frequentemente a ferramenta mais poderosa para builds de "tanque".
+
+| Tipo de Status | Método de Cálculo | Aplicado Quando |
+| :--- | :--- | :--- |
+| **Defesa Fixa** | 0,5 de dano por 1 ponto de Defesa | Primeiro (Camada Primária) |
+| **Redução de Dano** | 0,2% de redução por 1 ponto de Defesa | Segundo (Camada de Porcentagem) |
+| **Mitigação** | Multiplicador específico do item (ex: 0,75x) | Terceiro (Camada Final) |
+
+## A Fórmula de Dano Base
+
+Para calcular exatamente quanto dano você receberá, você deve seguir a ordem oficial de operações. O jogo processa a Defesa Fixa primeiro, depois calcula a porcentagem de dano recebido com base na sua DR e, finalmente, aplica quaisquer multiplicadores de Mitigação.
+
+A fórmula simplificada para o cálculo de dano dos **status do pilgrammed** é:
+`Dano Final = Mitigação × (100% - %DR) × (Dano Base - Defesa Fixa)`
+
+Vejamos um exemplo prático. Suponha que um inimigo Ladrão (Thief) cause **10 de Dano Base**, e você esteja usando as Vestes de Clérigo (Cleric Robes), que fornecem **10 de Defesa**.
+
+| Passo | Variável | Valor |
+| :--- | :--- | :--- |
+| **1** | Dano Base | 10 |
+| **2** | Defesa Fixa (10 * 0,5) | 5 |
+| **3** | Dano Após Defesa Fixa (10 - 5) | 5 |
+| **4** | % de Redução de Dano (10 * 0,2%) | 2% |
+| **5** | % de Dano Recebido (100% - 2%) | 98% |
+| **6** | Dano Final (5 * 0,98) | **4,9** |
+
+> **💡 Dica:** Como a Defesa Fixa é aplicada primeiro, ela é extremamente eficaz contra inimigos que atacam muitas vezes com pouco dano. No entanto, contra chefes que causam mais de 100 de dano em um único golpe, sua porcentagem de Redução de Dano torna-se muito mais importante.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, margin: "2rem 0", borderRadius: "0.5rem", overflow: "hidden"}}>
+  <iframe
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+    src="https://www.youtube.com/embed/IfoTjymuNog"
+    title="There’s a stat you don’t know about in Pilgrammed (pilgrammed math)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## Mecânicas Avançadas: O Chapéu de Clérigo
+
+Um dos itens mais incompreendidos que afetam os **status do pilgrammed** é o Chapéu de Clérigo (Cleric Hat). Este equipamento utiliza um efeito de status exclusivo chamado "Escudo de Clérigo" (Cleric Shield) que acumula até 30 vezes. Quando você é atingido, o chapéu consome esses acúmulos para fornecer um impulso massivo e temporário à sua sobrevivência.
+
+O chapéu gasta um máximo de **10 acúmulos** quando você recebe dano. Os benefícios que você recebe são diretamente proporcionais ao número de acúmulos consumidos:
+
+*   **Redução de Dano:** 1,5% por acúmulo (até 15% no total).
+*   **Defesa Fixa:** 1,0 por acúmulo (até 10 no total).
+
+Curiosamente, o Chapéu de Clérigo também auxilia seu grupo. Se um aliado for atingido, o chapéu consome até 5 acúmulos para protegê-lo, mas a escala é ainda mais agressiva para os companheiros de equipe (4% de DR por acúmulo e 2,0 de Defesa Fixa por acúmulo).
+
+### Gerando Acúmulos de Escudo de Clérigo
+Para manter esses bônus, você deve causar dano. A fórmula para ganhar acúmulos é:
+`Acúmulos Ganhos = (Dano Causado ao Inimigo + 1) / 10`
+
+Isso significa que builds de alto DPS podem regenerar seus escudos defensivos quase instantaneamente, tornando o Chapéu de Clérigo um item essencial para jogadores agressivos que desejam manter **status do pilgrammed** altos sem sacrificar o poder ofensivo.
+
+## Retornos Decrescentes e Depreciação
+
+Um erro comum em 2026 é assumir que acumular várias fontes de Redução de Dano levará à invulnerabilidade de 100%. O Pilgrammed usa um sistema de "depreciação" para evitar isso. 
+
+Crucialmente, a depreciação não é acionada pela *quantidade* de DR que você tem, mas pelo *número de fontes* que a fornecem.
+
+1.  **Uma Fonte:** Se você tem 80% de DR de um único item ou status, você recebe os 80% completos. Há zero depreciação.
+2.  **Duas Fontes:** Se você tiver duas fontes (ex: 50% dos status e 25% de uma habilidade), o valor maior permanece o mesmo, mas o valor menor passa por uma equação quadrática para reduzir sua eficácia.
+3.  **Três+ Fontes:** A matemática torna-se exponencialmente mais complexa. Cada fonte adicional é construída sobre os valores depreciados das anteriores, levando a ganhos significativamente menores para cada novo bônus adicionado.
+
+| Número de Fontes | Efeito de Depreciação | Eficiência |
+| :--- | :--- | :--- |
+| **1 Fonte** | Nenhum | 100% |
+| **2 Fontes** | Redução quadrática na fonte menor | ~80-90% |
+| **3 Fontes** | Redução em múltiplas camadas | ~60-70% |
+
+> **⚠️ Aviso:** Evite usar três ou quatro fontes pequenas de Redução de Dano. É sempre melhor ter uma ou duas fontes grandes para maximizar a eficiência dos seus **status do pilgrammed**.
+
+## Mitigação: A Arma Secreta
+
+Como a Mitigação é aplicada *depois* dos cálculos de defesa padrão e usa multiplicação repetida em vez da fórmula de depreciação, ela é a maneira mais eficaz de acumular defesa no final do jogo. 
+
+Itens como o **Wicked Pull do Gêmeo de Sangue** (75% de mitigação) ou a **Braçadeira de Titã** (30% de mitigação) são essenciais para builds de alto nível. Se você tiver ambos, o jogo multiplica o dano recebido por 0,25 (do Gêmeo de Sangue) e depois por 0,70 (da Braçadeira de Titã).
+
+Para mais informações sobre equipamentos específicos para builds, confira a [página oficial do Pilgrammed no Roblox](https://www.roblox.com/games/6738541257/Pilgrammed) para ver as descrições de itens e atualizações mais recentes para 2026.
+
+## FAQ
+
+**P: Meus status do pilgrammed afetam o dano de queda ou perigos ambientais?**
+
+R: Geralmente, a Defesa Fixa e a Redução de Dano se aplicam a golpes físicos de inimigos. O dano ambiental frequentemente ignora as camadas de defesa padrão, embora itens específicos de "Mitigação" ainda possam reduzir a vida total perdida, dependendo do tipo de dano.
+
+**P: É melhor focar em Vida ou Defesa em 2026?**
+
+R: É necessário um equilíbrio. Devido à depreciação nos **status do pilgrammed** como a Redução de Dano, existe um "limite suave" onde adicionar mais defesa fornece muito pouco benefício. Assim que você atingir cerca de 60-70% de DR de duas fontes, investir pontos em Vida bruta (VIT) geralmente oferece uma melhor sobrevivência efetiva.
+
+**P: Como sei se um item fornece Mitigação ou Redução de Dano?**
+
+R: A Redução de Dano geralmente está ligada ao seu status total de Defesa ou listada como um bônus percentual na sua ficha de personagem. A Mitigação é tipicamente uma propriedade passiva única listada na descrição do item, como "reduz o dano recebido em X%" sem estar vinculada ao seu status de defesa.
+
+**P: O Chapéu de Clérigo funciona no PvP?**
+
+R: Sim, o Chapéu de Clérigo e seus acúmulos de escudo funcionam no PvP. No entanto, como os jogadores costumam causar dano em rajadas (burst), é mais difícil manter os acúmulos máximos em comparação com a luta contra mobs PvE com grandes barras de vida. Armas de alta velocidade são recomendadas para manter seus **status do pilgrammed** no auge durante um duelo.

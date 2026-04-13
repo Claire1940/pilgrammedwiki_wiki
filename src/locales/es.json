@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "Guías",
-    "crafting": "Fabricación",
-    "items": "Objetos",
-    "biomes": "Biomas",
-    "building": "Construcción",
-    "support": "Soporte"
+    "guide": "Guide",
+    "build": "Build",
+    "weapons": "Weapons",
+    "bosses": "Bosses",
+    "items": "Items",
+    "locations": "Locations",
+    "codes": "Codes"
   },
   "common": {
     "home": "Inicio",
@@ -807,125 +808,145 @@
     "disclaimer": "Sitio web de recursos no oficial creado por fans."
   },
   "pages": {
-    "guides": {
-      "title": "Guías de Lucid Blocks",
-      "description": "Guías completas de juego, desde conceptos básicos para principiantes hasta estrategias avanzadas de Apotheosis. Domina la supervivencia y la fabricación.",
-      "metaTitle": "Guías de Lucid Blocks - Estrategias de principiante a avanzado",
-      "metaDescription": "Guías completas de Lucid Blocks que cubren consejos para principiantes, el sistema Apotheosis, estrategias de supervivencia y tácticas expertas para dominar este sandbox surrealista.",
-      "categoryLabel": "GUÍAS DEL JUEGO",
-      "whatIs": "¿Qué son las guías?",
-      "whatIsDescription": "Guías exhaustivas que cubren mecánicas de juego, estrategias de supervivencia y el sistema de fabricación Apotheosis. Aprende todo, desde los primeros pasos hasta técnicas avanzadas.",
-      "why": "¿Por qué leer las guías?",
+    "guide": {
+      "title": "Pilgrammed Guides",
+      "description": "Core Pilgrammed guides for first-hour routing, upgrade order, fishing, trading limits, quests, and long-term progression.",
+      "metaTitle": "Pilgrammed Guides - Progression, Quests & Upgrades",
+      "metaDescription": "Browse Pilgrammed guides covering beginner routes, quests in order, fishing, parrying, upgrades, and smart progression planning.",
+      "categoryLabel": "GAME GUIDES",
+      "whatIs": "What are Pilgrammed Guides?",
+      "whatIsDescription": "Pilgrammed guide articles focus on the systems players touch most often: early routing, quest flow, inventory habits, fishing, progression pacing, and the movement upgrades that unlock safer travel.",
+      "why": "Why use Pilgrammed Guides?",
       "whySteps": {
-        "step1Title": "Aprende las mecánicas principales",
-        "step1Description": "Entiende el sistema Apotheosis y evita errores comunes de principiante",
-        "step2Title": "Progresión rápida",
-        "step2Description": "Sigue caminos probados para sobrevivir y prosperar en este mundo surrealista",
-        "step3Title": "Domina las estrategias",
-        "step3Description": "Desarrolla tácticas avanzadas para la exploración y la fabricación"
+        "step1Title": "Start Cleaner",
+        "step1Description": "Use beginner, inventory, and loadout guides to avoid wasted detours and build a stable first route.",
+        "step2Title": "Progress Faster",
+        "step2Description": "Follow quest-order, max-level, and upgrade coverage to move through Pilgrammed with fewer dead ends.",
+        "step3Title": "Handle Core Systems",
+        "step3Description": "Keep fishing, parrying, trading, and guild info in one place when you need practical answers fast."
       },
-      "featured": "Destacado y esencial",
-      "all": "Todas las guías"
+      "featured": "Featured & Essential",
+      "all": "All Guides"
     },
-    "crafting": {
-      "title": "Fabricación en Lucid Blocks",
-      "description": "Domina el sistema de fusión Apotheosis con mecánicas de esencia, recetas y estrategias de fabricación para objetos poderosos.",
-      "metaTitle": "Fabricación en Lucid Blocks - Sistema Apotheosis y recetas",
-      "metaDescription": "Domina el sistema de fabricación Apotheosis de Lucid Blocks. Aprende mecánicas de esencia, recetas de fusión y estrategias para crear herramientas y armas poderosas.",
-      "categoryLabel": "SISTEMA DE FABRICACIÓN",
-      "whatIs": "¿Qué es la fabricación?",
-      "whatIsDescription": "El sistema Apotheosis es una mecánica de fusión única impulsada por esencias donde combinas hasta seis objetos para descubrir nuevas recetas. Sin menús de fabricación fijos: la experimentación es la clave.",
-      "why": "¿Por qué dominar la fabricación?",
+    "build": {
+      "title": "Pilgrammed Builds",
+      "description": "Compare Pilgrammed stats, classes, techniques, elements, reforges, and role-based builds for mage, tank, healer, and hybrid setups.",
+      "metaTitle": "Pilgrammed Builds - Stats, Reforges & Classes",
+      "metaDescription": "Plan Pilgrammed builds with stat priorities, class ideas, techniques, reforge choices, and role-focused setups for every stage.",
+      "categoryLabel": "BUILD SETUPS",
+      "whatIs": "What are Pilgrammed Builds?",
+      "whatIsDescription": "Pilgrammed build coverage groups together the stat systems and gear choices that define a playstyle, from raw attribute spreads to class identity, elemental synergies, and reforge direction.",
+      "why": "Why use Pilgrammed Builds?",
       "whySteps": {
-        "step1Title": "Desbloquea objetos poderosos",
-        "step1Description": "Descubre herramientas esenciales, armas y equipo de movilidad a través de la fusión",
-        "step2Title": "Entiende las esencias",
-        "step2Description": "Aprende cómo se combinan las esencias de los objetos para crear resultados predecibles",
-        "step3Title": "Optimiza recursos",
-        "step3Description": "Usa mecánicas de dilución para maximizar la producción con materiales baratos"
+        "step1Title": "Shape Your Stats",
+        "step1Description": "Compare agility, dexterity, intellect, and other core attributes before you lock points into a weak spread.",
+        "step2Title": "Match Role And Gear",
+        "step2Description": "Use class, healer, mage, tank, and technique guides to pair your armor and weapons with a real combat role.",
+        "step3Title": "Refine Endgame Power",
+        "step3Description": "Layer reforges, elements, and hybrid scaling so your Pilgrammed build keeps up in harder boss routes."
       },
-      "featured": "Destacado y esencial",
-      "all": "Todas las guías de fabricación"
+      "featured": "Featured & Essential",
+      "all": "All Builds"
+    },
+    "weapons": {
+      "title": "Pilgrammed Weapons",
+      "description": "Track Pilgrammed weapon rankings, early-game upgrades, signature drops, and best-in-slot picks across melee, ranged, and magic.",
+      "metaTitle": "Pilgrammed Weapons - Tier List, Best Picks & Early Gear",
+      "metaDescription": "Browse Pilgrammed weapons, from early-game upgrades to tier-list favorites, bows, daggers, guns, and standout endgame gear.",
+      "categoryLabel": "WEAPON INDEX",
+      "whatIs": "What are Pilgrammed Weapons?",
+      "whatIsDescription": "The Pilgrammed weapons hub collects both broad ranking articles and single-weapon breakdowns, making it easier to compare move sets, progression value, and role fit before you invest resources.",
+      "why": "Why use Pilgrammed Weapons?",
+      "whySteps": {
+        "step1Title": "Upgrade On Time",
+        "step1Description": "See which early and mid-game weapons are worth chasing instead of overcommitting to starter gear.",
+        "step2Title": "Compare The Meta",
+        "step2Description": "Use tier lists and best-weapon guides to weigh damage, range, safety, and technique value side by side.",
+        "step3Title": "Study Specific Picks",
+        "step3Description": "Jump into focused pages for bows, daggers, guns, and named drops when you need details on one weapon family."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Weapons"
+    },
+    "bosses": {
+      "title": "Pilgrammed Bosses",
+      "description": "Follow Pilgrammed boss guides for arena routes, key attacks, cheese options, useful drops, and progression checkpoints.",
+      "metaTitle": "Pilgrammed Bosses - Locations, Mechanics & Drops",
+      "metaDescription": "Browse Pilgrammed boss guides covering locations, attacks, farming value, drops, and the safest ways to win major fights.",
+      "categoryLabel": "BOSS FILES",
+      "whatIs": "What are Pilgrammed Boss guides?",
+      "whatIsDescription": "Pilgrammed boss pages are encounter files built around the questions players care about most: where the arena is, what the boss actually does, what it drops, and whether the fight is worth farming now.",
+      "why": "Why use Pilgrammed Boss guides?",
+      "whySteps": {
+        "step1Title": "Reach The Arena",
+        "step1Description": "Get to bosses faster with clear location context, route notes, and nearby checkpoints before the fight starts.",
+        "step2Title": "Read The Pattern",
+        "step2Description": "Review the attacks and punish windows that matter instead of learning every mechanic through repeated deaths.",
+        "step3Title": "Farm Better Rewards",
+        "step3Description": "Use drop and progression notes to decide which Pilgrammed bosses deserve your time at each stage."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Bosses"
     },
     "items": {
-      "title": "Objetos de Lucid Blocks",
-      "description": "Guías detalladas de objetos que cubren herramientas, armas, equipo de movilidad y soluciones de almacenamiento con recetas de fabricación y consejos de uso.",
-      "metaTitle": "Objetos de Lucid Blocks - Guía de herramientas, armas y equipo",
-      "metaDescription": "Base de datos completa de objetos para Lucid Blocks, incluyendo herramientas, armas, equipo de movilidad y almacenamiento. Aprende a fabricar y usar cada objeto de manera efectiva.",
-      "categoryLabel": "OBJETOS Y EQUIPAMIENTO",
-      "whatIs": "¿Qué son los objetos?",
-      "whatIsDescription": "Guías exhaustivas de herramientas, armas, equipo de movilidad y objetos funcionales. Aprende recetas de fabricación, estrategias de uso y combinaciones óptimas.",
-      "why": "¿Por qué consultar las guías de objetos?",
+      "title": "Pilgrammed Items",
+      "description": "Review Pilgrammed armor, accessories, gems, shields, potions, and utility gear that support real combat and farming decisions.",
+      "metaTitle": "Pilgrammed Items - Armor, Gems & Utility Gear",
+      "metaDescription": "Explore Pilgrammed items including armor, accessories, gems, shields, potions, and special drops that shape builds and routes.",
+      "categoryLabel": "ITEM INDEX",
+      "whatIs": "What are Pilgrammed Items?",
+      "whatIsDescription": "The Pilgrammed items section is where equipment and utility coverage meets. It brings together armor, accessories, consumables, upgrade materials, and special drops that support both combat builds and world traversal.",
+      "why": "Why use Pilgrammed Items?",
       "whySteps": {
-        "step1Title": "Aprende recetas de fabricación",
-        "step1Description": "Descubre cómo fabricar herramientas y armas esenciales usando Apotheosis",
-        "step2Title": "Optimiza tu equipamiento",
-        "step2Description": "Elige los mejores objetos para tu estilo de juego y etapa de progresión",
-        "step3Title": "Mejora tu supervivencia",
-        "step3Description": "Equípate con equipo de movilidad y armas para navegar por este mundo peligroso"
+        "step1Title": "Choose Better Gear",
+        "step1Description": "Compare armor, shields, and accessories before you spend time farming a piece that does not fit your build.",
+        "step2Title": "Understand Utility",
+        "step2Description": "Keep gems, lanterns, potions, and niche tools organized so you know what each item actually solves.",
+        "step3Title": "Track Key Drops",
+        "step3Description": "Use focused item pages for rings, fragments, and rare materials when a single pickup matters to your next upgrade."
       },
-      "featured": "Destacado y esencial",
-      "all": "Todos los objetos"
+      "featured": "Featured & Essential",
+      "all": "All Items"
     },
-    "biomes": {
-      "title": "Biomas de Lucid Blocks",
-      "description": "Explora las regiones del mundo, características ambientales, ubicaciones de recursos y consejos de supervivencia para cada bioma.",
-      "metaTitle": "Biomas de Lucid Blocks - Regiones del mundo y exploración",
-      "metaDescription": "Explora los biomas de Lucid Blocks, incluyendo las Líneas Ley de Tiamana, Fog Meadow y regiones surrealistas. Encuentra recursos, evita peligros y navega por un mundo infinito.",
-      "categoryLabel": "REGIONES DEL MUNDO",
-      "whatIs": "¿Qué son los biomas?",
-      "whatIsDescription": "Guías de las diferentes regiones del mundo, características ambientales, distribución de recursos y zonas de peligro. Aprende qué esperar y cómo prepararte para cada área.",
-      "why": "¿Por qué explorar los biomas?",
+    "locations": {
+      "title": "Pilgrammed Locations",
+      "description": "Navigate Pilgrammed locations with region overviews, waypoint routes, landmark notes, and travel shortcuts across the world map.",
+      "metaTitle": "Pilgrammed Locations - Map Routes, Landmarks & Waypoints",
+      "metaDescription": "Find Pilgrammed locations, from major regions and hidden paths to waypoint routes, landmarks, and farming shortcuts.",
+      "categoryLabel": "WORLD MAP",
+      "whatIs": "What are Pilgrammed Locations?",
+      "whatIsDescription": "Pilgrammed location guides map the spaces between fights. They cover regions, sub-areas, waypoints, landmarks, and the traversal decisions that make farming loops and boss runs less confusing.",
+      "why": "Why use Pilgrammed Locations?",
       "whySteps": {
-        "step1Title": "Encuentra recursos",
-        "step1Description": "Localiza materiales raros y esencias específicas de cada región",
-        "step2Title": "Evita peligros",
-        "step2Description": "Entiende los riesgos ambientales y las criaturas hostiles",
-        "step3Title": "Planifica tu exploración",
-        "step3Description": "Prepara las herramientas y el equipo adecuados para cada tipo de bioma"
+        "step1Title": "Find Regions Faster",
+        "step1Description": "Use landmark-based directions to reach areas like the Volcano, Catacombs, and Kings Den without trial-and-error wandering.",
+        "step2Title": "Plan Routes",
+        "step2Description": "Connect waypoints, checkpoints, and farming spots into cleaner movement paths across the Pilgrammed map.",
+        "step3Title": "Explore With Context",
+        "step3Description": "Read area notes before you enter a zone so you know what enemies, rewards, and progression hooks are waiting there."
       },
-      "featured": "Destacado y esencial",
-      "all": "Todos los biomas"
+      "featured": "Featured & Essential",
+      "all": "All Locations"
     },
-    "building": {
-      "title": "Construcción en Lucid Blocks",
-      "description": "Domina las dimensiones personales Qualia, la construcción de bases, la gestión de almacenamiento y técnicas creativas de construcción.",
-      "metaTitle": "Construcción en Lucid Blocks - Qualia y construcción de bases",
-      "metaDescription": "Domina la construcción en Lucid Blocks con las dimensiones personales Qualia, construcción de bases, soluciones de almacenamiento y técnicas creativas de construcción.",
-      "categoryLabel": "CONSTRUCCIÓN Y BASES",
-      "whatIs": "¿Qué es la construcción?",
-      "whatIsDescription": "Guías sobre el sistema de dimensiones personales Qualia, construcción de bases, gestión de almacenamiento y construcción creativa. Aprende a crear tu refugio seguro en este mundo surrealista.",
-      "why": "¿Por qué construir bases?",
+    "codes": {
+      "title": "Pilgrammed Codes",
+      "description": "Check the Pilgrammed codes status, redemption availability, and the official channels most likely to publish the first real public drop.",
+      "metaTitle": "Pilgrammed Codes - Redemption Status & Watchlist",
+      "metaDescription": "Track Pilgrammed codes status, redemption availability, and the official watchlist for the first public code release.",
+      "categoryLabel": "CODE STATUS",
+      "whatIs": "What are Pilgrammed Codes?",
+      "whatIsDescription": "The Pilgrammed codes page is a status hub for a category that players search for constantly even though the game has not settled into a normal public redeem cycle. It tracks whether codes exist, whether a redeem flow is live, and where official drops would surface first.",
+      "why": "Why use Pilgrammed Codes?",
       "whySteps": {
-        "step1Title": "Crea espacios seguros",
-        "step1Description": "Establece bases seguras para el almacenamiento y las operaciones de fabricación",
-        "step2Title": "Gestiona tus recursos",
-        "step2Description": "Organiza tus materiales de manera eficiente con soluciones de almacenamiento",
-        "step3Title": "Desbloquea Qualia",
-        "step3Description": "Accede a dimensiones de bolsillo personales para la máxima comodidad"
+        "step1Title": "Check Live Status",
+        "step1Description": "See whether Pilgrammed currently has working public codes or an active redemption flow before wasting time on fake lists.",
+        "step2Title": "Watch Official Sources",
+        "step2Description": "Keep the Roblox group, Discord, and update windows in view so you know where the first real code is likely to appear.",
+        "step3Title": "Avoid Bad Info",
+        "step3Description": "Use one clean Pilgrammed watchlist instead of bouncing between outdated redeem pages and copycat code claims."
       },
-      "featured": "Destacado y esencial",
-      "all": "Todas las guías de construcción"
-    },
-    "support": {
-      "title": "Soporte de Lucid Blocks",
-      "description": "Soporte técnico, compatibilidad de plataformas, optimización de rendimiento y solución de problemas comunes.",
-      "metaTitle": "Soporte de Lucid Blocks - Ayuda técnica y soluciones",
-      "metaDescription": "Obtén soporte técnico para Lucid Blocks, incluyendo la configuración de Steam Deck, soluciones a cierres inesperados, optimización de rendimiento y guías de compatibilidad de plataformas.",
-      "categoryLabel": "SOPORTE TÉCNICO",
-      "whatIs": "¿Qué es el soporte?",
-      "whatIsDescription": "Guías técnicas que cubren la compatibilidad de plataformas, optimización de rendimiento, soluciones a cierres inesperados y problemas comunes. Obtén ayuda con Steam Deck, preguntas sobre multijugador y ajustes.",
-      "why": "¿Por qué consultar el soporte?",
-      "whySteps": {
-        "step1Title": "Soluciona problemas técnicos",
-        "step1Description": "Resuelve cierres inesperados, problemas de rendimiento y de compatibilidad",
-        "step2Title": "Optimiza el rendimiento",
-        "step2Description": "Configura los ajustes para obtener la mejor experiencia en tu plataforma",
-        "step3Title": "Compatibilidad de plataformas",
-        "step3Description": "Aprende sobre Steam Deck, soporte para controles y requisitos del sistema"
-      },
-      "featured": "Destacado y esencial",
-      "all": "Todos los artículos de soporte"
+      "featured": "Featured & Essential",
+      "all": "Codes Watchlist"
     }
   }
 }

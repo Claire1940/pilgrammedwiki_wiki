@@ -1,31 +1,31 @@
-export const SITE_NAME = 'Pilgrammed Wiki'
-export const SITE_SHORT_NAME = 'Pilgrammed'
-export const SITE_DOMAIN = 'pilgrammedwiki.wiki'
-export const HERO_IMAGE_PATH = '/images/hero.webp'
-export const LOGO_PATH = '/android-chrome-512x512.png'
+export const SITE_NAME = "Pilgrammed Wiki";
+export const SITE_SHORT_NAME = "Pilgrammed";
+export const SITE_DOMAIN = "pilgrammedwiki.wiki";
+export const HERO_IMAGE_PATH = "/images/hero.webp";
+export const LOGO_PATH = "/android-chrome-512x512.png";
 
 export const HOME_METADATA = {
-  title: 'Pilgrammed Wiki - Bosses, Weapons & Quests',
+  title: "Pilgrammed Wiki - Bosses, Weapons & Quests",
   description:
-    'Pilgrammed Wiki covers beginner guides, weapons, builds, bosses, quests, maps, secrets, and upgrades for the Roblox open-world RPG by Phexonia Studios.',
+    "Pilgrammed Wiki covers beginner guides, weapons, builds, bosses, quests, maps, secrets, and upgrades for the Roblox open-world RPG by Phexonia Studios.",
   keywords: [
-    'Pilgrammed',
-    'Pilgrammed Wiki',
-    'Roblox RPG',
-    'Pilgrammed weapons',
-    'Pilgrammed bosses',
-    'Pilgrammed quests',
-    'Pilgrammed builds',
+    "Pilgrammed",
+    "Pilgrammed Wiki",
+    "Roblox RPG",
+    "Pilgrammed weapons",
+    "Pilgrammed bosses",
+    "Pilgrammed quests",
+    "Pilgrammed builds",
   ],
-} as const
+} as const;
 
 export const PILGRAMMED_LINKS = {
-  game: 'https://www.roblox.com/games/6735572261/Pilgrammed',
-  group: 'https://www.roblox.com/communities/3573124/Phexonia-Studios',
-  discord: 'https://discord.gg/pilgrammed',
-  reddit: 'https://www.reddit.com/r/RobloxPilgrammed/',
-  trailer: 'https://www.youtube.com/watch?v=ENdAdX0QgWc',
-} as const
+  game: "https://www.roblox.com/games/6735572261/Pilgrammed",
+  group: "https://www.roblox.com/communities/3573124/Phexonia-Studios",
+  discord: "https://discord.gg/pilgrammed",
+  reddit: "https://www.reddit.com/r/RobloxPilgrammed/",
+  trailer: "https://www.youtube.com/watch?v=ENdAdX0QgWc",
+} as const;
 
 export const SITE_EMAILS = {
   contact: `contact@${SITE_DOMAIN}`,
@@ -36,49 +36,57 @@ export const SITE_EMAILS = {
   legal: `legal@${SITE_DOMAIN}`,
   copyright: `copyright@${SITE_DOMAIN}`,
   dmca: `dmca@${SITE_DOMAIN}`,
-} as const
+} as const;
 
-const CONTENT_TYPE_METADATA: Record<string, { title: string; description: string }> = {
-  guides: {
-    title: 'Pilgrammed Guides',
+const CONTENT_TYPE_METADATA: Record<
+  string,
+  { title: string; description: string }
+> = {
+  guide: {
+    title: "Pilgrammed Guides",
     description:
-      'Browse Pilgrammed guides covering beginner progression, leveling routes, quest flow, and early-game survival.',
+      "Browse Pilgrammed guides for beginner routing, progression checkpoints, fishing, quests, upgrades, and survival habits.",
   },
-  crafting: {
-    title: 'Pilgrammed Builds',
+  build: {
+    title: "Pilgrammed Builds",
     description:
-      'Explore Pilgrammed build ideas, stat priorities, combat loadouts, and progression paths for different playstyles.',
+      "Explore Pilgrammed builds, stat priorities, classes, reforges, techniques, and role-based loadouts for every playstyle.",
+  },
+  weapons: {
+    title: "Pilgrammed Weapons",
+    description:
+      "Track Pilgrammed weapon rankings, early-game picks, signature gear, and damage options for melee, ranged, and magic setups.",
+  },
+  bosses: {
+    title: "Pilgrammed Bosses",
+    description:
+      "Find Pilgrammed boss guides with arena routes, key mechanics, farming reasons, and reward-focused progression notes.",
   },
   items: {
-    title: 'Pilgrammed Weapons & Items',
+    title: "Pilgrammed Items",
     description:
-      'Find Pilgrammed weapons, utility items, equipment notes, and combat gear references for every stage of progression.',
+      "Review Pilgrammed armor, accessories, gems, utility items, and equipment upgrades that shape real combat and exploration choices.",
   },
-  biomes: {
-    title: 'Pilgrammed Map & Locations',
+  locations: {
+    title: "Pilgrammed Locations",
     description:
-      'Track Pilgrammed regions, landmarks, boss areas, and location-specific tips for exploration and farming.',
+      "Navigate Pilgrammed locations with region overviews, waypoint routes, farming landmarks, and travel shortcuts across the world map.",
   },
-  building: {
-    title: 'Pilgrammed Quests & Progression',
+  codes: {
+    title: "Pilgrammed Codes",
     description:
-      'Follow Pilgrammed progression checkpoints, unlock routes, and quest-related reference material in one place.',
+      "Check the Pilgrammed codes status page for redemption availability, watchlist notes, and the official places where new drops would appear first.",
   },
-  support: {
-    title: 'Pilgrammed Help & FAQ',
-    description:
-      'Get Pilgrammed troubleshooting tips, platform answers, and community help resources for common questions.',
-  },
-}
+};
 
 export function getSiteUrl() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || `https://${SITE_DOMAIN}`
-  return siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || `https://${SITE_DOMAIN}`;
+  return siteUrl.endsWith("/") ? siteUrl.slice(0, -1) : siteUrl;
 }
 
 export function absoluteUrl(path: string, baseUrl = getSiteUrl()) {
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`
-  return new URL(normalizedPath, `${baseUrl}/`).toString()
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return new URL(normalizedPath, `${baseUrl}/`).toString();
 }
 
 export function getContentTypeMetadata(contentType: string) {
@@ -87,38 +95,41 @@ export function getContentTypeMetadata(contentType: string) {
       title: `${SITE_SHORT_NAME} ${toTitleCase(contentType)}`,
       description: `Browse ${SITE_SHORT_NAME} ${contentType} content on ${SITE_NAME}.`,
     }
-  )
+  );
 }
 
-export function sanitizeArticleHeading(value: string | undefined, fallback: string) {
+export function sanitizeArticleHeading(
+  value: string | undefined,
+  fallback: string,
+) {
   if (!value) {
-    return fallback
+    return fallback;
   }
 
   const sanitized = value
     .replace(/lucid blocks wiki/gi, SITE_NAME)
     .replace(/lucid blocks/gi, SITE_SHORT_NAME)
     .replace(/lucidblocks\.wiki/gi, SITE_DOMAIN)
-    .trim()
+    .trim();
 
-  return sanitized || fallback
+  return sanitized || fallback;
 }
 
 export function buildArticleFallbackTitle(slug: string, contentType: string) {
-  const lastSegment = slug.split('/').pop() || ''
+  const lastSegment = slug.split("/").pop() || "";
   const cleaned = lastSegment
-    .replace(/^(lucid-blocks-|pilgrammed-)/i, '')
-    .replace(/[-_]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
+    .replace(/^(lucid-blocks-|pilgrammed-)/i, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 
   if (!cleaned) {
-    return getContentTypeMetadata(contentType).title
+    return getContentTypeMetadata(contentType).title;
   }
 
-  return toTitleCase(cleaned)
+  return toTitleCase(cleaned);
 }
 
 function toTitleCase(value: string) {
-  return value.replace(/\b\w/g, (char) => char.toUpperCase())
+  return value.replace(/\b\w/g, (char) => char.toUpperCase());
 }

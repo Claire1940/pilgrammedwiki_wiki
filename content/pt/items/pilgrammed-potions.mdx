@@ -1,0 +1,119 @@
+export const metadata = {
+  title: "Poções de Pilgrammed: Guia Avançado de Alquimia e Teoria do Módulo 2026",
+  description: "Domine as mecânicas complexas das poções de Pilgrammed. Aprenda sobre níveis de status, ordens de função de modificadores e a Teoria do Módulo avançada para alquimia.",
+  category: "Guia",
+  image: "https://placehold.co/800x400/3b82f6/fff?text=Pilgrammed+Potions+Guide",
+  date: "2026-04-13",
+  author: "Equipe da Wiki de Pilgrammed"
+}
+
+Dominar a arte das **poções de pilgrammed** exige uma compreensão profunda de mecânicas ocultas que vão muito além de simplesmente jogar ingredientes em um caldeirão. Esteja você procurando maximizar seu dano corpo a corpo para uma luta difícil contra um chefe ou reforçar sua defesa para sobreviver aos desafios do final do jogo, saber como os ingredientes base interagem com os modificadores é essencial. Neste guia de 2026, vamos detalhar os fundamentos matemáticos da alquimia, incluindo a elusiva "Teoria do Módulo" que dita como os modificadores são aplicados às suas misturas. Seguindo estas estratégias avançadas de preparo, você pode otimizar suas **poções de pilgrammed** para alcançar os níveis de status e durações mais altos possíveis permitidos pela engine do jogo.
+
+## A Anatomia de uma Poção
+
+Cada poção no jogo é definida por quatro componentes fundamentais. Compreender essas variáveis é o primeiro passo para se tornar um mestre alquimista. Quando você interage com um caldeirão, o jogo calcula o resultado final com base na combinação e ordem específica dos itens que você fornece.
+
+1.  **Nível de Status:** Este é o valor numérico (ex: 0,75, 1,5, 2,25) que determina a potência do buff ou debuff.
+2.  **Nome do Efeito e Efeito:** O buff específico concedido, como "Strength" (Força) ou "Metallic" (Metálico). O efeito em si é geralmente proporcional ao nível de status.
+3.  **Ingrediente Base:** O item primário que define o que a poção realmente faz.
+4.  **Duração:** Quanto tempo o efeito dura em segundos.
+
+A relação entre o nível de status e o buff real é única para cada efeito. Por exemplo, no meta atual de 2026, cada nível de "Strength" fornece um aumento de 5% no dano corpo a corpo, enquanto cada nível de "Metallic" fornece exatamente quatro pontos extras de defesa.
+
+| Ingrediente Base | Nome do Efeito | Nível de Status Base | Duração Base |
+| :--- | :--- | :--- | :--- |
+| **Rage Berry** | Strength | 0,75 | 12 Segundos |
+| **Scrap Metal** | Metallic | 1,00 | 15 Segundos |
+| **Raw Colio** | Metallic | 2,25 | 15 Segundos |
+
+> **💡 Dica:** Adicionar vários do mesmo ingrediente base não soma simplesmente as estatísticas. O jogo usa uma equação de regressão linear única para cada ingrediente para determinar os retornos decrescentes no nível de status e na duração.
+
+## Entendendo Modificadores e Funções
+
+Modificadores são ingredientes que alteram as propriedades do ingrediente base. Estes incluem vários slimes, glândulas de veneno e camarões. Quando um modificador é adicionado ao caldeirão, o nível de status é processado através de uma função matemática, frequentemente denotada como $f(x)$. 
+
+Os principais modificadores usados na alquimia de alto nível são:
+*   **Magma Slime (M)**
+*   **Pink Slime (P)**
+*   **Green Slime (G)**
+*   **Blue Slime (B)**
+*   **Venom Gland (V)**
+*   **Shrimp (S)**
+
+A ordem em que você coloca esses modificadores no caldeirão altera significativamente o resultado final. Isso ocorre porque as funções são aplicadas sequencialmente, e trocar as posições de dois slimes pode levar a um nível de status completamente diferente.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, margin: "2rem 0", borderRadius: "0.5rem", overflow: "hidden"}}>
+  <iframe
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+    src="https://www.youtube.com/embed/_JS7xAnvlYU"
+    title="How I lost my mind over Pilgrammed’s Potions (pilgrammed math)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## A Teoria do Módulo da Ordem de Função
+
+O aspecto mais complexo da criação de **poções de pilgrammed** é a "Teoria do Módulo". Esta teoria explica como o jogo atribui modificadores a "slots" específicos na ordem de cálculo. Para determinar a ordem da função, você deve olhar para o número total de modificadores usados e aplicar um operador de módulo (o resto após a divisão).
+
+### As Cinco Regras da Ordem de Função
+
+Para calcular a ordem você mesmo, siga estas regras estabelecidas para a alquimia de 2026:
+
+1.  **A Regra do Módulo:** A quantidade total de modificadores determina o módulo com o qual trabalhamos. O módulo deve ser sempre um número par. Se você tiver 1 ou 3 modificadores, arredonde para 2 ou 4.
+2.  **Consideração de Cima para Baixo:** O modificador no topo da lista do caldeirão é considerado primeiro, e o último da lista é considerado por último.
+3.  **Atribuição de Slot:** Cada modificador tem um número atribuído. Após passar esse número pela função de módulo, o resultado representa o slot que ele ocupa.
+4.  **Conflito de Ocupação:** Se um slot já estiver ocupado, o modificador é colocado no próximo slot disponível com base em sua ordem no caldeirão.
+5.  **Prioridade Externa:** Quando Magma Slime (M) e Pink Slime (P) são os dois primeiros modificadores em um caldeirão com mais de dois modificadores, o segundo é sempre considerado primeiro.
+
+| Tipo de Modificador | Nome do Modificador | Número Atribuído | Slot Típico |
+| :--- | :--- | :--- | :--- |
+| **Diversos** | Blue Slime (B) | 1 | Mais externo |
+| **Externo** | Magma/Pink Slime | 2 | Penúltimo |
+| **Interno** | Green Slime/Venom | 3 | Antepenúltimo |
+| **Diversos** | Shrimp (S) | 0 (ou X) | Mais interno |
+
+## Calculando a Duração da Poção
+
+Enquanto os níveis de status seguem funções rígidas baseadas em slots, a duração é geralmente multiplicativa. Cada modificador tem seu próprio impacto na duração da poção. Por exemplo, o Green Slime tem uma função de duração muito consistente, enquanto as Venom Glands podem ser mais imprevisíveis.
+
+Ao combinar vários modificadores, você pega a função de duração de cada modificador individual e multiplica os resultados. É por isso que é extremamente difícil criar uma poção que tenha um nível de status incrivelmente alto e uma longa duração; a matemática geralmente força uma escolha entre os dois.
+
+> **⚠️ Aviso:** Sempre verifique suas aproximações de duração. A duração real no jogo pode variar da descrição do item em 0,6 a 1,2 segundos devido ao processamento do servidor e arredondamentos.
+
+## Receitas Avançadas e Limitações
+
+Um objetivo comum para os jogadores é criar uma poção com mais de 25% de dano corpo a corpo que dure mais de 10 segundos. Através da "prova por exaustão" e do uso de calculadoras de poções modernas, foi determinado que este limite específico é quase impossível de alcançar com os ingredientes atuais de 2026. As combinações que fornecem um nível de status de 5.0 ou superior (necessário para 25% de dano) invariavelmente sofrem penalidades de duração que as deixam abaixo da marca de 10 segundos.
+
+Para experimentar suas próprias builds, você pode visitar a [página oficial de Pilgrammed no Roblox](https://www.roblox.com/games/11135891462/Pilgrammed-V0-5) para testar essas teorias em tempo real.
+
+### Combinações de Modificadores Recomendadas
+
+| Objetivo | Ingredientes | Resultado da Ordem de Função |
+| :--- | :--- | :--- |
+| **Força Máxima** | Rage Berry + M + P | PM (Função M primeiro, depois P) |
+| **Defesa Máxima** | Raw Colio + G + V | VG (Função G primeiro, depois V) |
+| **Buff Equilibrado** | Base + B + G + S | BVGS |
+
+## Resumo das Mecânicas de Alquimia
+
+A profundidade do sistema de poções é o que mantém a comunidade engajada. Ao entender que modificadores como Blue Slime e Shrimp atuam como âncoras "Diversas", enquanto os slimes atuam como "Internos" ou "Externos", você pode começar a prever o resultado de suas misturas sem desperdiçar materiais raros. Lembre-se de que o caldeirão não olha apenas para o que você coloca, mas *onde* você coloca.
+
+## FAQ
+
+**P: A posição do ingrediente base importa nas poções de Pilgrammed?**
+
+R: Não, a posição do ingrediente base (como Rage Berry ou Scrap Metal) não afeta a ordem de função dos modificadores. Você pode colocá-lo em qualquer slot dentro do caldeirão.
+
+**P: Por que minha poção deu um valor menor, mesmo eu usando os mesmos slimes?**
+
+R: Isso provavelmente se deve à "Ordem de Função" explicada pela Teoria do Módulo. Se você alterou a ordem em que adicionou os slimes ao caldeirão, o jogo aplicou as funções matemáticas em uma sequência diferente, resultando em um nível de status final diferente.
+
+**P: Qual é o melhor modificador para aumentar a duração da poção?**
+
+R: O Green Slime é geralmente considerado o modificador mais confiável para duração. No entanto, para obter os melhores resultados, você deve usar uma combinação de modificadores e calcular seu efeito multiplicativo usando as equações de duração padrão.
+
+**P: As poções de arremesso (splash potions) são cobertas pela Teoria do Módulo?**
+
+R: Não, poções de arremesso e misturas baseadas em enxofre seguem um conjunto inteiramente diferente de regras e campos. A Teoria do Módulo e as atribuições de slots discutidas aqui aplicam-se especificamente às poções de nível de status.

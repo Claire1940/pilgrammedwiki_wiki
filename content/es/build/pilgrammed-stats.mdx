@@ -1,0 +1,123 @@
+export const metadata = {
+  title: "Estadísticas de Pilgrammed: La Guía Definitiva de Reducción de Daño 2026",
+  description: "Domina las complejas matemáticas detrás de las estadísticas de Pilgrammed. Aprende cómo la defensa, la reducción de daño y la mitigación interactúan para optimizar tu build en 2026.",
+  category: "Guía",
+  image: "https://placehold.co/800x400/3b82f6/fff?text=Pilgrammed+Stats+Guide",
+  date: "2026-04-13",
+  author: "Equipo de la Wiki de Pilgrammed"
+}
+
+Comprender cómo sobrevive tu personaje a los encuentros de alto nivel es la base de cualquier build exitosa. Aunque muchos jugadores se centran únicamente en la salud bruta, la forma en que las **estadísticas de pilgrammed** gestionan el daño entrante es mucho más matizada que simplemente tener un número de defensa alto. En el meta actual de 2026, confiar en una sola estadística ya no es suficiente para sobrevivir a los jefes más duros y enemigos de élite del juego.
+
+Para optimizar verdaderamente tu supervivencia, debes entender la interacción entre tres mecánicas distintas: Defensa Plana (Flat Defense), Reducción de Daño (Damage Reduction) y Mitigación. Estas **estadísticas de pilgrammed** funcionan en una secuencia específica para determinar exactamente cuánta salud pierdes cuando un enemigo te golpea. Esta guía desglosará las fórmulas matemáticas, las propiedades ocultas de equipos populares como el Cleric Hat (Sombrero de Clérigo) y la frustrante realidad de los rendimientos decrecientes al acumular mejoras defensivas.
+
+## Los Tres Pilares de la Defensa en Pilgrammed
+
+Cuando abres tu menú para ver tus **estadísticas de pilgrammed**, el número de "Defensa" es lo que la mayoría de los jugadores notan primero. Sin embargo, este valor único alimenta simultáneamente dos capas defensivas diferentes. Más allá de eso, los objetos especializados proporcionan una tercera capa llamada "Mitigación", que actúa como un multiplicador final para tu seguridad.
+
+### 1. Defensa Plana (Flat Defense)
+La Defensa Plana es la capa más directa. Por cada punto de Defensa que tengas, el daño entrante se reduce exactamente en **0.5**. Si un enemigo golpea por 10 de daño y tienes 10 de Defensa, la parte de Defensa Plana reduce ese golpe en 5.
+
+### 2. Reducción de Daño (DR)
+Mientras que la Defensa Plana resta un número específico, la Reducción de Daño (DR) reduce el daño restante mediante un porcentaje. Cada punto de la estadística de Defensa te otorga un **0.2% de Reducción de Daño**. A diferencia de la Defensa Plana, esta capa escala con la intensidad del golpe, lo que la hace vital para sobrevivir a jefes que pegan muy fuerte.
+
+### 3. Mitigación
+La Mitigación es una propiedad única que se encuentra en objetos específicos de alto nivel. Es totalmente independiente de la estadística de Defensa estándar y actúa como un multiplicador final (entre 0 y 1) sobre el daño que de otro modo habrías recibido. Debido a que se aplica al final, suele ser la herramienta más poderosa para las builds de "tanque".
+
+| Tipo de Estadística | Método de Cálculo | Cuándo se Aplica |
+| :--- | :--- | :--- |
+| **Defensa Plana** | 0.5 de daño por cada 1 punto de Defensa | Primero (Capa Primaria) |
+| **Reducción de Daño** | 0.2% de reducción por cada 1 punto de Defensa | Segundo (Capa Porcentual) |
+| **Mitigación** | Multiplicador específico del objeto (ej. 0.75x) | Tercero (Capa Final) |
+
+## La Fórmula Maestra del Daño
+
+Para calcular exactamente cuánto daño recibirás, debes seguir el orden oficial de operaciones. El juego procesa primero la Defensa Plana, luego calcula el porcentaje de daño recibido basándose en tu DR y, finalmente, aplica cualquier multiplicador de Mitigación.
+
+La fórmula simplificada para el cálculo de daño de las **estadísticas de pilgrammed** es:
+`Daño Final = Mitigación × (100% - %DR) × (Daño Base - Defensa Plana)`
+
+Veamos un ejemplo práctico. Supongamos que un enemigo Ladrón inflige **10 de Daño Base** y llevas puestas unas Cleric Robes (Túnicas de Clérigo) que proporcionan **10 de Defensa**.
+
+| Paso | Variable | Valor |
+| :--- | :--- | :--- |
+| **1** | Daño Base | 10 |
+| **2** | Defensa Plana (10 * 0.5) | 5 |
+| **3** | Daño tras Defensa Plana (10 - 5) | 5 |
+| **4** | % Reducción de Daño (10 * 0.2%) | 2% |
+| **5** | % Daño Recibido (100% - 2%) | 98% |
+| **6** | Daño Final (5 * 0.98) | **4.9** |
+
+> **💡 Consejo:** Debido a que la Defensa Plana se aplica primero, es extremadamente efectiva contra enemigos que golpean muchas veces con poco daño. Sin embargo, contra jefes que infligen más de 100 de daño en un solo golpe, tu porcentaje de Reducción de Daño se vuelve mucho más importante.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, margin: "2rem 0", borderRadius: "0.5rem", overflow: "hidden"}}>
+  <iframe
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+    src="https://www.youtube.com/embed/IfoTjymuNog"
+    title="There’s a stat you don’t know about in Pilgrammed (pilgrammed math)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## Mecánicas Avanzadas: El Sombrero de Clérigo (Cleric Hat)
+
+Uno de los objetos más incomprendidos que afectan a las **estadísticas de pilgrammed** es el Cleric Hat. Esta pieza de equipo utiliza un efecto de estado único llamado "Escudo de Clérigo" que se acumula hasta 30 veces. Cuando te golpean, el sombrero consume estas cargas para proporcionar un aumento masivo y temporal a tu supervivencia.
+
+El sombrero gasta un máximo de **10 cargas** cuando recibes daño. Los beneficios que recibes son directamente proporcionales al número de cargas consumidas:
+
+*   **Reducción de Daño:** 1.5% por carga (hasta un 15% en total).
+*   **Defensa Plana:** 1.0 por carga (hasta 10 en total).
+
+Curiosamente, el Cleric Hat también apoya a tu grupo. Si un aliado es golpeado, el sombrero consume hasta 5 cargas para protegerlo, pero el escalado es aún más agresivo para los compañeros (4% de DR por carga y 2.0 de Defensa Plana por carga).
+
+### Generación de Cargas de Escudo de Clérigo
+Para mantener estas mejoras, debes infligir daño. La fórmula para ganar cargas es:
+`Cargas Ganadas = (Daño Infligido al Enemigo + 1) / 10`
+
+Esto significa que las builds de alto DPS pueden regenerar sus escudos defensivos casi instantáneamente, convirtiendo al Cleric Hat en un elemento básico para jugadores agresivos que quieren mantener sus **estadísticas de pilgrammed** altas sin sacrificar poder ofensivo.
+
+## Rendimientos Decrecientes y Depreciación
+
+Un error común en 2026 es asumir que acumular múltiples fuentes de Reducción de Daño llevará al 100% de invulnerabilidad. Pilgrammed utiliza un sistema de "depreciación" para evitar esto.
+
+Crucialmente, la depreciación no se activa por la *cantidad* de DR que tengas, sino por el *número de fuentes* que la proporcionan.
+
+1.  **Una Fuente:** Si tienes 80% de DR de un solo objeto o estadística, obtienes el 80% completo. Hay cero depreciación.
+2.  **Dos Fuentes:** Si tienes dos fuentes (ej. 50% de estadísticas y 25% de una habilidad), el valor más alto se mantiene igual, pero el valor más pequeño pasa por una ecuación cuadrática para reducir su efectividad.
+3.  **Tres o más Fuentes:** Las matemáticas se vuelven exponencialmente más complejas. Cada fuente adicional se basa en los valores depreciados de las anteriores, lo que resulta en ganancias significativamente menores por cada nueva mejora añadida.
+
+| Número de Fuentes | Efecto de Depreciación | Eficiencia |
+| :--- | :--- | :--- |
+| **1 Fuente** | Ninguno | 100% |
+| **2 Fuentes** | Reducción cuadrática en la fuente menor | ~80-90% |
+| **3 Fuentes** | Reducción en múltiples capas | ~60-70% |
+
+> **⚠️ Advertencia:** Evita usar tres o cuatro fuentes pequeñas de Reducción de Daño. Siempre es mejor tener una o dos fuentes grandes para maximizar la eficiencia de tus **estadísticas de pilgrammed**.
+
+## Mitigación: El Arma Secreta
+
+Debido a que la Mitigación se aplica *después* de los cálculos de defensa estándar y utiliza una multiplicación repetida en lugar de la fórmula de depreciación, es la forma más efectiva de acumular defensa en el juego tardío.
+
+Objetos como el **Blood Twin's Wicked Pull** (75% de mitigación) o el **Titan Brace** (30% de mitigación) son esenciales para builds de alto nivel. Si tienes ambos, el juego multiplica el daño entrante por 0.25 (de Blood Twin) y luego por 0.70 (de Titan Brace).
+
+Para más información sobre equipo específico para builds, visita la [página oficial de Pilgrammed en Roblox](https://www.roblox.com/games/6738541257/Pilgrammed) para ver las últimas descripciones de objetos y actualizaciones para 2026.
+
+## Preguntas Frecuentes (FAQ)
+
+**P: ¿Afectan mis estadísticas de pilgrammed al daño por caída o a los peligros ambientales?**
+
+R: Generalmente, la Defensa Plana y la Reducción de Daño se aplican a los golpes físicos de los enemigos. El daño ambiental a menudo ignora las capas de defensa estándar, aunque objetos específicos de "Mitigación" aún pueden reducir la salud total perdida dependiendo del tipo de daño.
+
+**P: ¿Es mejor centrarse en Vida o en Defensa en 2026?**
+
+R: Se requiere un equilibrio. Debido a la depreciación en las **estadísticas de pilgrammed** como la Reducción de Daño, hay un "límite blando" donde añadir más defensa proporciona muy poco beneficio. Una vez que alcanzas aproximadamente un 60-70% de DR de dos fuentes, invertir puntos en Vida bruta (VIT) suele proporcionar una mejor supervivencia efectiva.
+
+**P: ¿Cómo sé si un objeto proporciona Mitigación o Reducción de Daño?**
+
+R: La Reducción de Daño suele estar ligada a tu estadística de Defensa total o aparece como una mejora porcentual en tu hoja de personaje. La Mitigación suele ser una propiedad pasiva única que figura en la descripción del objeto, como "reduce el daño entrante en un X%" sin estar vinculada a tu estadística de defensa.
+
+**P: ¿Funciona el Cleric Hat en PvP?**
+
+R: Sí, el Cleric Hat y sus cargas de escudo funcionan en PvP. Sin embargo, dado que los jugadores suelen infligir daño en ráfagas, es más difícil mantener las cargas al máximo en comparación con la lucha contra mobs de PvE con grandes reservas de salud. Se recomiendan armas de alta velocidad para mantener tus **estadísticas de pilgrammed** en su punto máximo durante un duelo.

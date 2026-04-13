@@ -1,0 +1,123 @@
+export const metadata = {
+  title: "Pilgrammed Stats: The Ultimate Damage Reduction Guide 2026",
+  description: "Master the complex math behind Pilgrammed stats. Learn how defense, damage reduction, and mitigation interact to optimize your build in 2026.",
+  category: "Guide",
+  image: "https://placehold.co/800x400/3b82f6/fff?text=Pilgrammed+Stats+Guide",
+  date: "2026-04-13",
+  author: "Pilgrammed Wiki Team"
+}
+
+Understanding how your character survives high-level encounters is the foundation of any successful build. While many players focus solely on raw health, the way **pilgrammed stats** handle incoming damage is far more nuanced than simply having a high defense number. In the current 2026 meta, relying on a single stat is no longer enough to survive the game's toughest bosses and elite enemies.
+
+To truly optimize your survivability, you must understand the interaction between three distinct mechanics: Flat Defense, Damage Reduction, and Mitigation. These **pilgrammed stats** work in a specific sequence to determine exactly how much health you lose when an enemy strikes. This guide will break down the mathematical formulas, the hidden properties of popular gear like the Cleric Hat, and the frustrating reality of diminishing returns when stacking defensive buffs.
+
+## The Three Pillars of Pilgrammed Defense
+
+When you open your menu to look at your **pilgrammed stats**, the "Defense" number is what most players notice first. However, this single value actually feeds into two different defensive layers simultaneously. Beyond that, specialized items provide a third layer called "Mitigation" which acts as a final multiplier for your safety.
+
+### 1. Flat Defense
+Flat Defense is the most straightforward layer. For every point of Defense you have, the incoming damage is reduced by exactly **0.5**. If an enemy hits for 10 damage and you have 10 Defense, the Flat Defense portion reduces that hit by 5.
+
+### 2. Damage Reduction (DR)
+While Flat Defense subtracts a specific number, Damage Reduction (DR) reduces the remaining damage by a percentage. Every point of the Defense stat grants you **0.2% Damage Reduction**. Unlike Flat Defense, this layer scales with the intensity of the hit, making it vital for surviving heavy-hitting bosses.
+
+### 3. Mitigation
+Mitigation is a unique property found on specific high-tier items. It is entirely separate from the standard Defense stat and acts as a final multiplier (between 0 and 1) on the damage you would have otherwise taken. Because it is applied last, it is often the most powerful tool for "tank" builds.
+
+| Stat Type | Calculation Method | Applied When |
+| :--- | :--- | :--- |
+| **Flat Defense** | 0.5 damage per 1 Defense point | First (Primary Layer) |
+| **Damage Reduction** | 0.2% reduction per 1 Defense point | Second (Percentage Layer) |
+| **Mitigation** | Item-specific multiplier (e.g., 0.75x) | Third (Final Layer) |
+
+## The Core Damage Formula
+
+To calculate exactly how much damage you will take, you must follow the official order of operations. The game processes Flat Defense first, then calculates the percentage of damage taken based on your DR, and finally applies any Mitigation multipliers.
+
+The simplified formula for **pilgrammed stats** damage calculation is:
+`Final Damage = Mitigation × (100% - DR%) × (Base Damage - Flat Defense)`
+
+Let's look at a practical example. Suppose a Thief enemy deals **10 Base Damage**, and you are wearing Cleric Robes which provide **10 Defense**.
+
+| Step | Variable | Value |
+| :--- | :--- | :--- |
+| **1** | Base Damage | 10 |
+| **2** | Flat Defense (10 * 0.5) | 5 |
+| **3** | Damage After Flat Defense (10 - 5) | 5 |
+| **4** | Damage Reduction % (10 * 0.2%) | 2% |
+| **5** | Damage Taken % (100% - 2%) | 98% |
+| **6** | Final Damage (5 * 0.98) | **4.9** |
+
+> **💡 Tip:** Because Flat Defense is applied first, it is extremely effective against enemies that hit many times for low damage. However, against bosses that deal 100+ damage in a single hit, your Damage Reduction percentage becomes much more important.
+
+<div style={{position: "relative", paddingBottom: "56.25%", height: 0, margin: "2rem 0", borderRadius: "0.5rem", overflow: "hidden"}}>
+  <iframe
+    style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}
+    src="https://www.youtube.com/embed/IfoTjymuNog"
+    title="There’s a stat you don’t know about in Pilgrammed (pilgrammed math)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+## Advanced Mechanics: The Cleric Hat
+
+One of the most misunderstood items affecting **pilgrammed stats** is the Cleric Hat. This piece of gear utilizes a unique "Cleric Shield" status effect that stacks up to 30 times. When you are hit, the hat consumes these stacks to provide a massive, temporary boost to your survivability.
+
+The hat expends a maximum of **10 stacks** when you take damage. The benefits you receive are directly proportional to the number of stacks consumed:
+
+*   **Damage Reduction:** 1.5% per stack (up to 15% total).
+*   **Flat Defense:** 1.0 per stack (up to 10 total).
+
+Interestingly, the Cleric Hat also supports your party. If an ally is hit, the hat consumes up to 5 stacks to protect them, but the scaling is even more aggressive for teammates (4% DR per stack and 2.0 Flat Defense per stack).
+
+### Generating Cleric Shield Stacks
+To maintain these buffs, you must deal damage. The formula for gaining stacks is:
+`Stacks Gained = (Damage Dealt to Enemy + 1) / 10`
+
+This means that high-DPS builds can regenerate their defensive shields almost instantly, making the Cleric Hat a staple for aggressive players who want to maintain high **pilgrammed stats** without sacrificing offensive power.
+
+## Diminishing Returns and Depreciation
+
+A common mistake in 2026 is assuming that stacking multiple sources of Damage Reduction will lead to 100% invulnerability. Pilgrammed uses a "depreciation" system to prevent this. 
+
+Crucially, depreciation is not triggered by the *amount* of DR you have, but by the *number of sources* providing it.
+
+1.  **One Source:** If you have 80% DR from a single item or stat, you get the full 80%. There is zero depreciation.
+2.  **Two Sources:** If you have two sources (e.g., 50% from stats and 25% from a skill), the larger value stays the same, but the smaller value is passed through a quadratic equation to reduce its effectiveness.
+3.  **Three+ Sources:** The math becomes exponentially more complex. Each additional source builds off the depreciated values of the previous ones, leading to significantly lower gains for every new buff added.
+
+| Number of Sources | Depreciation Effect | Efficiency |
+| :--- | :--- | :--- |
+| **1 Source** | None | 100% |
+| **2 Sources** | Quadratic reduction on the smaller source | ~80-90% |
+| **3 Sources** | Multi-layered reduction | ~60-70% |
+
+> **⚠️ Warning:** Avoid using three or four small sources of Damage Reduction. It is always better to have one or two large sources to maximize the efficiency of your **pilgrammed stats**.
+
+## Mitigation: The Secret Weapon
+
+Because Mitigation is applied *after* the standard defense calculations and uses repeated multiplication rather than the depreciation formula, it is the most effective way to stack defense in the late game. 
+
+Items like **Blood Twin's Wicked Pull** (75% mitigation) or the **Titan Brace** (30% mitigation) are essential for high-tier builds. If you have both, the game multiplies the incoming damage by 0.25 (from Blood Twin) and then by 0.70 (from Titan Brace).
+
+For more information on build-specific gear, check out the [official Pilgrammed Roblox page](https://www.roblox.com/games/6738541257/Pilgrammed) to see the latest item descriptions and updates for 2026.
+
+## FAQ
+
+**Q: Do my pilgrammed stats affect fall damage or environmental hazards?**
+
+A: Generally, Flat Defense and Damage Reduction apply to physical hits from enemies. Environmental damage often bypasses standard defense layers, though specific "Mitigation" items may still reduce the total health lost depending on the damage type.
+
+**Q: Is it better to focus on Health or Defense in 2026?**
+
+A: A balance is required. Because of the depreciation on **pilgrammed stats** like Damage Reduction, there is a "soft cap" where adding more defense provides very little benefit. Once you reach roughly 60-70% DR from two sources, investing points into raw Health (VIT) usually provides better effective survivability.
+
+**Q: How do I know if an item provides Mitigation or Damage Reduction?**
+
+A: Damage Reduction is usually tied to your total Defense stat or listed as a percentage buff in your character sheet. Mitigation is typically a unique passive property listed in the item description, such as "reduces incoming damage by X%" without being tied to your defense stat.
+
+**Q: Does the Cleric Hat work in PvP?**
+
+A: Yes, the Cleric Hat and its shield stacks function in PvP. However, since players often deal damage in bursts, it is harder to maintain maximum stacks compared to fighting PvE mobs with large health pools. High-speed weapons are recommended to keep your **pilgrammed stats** peaked during a duel.

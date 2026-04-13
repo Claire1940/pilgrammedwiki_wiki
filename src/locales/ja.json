@@ -11,12 +11,13 @@
     }
   },
   "nav": {
-    "guides": "ガイド",
-    "crafting": "クラフト",
-    "items": "アイテム",
-    "biomes": "バイオーム",
-    "building": "建築",
-    "support": "サポート"
+    "guide": "Guide",
+    "build": "Build",
+    "weapons": "Weapons",
+    "bosses": "Bosses",
+    "items": "Items",
+    "locations": "Locations",
+    "codes": "Codes"
   },
   "common": {
     "home": "ホーム",
@@ -807,125 +808,145 @@
     "disclaimer": "非公式のファン作成リソースサイトです。"
   },
   "pages": {
-    "guides": {
-      "title": "Lucid Blocks 攻略ガイド",
-      "description": "初心者向けの基本から、高度な Apotheosis 戦略まで網羅した完全攻略ガイド。サバイバルとクラフトを極めましょう。",
-      "metaTitle": "Lucid Blocks 攻略ガイド - 初心者から上級者向けの戦略",
-      "metaDescription": "初心者向けのヒント、Apotheosis システム、サバイバル戦略、そしてシュールなサンドボックスの世界を攻略するための専門的な戦術を網羅した Lucid Blocks 完全ガイド。",
-      "categoryLabel": "ゲームガイド",
-      "whatIs": "ガイドとは？",
-      "whatIsDescription": "ゲームの仕組み、サバイバル戦略、Apotheosis クラフトシステムを網羅した包括的なガイド。最初の一歩から高度なテクニックまで、すべてを学びましょう。",
-      "why": "なぜガイドを読むのか？",
+    "guide": {
+      "title": "Pilgrammed Guides",
+      "description": "Core Pilgrammed guides for first-hour routing, upgrade order, fishing, trading limits, quests, and long-term progression.",
+      "metaTitle": "Pilgrammed Guides - Progression, Quests & Upgrades",
+      "metaDescription": "Browse Pilgrammed guides covering beginner routes, quests in order, fishing, parrying, upgrades, and smart progression planning.",
+      "categoryLabel": "GAME GUIDES",
+      "whatIs": "What are Pilgrammed Guides?",
+      "whatIsDescription": "Pilgrammed guide articles focus on the systems players touch most often: early routing, quest flow, inventory habits, fishing, progression pacing, and the movement upgrades that unlock safer travel.",
+      "why": "Why use Pilgrammed Guides?",
       "whySteps": {
-        "step1Title": "基本システムを学ぶ",
-        "step1Description": "Apotheosis システムを理解し、初心者が陥りやすいミスを回避しましょう",
-        "step2Title": "素早い進行",
-        "step2Description": "シュールな世界で生き残り、繁栄するための実証済みの道筋を辿りましょう",
-        "step3Title": "戦略を極める",
-        "step3Description": "探索とクラフトのための高度な戦術を身につけましょう"
+        "step1Title": "Start Cleaner",
+        "step1Description": "Use beginner, inventory, and loadout guides to avoid wasted detours and build a stable first route.",
+        "step2Title": "Progress Faster",
+        "step2Description": "Follow quest-order, max-level, and upgrade coverage to move through Pilgrammed with fewer dead ends.",
+        "step3Title": "Handle Core Systems",
+        "step3Description": "Keep fishing, parrying, trading, and guild info in one place when you need practical answers fast."
       },
-      "featured": "注目・必須ガイド",
-      "all": "すべてのガイド"
+      "featured": "Featured & Essential",
+      "all": "All Guides"
     },
-    "crafting": {
-      "title": "Lucid Blocks クラフト",
-      "description": "エッセンスの仕組み、レシピ、強力なアイテムを作るためのクラフト戦略など、Apotheosis 合成システムをマスターしましょう。",
-      "metaTitle": "Lucid Blocks クラフト - Apotheosis システムとレシピ",
-      "metaDescription": "Lucid Blocks の Apotheosis クラフトシステムを極める。エッセンスの仕組み、合成レシピ、強力な道具や武器を作るための戦略を学びましょう。",
-      "categoryLabel": "クラフトシステム",
-      "whatIs": "クラフトとは？",
-      "whatIsDescription": "Apotheosis システムは、最大6つのアイテムを組み合わせて新しいレシピを発見する、独自のエッセンス駆動型合成メカニズムです。固定されたクラフトメニューはなく、実験が鍵となります。",
-      "why": "なぜクラフトを極めるのか？",
+    "build": {
+      "title": "Pilgrammed Builds",
+      "description": "Compare Pilgrammed stats, classes, techniques, elements, reforges, and role-based builds for mage, tank, healer, and hybrid setups.",
+      "metaTitle": "Pilgrammed Builds - Stats, Reforges & Classes",
+      "metaDescription": "Plan Pilgrammed builds with stat priorities, class ideas, techniques, reforge choices, and role-focused setups for every stage.",
+      "categoryLabel": "BUILD SETUPS",
+      "whatIs": "What are Pilgrammed Builds?",
+      "whatIsDescription": "Pilgrammed build coverage groups together the stat systems and gear choices that define a playstyle, from raw attribute spreads to class identity, elemental synergies, and reforge direction.",
+      "why": "Why use Pilgrammed Builds?",
       "whySteps": {
-        "step1Title": "強力なアイテムをアンロック",
-        "step1Description": "合成を通じて、不可欠な道具、武器、移動用装備を発見しましょう",
-        "step2Title": "エッセンスを理解する",
-        "step2Description": "アイテムのエッセンスがどのように組み合わさり、予測可能な結果を生み出すかを学びましょう",
-        "step3Title": "リソースを最適化",
-        "step3Description": "希釈メカニズムを使用して、安価な材料から出力を最大化しましょう"
+        "step1Title": "Shape Your Stats",
+        "step1Description": "Compare agility, dexterity, intellect, and other core attributes before you lock points into a weak spread.",
+        "step2Title": "Match Role And Gear",
+        "step2Description": "Use class, healer, mage, tank, and technique guides to pair your armor and weapons with a real combat role.",
+        "step3Title": "Refine Endgame Power",
+        "step3Description": "Layer reforges, elements, and hybrid scaling so your Pilgrammed build keeps up in harder boss routes."
       },
-      "featured": "注目・必須ガイド",
-      "all": "すべてのクラフトガイド"
+      "featured": "Featured & Essential",
+      "all": "All Builds"
+    },
+    "weapons": {
+      "title": "Pilgrammed Weapons",
+      "description": "Track Pilgrammed weapon rankings, early-game upgrades, signature drops, and best-in-slot picks across melee, ranged, and magic.",
+      "metaTitle": "Pilgrammed Weapons - Tier List, Best Picks & Early Gear",
+      "metaDescription": "Browse Pilgrammed weapons, from early-game upgrades to tier-list favorites, bows, daggers, guns, and standout endgame gear.",
+      "categoryLabel": "WEAPON INDEX",
+      "whatIs": "What are Pilgrammed Weapons?",
+      "whatIsDescription": "The Pilgrammed weapons hub collects both broad ranking articles and single-weapon breakdowns, making it easier to compare move sets, progression value, and role fit before you invest resources.",
+      "why": "Why use Pilgrammed Weapons?",
+      "whySteps": {
+        "step1Title": "Upgrade On Time",
+        "step1Description": "See which early and mid-game weapons are worth chasing instead of overcommitting to starter gear.",
+        "step2Title": "Compare The Meta",
+        "step2Description": "Use tier lists and best-weapon guides to weigh damage, range, safety, and technique value side by side.",
+        "step3Title": "Study Specific Picks",
+        "step3Description": "Jump into focused pages for bows, daggers, guns, and named drops when you need details on one weapon family."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Weapons"
+    },
+    "bosses": {
+      "title": "Pilgrammed Bosses",
+      "description": "Follow Pilgrammed boss guides for arena routes, key attacks, cheese options, useful drops, and progression checkpoints.",
+      "metaTitle": "Pilgrammed Bosses - Locations, Mechanics & Drops",
+      "metaDescription": "Browse Pilgrammed boss guides covering locations, attacks, farming value, drops, and the safest ways to win major fights.",
+      "categoryLabel": "BOSS FILES",
+      "whatIs": "What are Pilgrammed Boss guides?",
+      "whatIsDescription": "Pilgrammed boss pages are encounter files built around the questions players care about most: where the arena is, what the boss actually does, what it drops, and whether the fight is worth farming now.",
+      "why": "Why use Pilgrammed Boss guides?",
+      "whySteps": {
+        "step1Title": "Reach The Arena",
+        "step1Description": "Get to bosses faster with clear location context, route notes, and nearby checkpoints before the fight starts.",
+        "step2Title": "Read The Pattern",
+        "step2Description": "Review the attacks and punish windows that matter instead of learning every mechanic through repeated deaths.",
+        "step3Title": "Farm Better Rewards",
+        "step3Description": "Use drop and progression notes to decide which Pilgrammed bosses deserve your time at each stage."
+      },
+      "featured": "Featured & Essential",
+      "all": "All Bosses"
     },
     "items": {
-      "title": "Lucid Blocks アイテム",
-      "description": "道具、武器、移動用装備、収納ソリューションを網羅した詳細なアイテムガイド。クラフトレシピや使い方のヒントも掲載。",
-      "metaTitle": "Lucid Blocks アイテム - 道具、武器、装備ガイド",
-      "metaDescription": "道具、武器、移動用装備、収納を含む Lucid Blocks の完全アイテムデータベース。各アイテムを効果的に作り、使用する方法を学びましょう。",
-      "categoryLabel": "アイテム＆装備",
-      "whatIs": "アイテムとは？",
-      "whatIsDescription": "道具、武器、移動用装備、機能的なアイテムに関する包括的なガイド。クラフトレシピ、使用戦略、最適な組み合わせを学びましょう。",
-      "why": "なぜアイテムガイドをチェックするのか？",
+      "title": "Pilgrammed Items",
+      "description": "Review Pilgrammed armor, accessories, gems, shields, potions, and utility gear that support real combat and farming decisions.",
+      "metaTitle": "Pilgrammed Items - Armor, Gems & Utility Gear",
+      "metaDescription": "Explore Pilgrammed items including armor, accessories, gems, shields, potions, and special drops that shape builds and routes.",
+      "categoryLabel": "ITEM INDEX",
+      "whatIs": "What are Pilgrammed Items?",
+      "whatIsDescription": "The Pilgrammed items section is where equipment and utility coverage meets. It brings together armor, accessories, consumables, upgrade materials, and special drops that support both combat builds and world traversal.",
+      "why": "Why use Pilgrammed Items?",
       "whySteps": {
-        "step1Title": "クラフトレシピを学ぶ",
-        "step1Description": "Apotheosis を使用して、不可欠な道具や武器をクラフトする方法を発見しましょう",
-        "step2Title": "装備を最適化",
-        "step2Description": "プレイスタイルや進行状況に合わせて最適なアイテムを選びましょう",
-        "step3Title": "生存率を高める",
-        "step3Description": "移動用装備や武器を装備して、危険な世界を探索しましょう"
+        "step1Title": "Choose Better Gear",
+        "step1Description": "Compare armor, shields, and accessories before you spend time farming a piece that does not fit your build.",
+        "step2Title": "Understand Utility",
+        "step2Description": "Keep gems, lanterns, potions, and niche tools organized so you know what each item actually solves.",
+        "step3Title": "Track Key Drops",
+        "step3Description": "Use focused item pages for rings, fragments, and rare materials when a single pickup matters to your next upgrade."
       },
-      "featured": "注目・必須ガイド",
-      "all": "すべてのアイテム"
+      "featured": "Featured & Essential",
+      "all": "All Items"
     },
-    "biomes": {
-      "title": "Lucid Blocks バイオーム",
-      "description": "世界の各地域、環境の特徴、リソースの場所、各バイオームでのサバイバルのヒントを探索しましょう。",
-      "metaTitle": "Lucid Blocks バイオーム - 世界の地域と探索",
-      "metaDescription": "ティアマナ・レイライン、Fog Meadow、シュールな地域を含む Lucid Blocks のバイオームを探索。リソースを見つけ、危険を回避し、無限の世界を旅しましょう。",
-      "categoryLabel": "世界の地域",
-      "whatIs": "バイオームとは？",
-      "whatIsDescription": "世界のさまざまな地域、環境の特徴、リソースの分布、危険地帯に関するガイド。各エリアで何が待ち受けているか、どのように準備すべきかを学びましょう。",
-      "why": "なぜバイオームを探索するのか？",
+    "locations": {
+      "title": "Pilgrammed Locations",
+      "description": "Navigate Pilgrammed locations with region overviews, waypoint routes, landmark notes, and travel shortcuts across the world map.",
+      "metaTitle": "Pilgrammed Locations - Map Routes, Landmarks & Waypoints",
+      "metaDescription": "Find Pilgrammed locations, from major regions and hidden paths to waypoint routes, landmarks, and farming shortcuts.",
+      "categoryLabel": "WORLD MAP",
+      "whatIs": "What are Pilgrammed Locations?",
+      "whatIsDescription": "Pilgrammed location guides map the spaces between fights. They cover regions, sub-areas, waypoints, landmarks, and the traversal decisions that make farming loops and boss runs less confusing.",
+      "why": "Why use Pilgrammed Locations?",
       "whySteps": {
-        "step1Title": "リソースを見つける",
-        "step1Description": "各地域特有の希少な材料やエッセンスの場所を特定しましょう",
-        "step2Title": "危険を回避",
-        "step2Description": "環境の危険や敵対的な生物について理解しましょう",
-        "step3Title": "探索を計画",
-        "step3Description": "各バイオームのタイプに合わせて、適切な道具と装備を準備しましょう"
+        "step1Title": "Find Regions Faster",
+        "step1Description": "Use landmark-based directions to reach areas like the Volcano, Catacombs, and Kings Den without trial-and-error wandering.",
+        "step2Title": "Plan Routes",
+        "step2Description": "Connect waypoints, checkpoints, and farming spots into cleaner movement paths across the Pilgrammed map.",
+        "step3Title": "Explore With Context",
+        "step3Description": "Read area notes before you enter a zone so you know what enemies, rewards, and progression hooks are waiting there."
       },
-      "featured": "注目・必須ガイド",
-      "all": "すべてのバイオーム"
+      "featured": "Featured & Essential",
+      "all": "All Locations"
     },
-    "building": {
-      "title": "Lucid Blocks 建築",
-      "description": "クオリア個人次元、拠点建築、収納管理、クリエイティブな建設テクニックをマスターしましょう。",
-      "metaTitle": "Lucid Blocks 建築 - クオリアと拠点建設",
-      "metaDescription": "クオリア個人次元、拠点建設、収納ソリューション、クリエイティブな建築テクニックなど、Lucid Blocks の建築を極めましょう。",
-      "categoryLabel": "建築＆拠点",
-      "whatIs": "建築とは？",
-      "whatIsDescription": "クオリア個人次元システム、拠点建設、収納管理、クリエイティブな建築に関するガイド。シュールな世界の中に自分だけの安息の地を作る方法を学びましょう。",
-      "why": "なぜ拠点を建てるのか？",
+    "codes": {
+      "title": "Pilgrammed Codes",
+      "description": "Check the Pilgrammed codes status, redemption availability, and the official channels most likely to publish the first real public drop.",
+      "metaTitle": "Pilgrammed Codes - Redemption Status & Watchlist",
+      "metaDescription": "Track Pilgrammed codes status, redemption availability, and the official watchlist for the first public code release.",
+      "categoryLabel": "CODE STATUS",
+      "whatIs": "What are Pilgrammed Codes?",
+      "whatIsDescription": "The Pilgrammed codes page is a status hub for a category that players search for constantly even though the game has not settled into a normal public redeem cycle. It tracks whether codes exist, whether a redeem flow is live, and where official drops would surface first.",
+      "why": "Why use Pilgrammed Codes?",
       "whySteps": {
-        "step1Title": "安全な場所を作る",
-        "step1Description": "収納やクラフト作業のための安全な拠点を確立しましょう",
-        "step2Title": "リソースを管理",
-        "step2Description": "収納ソリューションを使用して、材料を効率的に整理しましょう",
-        "step3Title": "クオリアをアンロック",
-        "step3Description": "究極の利便性を備えた個人のポケット次元にアクセスしましょう"
+        "step1Title": "Check Live Status",
+        "step1Description": "See whether Pilgrammed currently has working public codes or an active redemption flow before wasting time on fake lists.",
+        "step2Title": "Watch Official Sources",
+        "step2Description": "Keep the Roblox group, Discord, and update windows in view so you know where the first real code is likely to appear.",
+        "step3Title": "Avoid Bad Info",
+        "step3Description": "Use one clean Pilgrammed watchlist instead of bouncing between outdated redeem pages and copycat code claims."
       },
-      "featured": "注目・必須ガイド",
-      "all": "すべての建築ガイド"
-    },
-    "support": {
-      "title": "Lucid Blocks サポート",
-      "description": "テクニカルサポート、プラットフォームの互換性、パフォーマンスの最適化、一般的な問題のトラブルシューティング。",
-      "metaTitle": "Lucid Blocks サポート - テクニカルヘルプと修正",
-      "metaDescription": "Steam Deck のセットアップ、クラッシュの修正、パフォーマンスの最適化、プラットフォームの互換性ガイドなど、Lucid Blocks のテクニカルサポートを受けられます。",
-      "categoryLabel": "テクニカルサポート",
-      "whatIs": "サポートとは？",
-      "whatIsDescription": "プラットフォームの互換性、パフォーマンスの最適化、クラッシュの修正、一般的な問題を網羅したテクニカルガイド。Steam Deck、マルチプレイヤーに関する質問、設定などのヘルプ。",
-      "why": "なぜサポートをチェックするのか？",
-      "whySteps": {
-        "step1Title": "技術的な問題を解決",
-        "step1Description": "クラッシュ、パフォーマンスの問題、互換性の問題を解決しましょう",
-        "step2Title": "パフォーマンスを最適化",
-        "step2Description": "お使いのプラットフォームで最高の体験を得るために設定を構成しましょう",
-        "step3Title": "プラットフォームの互換性",
-        "step3Description": "Steam Deck、コントローラーのサポート、システム要件について学びましょう"
-      },
-      "featured": "注目・必須ガイド",
-      "all": "すべてのサポート記事"
+      "featured": "Featured & Essential",
+      "all": "Codes Watchlist"
     }
   }
 }
