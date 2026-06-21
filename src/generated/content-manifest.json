@@ -1,0 +1,2210 @@
+{
+  "en": {
+    "bosses": [
+      {
+        "slug": "pilgrammed-granny",
+        "file": "pilgrammed-granny"
+      },
+      {
+        "slug": "pilgrammed-highway-son",
+        "file": "pilgrammed-highway-son"
+      },
+      {
+        "slug": "pilgrammed-old-fart",
+        "file": "pilgrammed-old-fart"
+      },
+      {
+        "slug": "pilgrammed-prism-troll",
+        "file": "pilgrammed-prism-troll"
+      },
+      {
+        "slug": "pilgrammed-shock-marauder",
+        "file": "pilgrammed-shock-marauder"
+      },
+      {
+        "slug": "pilgrammed-snow-cultist",
+        "file": "pilgrammed-snow-cultist"
+      }
+    ],
+    "build": [
+      {
+        "slug": "pilgrammed-agility",
+        "file": "pilgrammed-agility"
+      },
+      {
+        "slug": "pilgrammed-classes",
+        "file": "pilgrammed-classes"
+      },
+      {
+        "slug": "pilgrammed-dexterity",
+        "file": "pilgrammed-dexterity"
+      },
+      {
+        "slug": "pilgrammed-elements",
+        "file": "pilgrammed-elements"
+      },
+      {
+        "slug": "pilgrammed-healer-build",
+        "file": "pilgrammed-healer-build"
+      },
+      {
+        "slug": "pilgrammed-intellect",
+        "file": "pilgrammed-intellect"
+      },
+      {
+        "slug": "pilgrammed-mage-build",
+        "file": "pilgrammed-mage-build"
+      },
+      {
+        "slug": "pilgrammed-reforge",
+        "file": "pilgrammed-reforge"
+      },
+      {
+        "slug": "pilgrammed-stats",
+        "file": "pilgrammed-stats"
+      },
+      {
+        "slug": "pilgrammed-tank-build",
+        "file": "pilgrammed-tank-build"
+      },
+      {
+        "slug": "pilgrammed-techniques",
+        "file": "pilgrammed-techniques"
+      },
+      {
+        "slug": "pilgrammed-vampire-race",
+        "file": "pilgrammed-vampire-race"
+      }
+    ],
+    "community": [
+      {
+        "slug": "pilgramed-wiki",
+        "file": "pilgramed-wiki"
+      },
+      {
+        "slug": "pilgrammed-direct",
+        "file": "pilgrammed-direct"
+      },
+      {
+        "slug": "pilgrammed-discord",
+        "file": "pilgrammed-discord"
+      },
+      {
+        "slug": "pilgrammed-new-update",
+        "file": "pilgrammed-new-update"
+      },
+      {
+        "slug": "pilgrammed-next-update",
+        "file": "pilgrammed-next-update"
+      },
+      {
+        "slug": "pilgrammed-reddit",
+        "file": "pilgrammed-reddit"
+      },
+      {
+        "slug": "pilgrammed-roblox-wiki",
+        "file": "pilgrammed-roblox-wiki"
+      },
+      {
+        "slug": "pilgrammed-sound-effects",
+        "file": "pilgrammed-sound-effects"
+      },
+      {
+        "slug": "pilgrammed-update-log",
+        "file": "pilgrammed-update-log"
+      },
+      {
+        "slug": "pilgrammed-update",
+        "file": "pilgrammed-update"
+      },
+      {
+        "slug": "pilgrammed-wallpaper",
+        "file": "pilgrammed-wallpaper"
+      },
+      {
+        "slug": "pilgrammed-x-fantastic-frontier",
+        "file": "pilgrammed-x-fantastic-frontier"
+      },
+      {
+        "slug": "pillgrammed-wiki",
+        "file": "pillgrammed-wiki"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "adagio-pilgrammed",
+        "file": "adagio-pilgrammed"
+      },
+      {
+        "slug": "ammo-box-pilgrammed",
+        "file": "ammo-box-pilgrammed"
+      },
+      {
+        "slug": "blackbird-pilgrammed",
+        "file": "blackbird-pilgrammed"
+      },
+      {
+        "slug": "climbmaster-pilgrammed",
+        "file": "climbmaster-pilgrammed"
+      },
+      {
+        "slug": "cloud-boots-pilgrammed",
+        "file": "cloud-boots-pilgrammed"
+      },
+      {
+        "slug": "copper-glove-pilgrammed",
+        "file": "copper-glove-pilgrammed"
+      },
+      {
+        "slug": "dashmaster-pilgrammed",
+        "file": "dashmaster-pilgrammed"
+      },
+      {
+        "slug": "fiberglass-pilgrammed",
+        "file": "fiberglass-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-great-red-feather-pilgrammed",
+        "file": "how-to-get-great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-in-pilgrammed",
+        "file": "how-to-get-vine-wand-in-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-pilgrammed",
+        "file": "how-to-get-vine-wand-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster-pilgrammed",
+        "file": "jumpmaster-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster",
+        "file": "jumpmaster"
+      },
+      {
+        "slug": "lets-fly-quest-pilgrammed",
+        "file": "lets-fly-quest-pilgrammed"
+      },
+      {
+        "slug": "mana-feather-pilgrammed",
+        "file": "mana-feather-pilgrammed"
+      },
+      {
+        "slug": "max-soul-level-pilgrammed",
+        "file": "max-soul-level-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-baghead",
+        "file": "pilgrammed-baghead"
+      },
+      {
+        "slug": "pilgrammed-build",
+        "file": "pilgrammed-build"
+      },
+      {
+        "slug": "pilgrammed-builds-2026",
+        "file": "pilgrammed-builds-2026"
+      },
+      {
+        "slug": "pilgrammed-can-you-trade",
+        "file": "pilgrammed-can-you-trade"
+      },
+      {
+        "slug": "pilgrammed-cloud-boots",
+        "file": "pilgrammed-cloud-boots"
+      },
+      {
+        "slug": "pilgrammed-dagger-sheath",
+        "file": "pilgrammed-dagger-sheath"
+      },
+      {
+        "slug": "pilgrammed-dash",
+        "file": "pilgrammed-dash"
+      },
+      {
+        "slug": "pilgrammed-dashmaster",
+        "file": "pilgrammed-dashmaster"
+      },
+      {
+        "slug": "pilgrammed-fishing",
+        "file": "pilgrammed-fishing"
+      },
+      {
+        "slug": "pilgrammed-guide",
+        "file": "pilgrammed-guide"
+      },
+      {
+        "slug": "pilgrammed-guilds",
+        "file": "pilgrammed-guilds"
+      },
+      {
+        "slug": "pilgrammed-inventory",
+        "file": "pilgrammed-inventory"
+      },
+      {
+        "slug": "pilgrammed-lance",
+        "file": "pilgrammed-lance"
+      },
+      {
+        "slug": "pilgrammed-loadout",
+        "file": "pilgrammed-loadout"
+      },
+      {
+        "slug": "pilgrammed-mana-feather",
+        "file": "pilgrammed-mana-feather"
+      },
+      {
+        "slug": "pilgrammed-max-level",
+        "file": "pilgrammed-max-level"
+      },
+      {
+        "slug": "pilgrammed-modifiers",
+        "file": "pilgrammed-modifiers"
+      },
+      {
+        "slug": "pilgrammed-parrying",
+        "file": "pilgrammed-parrying"
+      },
+      {
+        "slug": "pilgrammed-progression-guide",
+        "file": "pilgrammed-progression-guide"
+      },
+      {
+        "slug": "pilgrammed-quest-guide",
+        "file": "pilgrammed-quest-guide"
+      },
+      {
+        "slug": "pilgrammed-quests-in-order",
+        "file": "pilgrammed-quests-in-order"
+      },
+      {
+        "slug": "pilgrammed-scurry-boots",
+        "file": "pilgrammed-scurry-boots"
+      },
+      {
+        "slug": "pilgrammed-soul-level",
+        "file": "pilgrammed-soul-level"
+      },
+      {
+        "slug": "pilgrammed-spark-scale",
+        "file": "pilgrammed-spark-scale"
+      },
+      {
+        "slug": "pilgrammed-tips-and-tricks",
+        "file": "pilgrammed-tips-and-tricks"
+      },
+      {
+        "slug": "pilgrammed-trading",
+        "file": "pilgrammed-trading"
+      },
+      {
+        "slug": "pilgrammed-updates",
+        "file": "pilgrammed-updates"
+      },
+      {
+        "slug": "pilgrammed-upgrades",
+        "file": "pilgrammed-upgrades"
+      },
+      {
+        "slug": "poise-damage-pilgrammed",
+        "file": "poise-damage-pilgrammed"
+      },
+      {
+        "slug": "reforge-pilgrammed",
+        "file": "reforge-pilgrammed"
+      },
+      {
+        "slug": "roblox-pilgrammed-reforge",
+        "file": "roblox-pilgrammed-reforge"
+      },
+      {
+        "slug": "scrap-lance-pilgrammed",
+        "file": "scrap-lance-pilgrammed"
+      },
+      {
+        "slug": "soul-fragment-pilgrammed",
+        "file": "soul-fragment-pilgrammed"
+      },
+      {
+        "slug": "soul-level-pilgrammed",
+        "file": "soul-level-pilgrammed"
+      },
+      {
+        "slug": "soul-levels-pilgrammed",
+        "file": "soul-levels-pilgrammed"
+      },
+      {
+        "slug": "spark-scale-pilgrammed",
+        "file": "spark-scale-pilgrammed"
+      },
+      {
+        "slug": "toolmark-pilgrammed",
+        "file": "toolmark-pilgrammed"
+      },
+      {
+        "slug": "upgrades-pilgrammed",
+        "file": "upgrades-pilgrammed"
+      },
+      {
+        "slug": "vine-wand-build-pilgrammed",
+        "file": "vine-wand-build-pilgrammed"
+      }
+    ],
+    "items": [
+      {
+        "slug": "elf-blade-pilgrammed",
+        "file": "elf-blade-pilgrammed"
+      },
+      {
+        "slug": "great-red-feather-pilgrammed",
+        "file": "great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "great-redfeather-pilgrammed",
+        "file": "great-redfeather-pilgrammed"
+      },
+      {
+        "slug": "lance-fragment-pilgrammed",
+        "file": "lance-fragment-pilgrammed"
+      },
+      {
+        "slug": "magic-token-pilgrammed",
+        "file": "magic-token-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-accessories",
+        "file": "pilgrammed-accessories"
+      },
+      {
+        "slug": "pilgrammed-armor",
+        "file": "pilgrammed-armor"
+      },
+      {
+        "slug": "pilgrammed-diamond-ring",
+        "file": "pilgrammed-diamond-ring"
+      },
+      {
+        "slug": "pilgrammed-elf-blade",
+        "file": "pilgrammed-elf-blade"
+      },
+      {
+        "slug": "pilgrammed-elite-shield",
+        "file": "pilgrammed-elite-shield"
+      },
+      {
+        "slug": "pilgrammed-explosive-gem",
+        "file": "pilgrammed-explosive-gem"
+      },
+      {
+        "slug": "pilgrammed-gelatinous-sludge",
+        "file": "pilgrammed-gelatinous-sludge"
+      },
+      {
+        "slug": "pilgrammed-gems",
+        "file": "pilgrammed-gems"
+      },
+      {
+        "slug": "pilgrammed-great-red-feather",
+        "file": "pilgrammed-great-red-feather"
+      },
+      {
+        "slug": "pilgrammed-great-redfeather",
+        "file": "pilgrammed-great-redfeather"
+      },
+      {
+        "slug": "pilgrammed-insignia-gem",
+        "file": "pilgrammed-insignia-gem"
+      },
+      {
+        "slug": "pilgrammed-lance-fragment",
+        "file": "pilgrammed-lance-fragment"
+      },
+      {
+        "slug": "pilgrammed-lantern",
+        "file": "pilgrammed-lantern"
+      },
+      {
+        "slug": "pilgrammed-magic-token",
+        "file": "pilgrammed-magic-token"
+      },
+      {
+        "slug": "pilgrammed-pocket-mirror",
+        "file": "pilgrammed-pocket-mirror"
+      },
+      {
+        "slug": "pilgrammed-potions",
+        "file": "pilgrammed-potions"
+      },
+      {
+        "slug": "pilgrammed-redfeather",
+        "file": "pilgrammed-redfeather"
+      },
+      {
+        "slug": "pilgrammed-titan-brace",
+        "file": "pilgrammed-titan-brace"
+      },
+      {
+        "slug": "venom-gland-pilgrammed",
+        "file": "venom-gland-pilgrammed"
+      }
+    ],
+    "locations": [
+      {
+        "slug": "pilgrammed-catacombs",
+        "file": "pilgrammed-catacombs"
+      },
+      {
+        "slug": "pilgrammed-dark-green-retreat",
+        "file": "pilgrammed-dark-green-retreat"
+      },
+      {
+        "slug": "pilgrammed-junk-pits",
+        "file": "pilgrammed-junk-pits"
+      },
+      {
+        "slug": "pilgrammed-kings-den",
+        "file": "pilgrammed-kings-den"
+      },
+      {
+        "slug": "pilgrammed-map",
+        "file": "pilgrammed-map"
+      },
+      {
+        "slug": "pilgrammed-strange-chasm",
+        "file": "pilgrammed-strange-chasm"
+      },
+      {
+        "slug": "pilgrammed-tailfish-island",
+        "file": "pilgrammed-tailfish-island"
+      },
+      {
+        "slug": "pilgrammed-volcano",
+        "file": "pilgrammed-volcano"
+      },
+      {
+        "slug": "pilgrammed-waypoint",
+        "file": "pilgrammed-waypoint"
+      },
+      {
+        "slug": "tailfish-island-pilgrammed",
+        "file": "tailfish-island-pilgrammed"
+      }
+    ],
+    "weapons": [
+      {
+        "slug": "pilgrammed-all-weapons",
+        "file": "pilgrammed-all-weapons"
+      },
+      {
+        "slug": "pilgrammed-best-weapons",
+        "file": "pilgrammed-best-weapons"
+      },
+      {
+        "slug": "pilgrammed-blunderbuss",
+        "file": "pilgrammed-blunderbuss"
+      },
+      {
+        "slug": "pilgrammed-bows",
+        "file": "pilgrammed-bows"
+      },
+      {
+        "slug": "pilgrammed-catatome",
+        "file": "pilgrammed-catatome"
+      },
+      {
+        "slug": "pilgrammed-coffinhilt",
+        "file": "pilgrammed-coffinhilt"
+      },
+      {
+        "slug": "pilgrammed-daggers",
+        "file": "pilgrammed-daggers"
+      },
+      {
+        "slug": "pilgrammed-early-game-weapons",
+        "file": "pilgrammed-early-game-weapons"
+      },
+      {
+        "slug": "pilgrammed-kai-fist",
+        "file": "pilgrammed-kai-fist"
+      },
+      {
+        "slug": "pilgrammed-nos-dywyll",
+        "file": "pilgrammed-nos-dywyll"
+      },
+      {
+        "slug": "pilgrammed-prism-bow",
+        "file": "pilgrammed-prism-bow"
+      },
+      {
+        "slug": "pilgrammed-vine-wand",
+        "file": "pilgrammed-vine-wand"
+      },
+      {
+        "slug": "pilgrammed-weapon-tier-list",
+        "file": "pilgrammed-weapon-tier-list"
+      },
+      {
+        "slug": "pilgrammed-weapons",
+        "file": "pilgrammed-weapons"
+      }
+    ]
+  },
+  "es": {
+    "bosses": [
+      {
+        "slug": "pilgrammed-granny",
+        "file": "pilgrammed-granny"
+      },
+      {
+        "slug": "pilgrammed-highway-son",
+        "file": "pilgrammed-highway-son"
+      },
+      {
+        "slug": "pilgrammed-old-fart",
+        "file": "pilgrammed-old-fart"
+      },
+      {
+        "slug": "pilgrammed-prism-troll",
+        "file": "pilgrammed-prism-troll"
+      },
+      {
+        "slug": "pilgrammed-shock-marauder",
+        "file": "pilgrammed-shock-marauder"
+      },
+      {
+        "slug": "pilgrammed-snow-cultist",
+        "file": "pilgrammed-snow-cultist"
+      }
+    ],
+    "build": [
+      {
+        "slug": "pilgrammed-agility",
+        "file": "pilgrammed-agility"
+      },
+      {
+        "slug": "pilgrammed-classes",
+        "file": "pilgrammed-classes"
+      },
+      {
+        "slug": "pilgrammed-dexterity",
+        "file": "pilgrammed-dexterity"
+      },
+      {
+        "slug": "pilgrammed-elements",
+        "file": "pilgrammed-elements"
+      },
+      {
+        "slug": "pilgrammed-healer-build",
+        "file": "pilgrammed-healer-build"
+      },
+      {
+        "slug": "pilgrammed-intellect",
+        "file": "pilgrammed-intellect"
+      },
+      {
+        "slug": "pilgrammed-mage-build",
+        "file": "pilgrammed-mage-build"
+      },
+      {
+        "slug": "pilgrammed-reforge",
+        "file": "pilgrammed-reforge"
+      },
+      {
+        "slug": "pilgrammed-stats",
+        "file": "pilgrammed-stats"
+      },
+      {
+        "slug": "pilgrammed-tank-build",
+        "file": "pilgrammed-tank-build"
+      },
+      {
+        "slug": "pilgrammed-techniques",
+        "file": "pilgrammed-techniques"
+      },
+      {
+        "slug": "pilgrammed-vampire-race",
+        "file": "pilgrammed-vampire-race"
+      }
+    ],
+    "community": [
+      {
+        "slug": "pilgramed-wiki",
+        "file": "pilgramed-wiki"
+      },
+      {
+        "slug": "pilgrammed-direct",
+        "file": "pilgrammed-direct"
+      },
+      {
+        "slug": "pilgrammed-discord",
+        "file": "pilgrammed-discord"
+      },
+      {
+        "slug": "pilgrammed-new-update",
+        "file": "pilgrammed-new-update"
+      },
+      {
+        "slug": "pilgrammed-next-update",
+        "file": "pilgrammed-next-update"
+      },
+      {
+        "slug": "pilgrammed-reddit",
+        "file": "pilgrammed-reddit"
+      },
+      {
+        "slug": "pilgrammed-roblox-wiki",
+        "file": "pilgrammed-roblox-wiki"
+      },
+      {
+        "slug": "pilgrammed-sound-effects",
+        "file": "pilgrammed-sound-effects"
+      },
+      {
+        "slug": "pilgrammed-update-log",
+        "file": "pilgrammed-update-log"
+      },
+      {
+        "slug": "pilgrammed-update",
+        "file": "pilgrammed-update"
+      },
+      {
+        "slug": "pilgrammed-wallpaper",
+        "file": "pilgrammed-wallpaper"
+      },
+      {
+        "slug": "pilgrammed-x-fantastic-frontier",
+        "file": "pilgrammed-x-fantastic-frontier"
+      },
+      {
+        "slug": "pillgrammed-wiki",
+        "file": "pillgrammed-wiki"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "adagio-pilgrammed",
+        "file": "adagio-pilgrammed"
+      },
+      {
+        "slug": "ammo-box-pilgrammed",
+        "file": "ammo-box-pilgrammed"
+      },
+      {
+        "slug": "blackbird-pilgrammed",
+        "file": "blackbird-pilgrammed"
+      },
+      {
+        "slug": "climbmaster-pilgrammed",
+        "file": "climbmaster-pilgrammed"
+      },
+      {
+        "slug": "cloud-boots-pilgrammed",
+        "file": "cloud-boots-pilgrammed"
+      },
+      {
+        "slug": "copper-glove-pilgrammed",
+        "file": "copper-glove-pilgrammed"
+      },
+      {
+        "slug": "dashmaster-pilgrammed",
+        "file": "dashmaster-pilgrammed"
+      },
+      {
+        "slug": "fiberglass-pilgrammed",
+        "file": "fiberglass-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-great-red-feather-pilgrammed",
+        "file": "how-to-get-great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-in-pilgrammed",
+        "file": "how-to-get-vine-wand-in-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-pilgrammed",
+        "file": "how-to-get-vine-wand-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster-pilgrammed",
+        "file": "jumpmaster-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster",
+        "file": "jumpmaster"
+      },
+      {
+        "slug": "lets-fly-quest-pilgrammed",
+        "file": "lets-fly-quest-pilgrammed"
+      },
+      {
+        "slug": "mana-feather-pilgrammed",
+        "file": "mana-feather-pilgrammed"
+      },
+      {
+        "slug": "max-soul-level-pilgrammed",
+        "file": "max-soul-level-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-baghead",
+        "file": "pilgrammed-baghead"
+      },
+      {
+        "slug": "pilgrammed-build",
+        "file": "pilgrammed-build"
+      },
+      {
+        "slug": "pilgrammed-builds-2026",
+        "file": "pilgrammed-builds-2026"
+      },
+      {
+        "slug": "pilgrammed-can-you-trade",
+        "file": "pilgrammed-can-you-trade"
+      },
+      {
+        "slug": "pilgrammed-cloud-boots",
+        "file": "pilgrammed-cloud-boots"
+      },
+      {
+        "slug": "pilgrammed-dagger-sheath",
+        "file": "pilgrammed-dagger-sheath"
+      },
+      {
+        "slug": "pilgrammed-dash",
+        "file": "pilgrammed-dash"
+      },
+      {
+        "slug": "pilgrammed-dashmaster",
+        "file": "pilgrammed-dashmaster"
+      },
+      {
+        "slug": "pilgrammed-fishing",
+        "file": "pilgrammed-fishing"
+      },
+      {
+        "slug": "pilgrammed-guide",
+        "file": "pilgrammed-guide"
+      },
+      {
+        "slug": "pilgrammed-guilds",
+        "file": "pilgrammed-guilds"
+      },
+      {
+        "slug": "pilgrammed-inventory",
+        "file": "pilgrammed-inventory"
+      },
+      {
+        "slug": "pilgrammed-lance",
+        "file": "pilgrammed-lance"
+      },
+      {
+        "slug": "pilgrammed-loadout",
+        "file": "pilgrammed-loadout"
+      },
+      {
+        "slug": "pilgrammed-mana-feather",
+        "file": "pilgrammed-mana-feather"
+      },
+      {
+        "slug": "pilgrammed-max-level",
+        "file": "pilgrammed-max-level"
+      },
+      {
+        "slug": "pilgrammed-modifiers",
+        "file": "pilgrammed-modifiers"
+      },
+      {
+        "slug": "pilgrammed-parrying",
+        "file": "pilgrammed-parrying"
+      },
+      {
+        "slug": "pilgrammed-progression-guide",
+        "file": "pilgrammed-progression-guide"
+      },
+      {
+        "slug": "pilgrammed-quest-guide",
+        "file": "pilgrammed-quest-guide"
+      },
+      {
+        "slug": "pilgrammed-quests-in-order",
+        "file": "pilgrammed-quests-in-order"
+      },
+      {
+        "slug": "pilgrammed-scurry-boots",
+        "file": "pilgrammed-scurry-boots"
+      },
+      {
+        "slug": "pilgrammed-soul-level",
+        "file": "pilgrammed-soul-level"
+      },
+      {
+        "slug": "pilgrammed-spark-scale",
+        "file": "pilgrammed-spark-scale"
+      },
+      {
+        "slug": "pilgrammed-tips-and-tricks",
+        "file": "pilgrammed-tips-and-tricks"
+      },
+      {
+        "slug": "pilgrammed-trading",
+        "file": "pilgrammed-trading"
+      },
+      {
+        "slug": "pilgrammed-updates",
+        "file": "pilgrammed-updates"
+      },
+      {
+        "slug": "pilgrammed-upgrades",
+        "file": "pilgrammed-upgrades"
+      },
+      {
+        "slug": "poise-damage-pilgrammed",
+        "file": "poise-damage-pilgrammed"
+      },
+      {
+        "slug": "reforge-pilgrammed",
+        "file": "reforge-pilgrammed"
+      },
+      {
+        "slug": "roblox-pilgrammed-reforge",
+        "file": "roblox-pilgrammed-reforge"
+      },
+      {
+        "slug": "scrap-lance-pilgrammed",
+        "file": "scrap-lance-pilgrammed"
+      },
+      {
+        "slug": "soul-fragment-pilgrammed",
+        "file": "soul-fragment-pilgrammed"
+      },
+      {
+        "slug": "soul-level-pilgrammed",
+        "file": "soul-level-pilgrammed"
+      },
+      {
+        "slug": "soul-levels-pilgrammed",
+        "file": "soul-levels-pilgrammed"
+      },
+      {
+        "slug": "spark-scale-pilgrammed",
+        "file": "spark-scale-pilgrammed"
+      },
+      {
+        "slug": "toolmark-pilgrammed",
+        "file": "toolmark-pilgrammed"
+      },
+      {
+        "slug": "upgrades-pilgrammed",
+        "file": "upgrades-pilgrammed"
+      },
+      {
+        "slug": "vine-wand-build-pilgrammed",
+        "file": "vine-wand-build-pilgrammed"
+      }
+    ],
+    "items": [
+      {
+        "slug": "elf-blade-pilgrammed",
+        "file": "elf-blade-pilgrammed"
+      },
+      {
+        "slug": "great-red-feather-pilgrammed",
+        "file": "great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "great-redfeather-pilgrammed",
+        "file": "great-redfeather-pilgrammed"
+      },
+      {
+        "slug": "lance-fragment-pilgrammed",
+        "file": "lance-fragment-pilgrammed"
+      },
+      {
+        "slug": "magic-token-pilgrammed",
+        "file": "magic-token-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-accessories",
+        "file": "pilgrammed-accessories"
+      },
+      {
+        "slug": "pilgrammed-armor",
+        "file": "pilgrammed-armor"
+      },
+      {
+        "slug": "pilgrammed-diamond-ring",
+        "file": "pilgrammed-diamond-ring"
+      },
+      {
+        "slug": "pilgrammed-elf-blade",
+        "file": "pilgrammed-elf-blade"
+      },
+      {
+        "slug": "pilgrammed-elite-shield",
+        "file": "pilgrammed-elite-shield"
+      },
+      {
+        "slug": "pilgrammed-explosive-gem",
+        "file": "pilgrammed-explosive-gem"
+      },
+      {
+        "slug": "pilgrammed-gelatinous-sludge",
+        "file": "pilgrammed-gelatinous-sludge"
+      },
+      {
+        "slug": "pilgrammed-gems",
+        "file": "pilgrammed-gems"
+      },
+      {
+        "slug": "pilgrammed-great-red-feather",
+        "file": "pilgrammed-great-red-feather"
+      },
+      {
+        "slug": "pilgrammed-great-redfeather",
+        "file": "pilgrammed-great-redfeather"
+      },
+      {
+        "slug": "pilgrammed-insignia-gem",
+        "file": "pilgrammed-insignia-gem"
+      },
+      {
+        "slug": "pilgrammed-lance-fragment",
+        "file": "pilgrammed-lance-fragment"
+      },
+      {
+        "slug": "pilgrammed-lantern",
+        "file": "pilgrammed-lantern"
+      },
+      {
+        "slug": "pilgrammed-magic-token",
+        "file": "pilgrammed-magic-token"
+      },
+      {
+        "slug": "pilgrammed-pocket-mirror",
+        "file": "pilgrammed-pocket-mirror"
+      },
+      {
+        "slug": "pilgrammed-potions",
+        "file": "pilgrammed-potions"
+      },
+      {
+        "slug": "pilgrammed-redfeather",
+        "file": "pilgrammed-redfeather"
+      },
+      {
+        "slug": "pilgrammed-titan-brace",
+        "file": "pilgrammed-titan-brace"
+      },
+      {
+        "slug": "venom-gland-pilgrammed",
+        "file": "venom-gland-pilgrammed"
+      }
+    ],
+    "locations": [
+      {
+        "slug": "pilgrammed-catacombs",
+        "file": "pilgrammed-catacombs"
+      },
+      {
+        "slug": "pilgrammed-dark-green-retreat",
+        "file": "pilgrammed-dark-green-retreat"
+      },
+      {
+        "slug": "pilgrammed-junk-pits",
+        "file": "pilgrammed-junk-pits"
+      },
+      {
+        "slug": "pilgrammed-kings-den",
+        "file": "pilgrammed-kings-den"
+      },
+      {
+        "slug": "pilgrammed-map",
+        "file": "pilgrammed-map"
+      },
+      {
+        "slug": "pilgrammed-strange-chasm",
+        "file": "pilgrammed-strange-chasm"
+      },
+      {
+        "slug": "pilgrammed-tailfish-island",
+        "file": "pilgrammed-tailfish-island"
+      },
+      {
+        "slug": "pilgrammed-volcano",
+        "file": "pilgrammed-volcano"
+      },
+      {
+        "slug": "pilgrammed-waypoint",
+        "file": "pilgrammed-waypoint"
+      },
+      {
+        "slug": "tailfish-island-pilgrammed",
+        "file": "tailfish-island-pilgrammed"
+      }
+    ],
+    "weapons": [
+      {
+        "slug": "pilgrammed-all-weapons",
+        "file": "pilgrammed-all-weapons"
+      },
+      {
+        "slug": "pilgrammed-best-weapons",
+        "file": "pilgrammed-best-weapons"
+      },
+      {
+        "slug": "pilgrammed-blunderbuss",
+        "file": "pilgrammed-blunderbuss"
+      },
+      {
+        "slug": "pilgrammed-bows",
+        "file": "pilgrammed-bows"
+      },
+      {
+        "slug": "pilgrammed-catatome",
+        "file": "pilgrammed-catatome"
+      },
+      {
+        "slug": "pilgrammed-coffinhilt",
+        "file": "pilgrammed-coffinhilt"
+      },
+      {
+        "slug": "pilgrammed-daggers",
+        "file": "pilgrammed-daggers"
+      },
+      {
+        "slug": "pilgrammed-early-game-weapons",
+        "file": "pilgrammed-early-game-weapons"
+      },
+      {
+        "slug": "pilgrammed-kai-fist",
+        "file": "pilgrammed-kai-fist"
+      },
+      {
+        "slug": "pilgrammed-nos-dywyll",
+        "file": "pilgrammed-nos-dywyll"
+      },
+      {
+        "slug": "pilgrammed-prism-bow",
+        "file": "pilgrammed-prism-bow"
+      },
+      {
+        "slug": "pilgrammed-vine-wand",
+        "file": "pilgrammed-vine-wand"
+      },
+      {
+        "slug": "pilgrammed-weapon-tier-list",
+        "file": "pilgrammed-weapon-tier-list"
+      },
+      {
+        "slug": "pilgrammed-weapons",
+        "file": "pilgrammed-weapons"
+      }
+    ]
+  },
+  "pt": {
+    "bosses": [
+      {
+        "slug": "pilgrammed-granny",
+        "file": "pilgrammed-granny"
+      },
+      {
+        "slug": "pilgrammed-highway-son",
+        "file": "pilgrammed-highway-son"
+      },
+      {
+        "slug": "pilgrammed-old-fart",
+        "file": "pilgrammed-old-fart"
+      },
+      {
+        "slug": "pilgrammed-prism-troll",
+        "file": "pilgrammed-prism-troll"
+      },
+      {
+        "slug": "pilgrammed-shock-marauder",
+        "file": "pilgrammed-shock-marauder"
+      },
+      {
+        "slug": "pilgrammed-snow-cultist",
+        "file": "pilgrammed-snow-cultist"
+      }
+    ],
+    "build": [
+      {
+        "slug": "pilgrammed-agility",
+        "file": "pilgrammed-agility"
+      },
+      {
+        "slug": "pilgrammed-classes",
+        "file": "pilgrammed-classes"
+      },
+      {
+        "slug": "pilgrammed-dexterity",
+        "file": "pilgrammed-dexterity"
+      },
+      {
+        "slug": "pilgrammed-elements",
+        "file": "pilgrammed-elements"
+      },
+      {
+        "slug": "pilgrammed-healer-build",
+        "file": "pilgrammed-healer-build"
+      },
+      {
+        "slug": "pilgrammed-intellect",
+        "file": "pilgrammed-intellect"
+      },
+      {
+        "slug": "pilgrammed-mage-build",
+        "file": "pilgrammed-mage-build"
+      },
+      {
+        "slug": "pilgrammed-reforge",
+        "file": "pilgrammed-reforge"
+      },
+      {
+        "slug": "pilgrammed-stats",
+        "file": "pilgrammed-stats"
+      },
+      {
+        "slug": "pilgrammed-tank-build",
+        "file": "pilgrammed-tank-build"
+      },
+      {
+        "slug": "pilgrammed-techniques",
+        "file": "pilgrammed-techniques"
+      },
+      {
+        "slug": "pilgrammed-vampire-race",
+        "file": "pilgrammed-vampire-race"
+      }
+    ],
+    "community": [
+      {
+        "slug": "pilgramed-wiki",
+        "file": "pilgramed-wiki"
+      },
+      {
+        "slug": "pilgrammed-direct",
+        "file": "pilgrammed-direct"
+      },
+      {
+        "slug": "pilgrammed-discord",
+        "file": "pilgrammed-discord"
+      },
+      {
+        "slug": "pilgrammed-new-update",
+        "file": "pilgrammed-new-update"
+      },
+      {
+        "slug": "pilgrammed-next-update",
+        "file": "pilgrammed-next-update"
+      },
+      {
+        "slug": "pilgrammed-reddit",
+        "file": "pilgrammed-reddit"
+      },
+      {
+        "slug": "pilgrammed-roblox-wiki",
+        "file": "pilgrammed-roblox-wiki"
+      },
+      {
+        "slug": "pilgrammed-sound-effects",
+        "file": "pilgrammed-sound-effects"
+      },
+      {
+        "slug": "pilgrammed-update-log",
+        "file": "pilgrammed-update-log"
+      },
+      {
+        "slug": "pilgrammed-update",
+        "file": "pilgrammed-update"
+      },
+      {
+        "slug": "pilgrammed-wallpaper",
+        "file": "pilgrammed-wallpaper"
+      },
+      {
+        "slug": "pilgrammed-x-fantastic-frontier",
+        "file": "pilgrammed-x-fantastic-frontier"
+      },
+      {
+        "slug": "pillgrammed-wiki",
+        "file": "pillgrammed-wiki"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "adagio-pilgrammed",
+        "file": "adagio-pilgrammed"
+      },
+      {
+        "slug": "ammo-box-pilgrammed",
+        "file": "ammo-box-pilgrammed"
+      },
+      {
+        "slug": "blackbird-pilgrammed",
+        "file": "blackbird-pilgrammed"
+      },
+      {
+        "slug": "climbmaster-pilgrammed",
+        "file": "climbmaster-pilgrammed"
+      },
+      {
+        "slug": "cloud-boots-pilgrammed",
+        "file": "cloud-boots-pilgrammed"
+      },
+      {
+        "slug": "copper-glove-pilgrammed",
+        "file": "copper-glove-pilgrammed"
+      },
+      {
+        "slug": "dashmaster-pilgrammed",
+        "file": "dashmaster-pilgrammed"
+      },
+      {
+        "slug": "fiberglass-pilgrammed",
+        "file": "fiberglass-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-great-red-feather-pilgrammed",
+        "file": "how-to-get-great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-in-pilgrammed",
+        "file": "how-to-get-vine-wand-in-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-pilgrammed",
+        "file": "how-to-get-vine-wand-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster-pilgrammed",
+        "file": "jumpmaster-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster",
+        "file": "jumpmaster"
+      },
+      {
+        "slug": "lets-fly-quest-pilgrammed",
+        "file": "lets-fly-quest-pilgrammed"
+      },
+      {
+        "slug": "mana-feather-pilgrammed",
+        "file": "mana-feather-pilgrammed"
+      },
+      {
+        "slug": "max-soul-level-pilgrammed",
+        "file": "max-soul-level-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-baghead",
+        "file": "pilgrammed-baghead"
+      },
+      {
+        "slug": "pilgrammed-build",
+        "file": "pilgrammed-build"
+      },
+      {
+        "slug": "pilgrammed-builds-2026",
+        "file": "pilgrammed-builds-2026"
+      },
+      {
+        "slug": "pilgrammed-can-you-trade",
+        "file": "pilgrammed-can-you-trade"
+      },
+      {
+        "slug": "pilgrammed-cloud-boots",
+        "file": "pilgrammed-cloud-boots"
+      },
+      {
+        "slug": "pilgrammed-dagger-sheath",
+        "file": "pilgrammed-dagger-sheath"
+      },
+      {
+        "slug": "pilgrammed-dash",
+        "file": "pilgrammed-dash"
+      },
+      {
+        "slug": "pilgrammed-dashmaster",
+        "file": "pilgrammed-dashmaster"
+      },
+      {
+        "slug": "pilgrammed-fishing",
+        "file": "pilgrammed-fishing"
+      },
+      {
+        "slug": "pilgrammed-guide",
+        "file": "pilgrammed-guide"
+      },
+      {
+        "slug": "pilgrammed-guilds",
+        "file": "pilgrammed-guilds"
+      },
+      {
+        "slug": "pilgrammed-inventory",
+        "file": "pilgrammed-inventory"
+      },
+      {
+        "slug": "pilgrammed-lance",
+        "file": "pilgrammed-lance"
+      },
+      {
+        "slug": "pilgrammed-loadout",
+        "file": "pilgrammed-loadout"
+      },
+      {
+        "slug": "pilgrammed-mana-feather",
+        "file": "pilgrammed-mana-feather"
+      },
+      {
+        "slug": "pilgrammed-max-level",
+        "file": "pilgrammed-max-level"
+      },
+      {
+        "slug": "pilgrammed-modifiers",
+        "file": "pilgrammed-modifiers"
+      },
+      {
+        "slug": "pilgrammed-parrying",
+        "file": "pilgrammed-parrying"
+      },
+      {
+        "slug": "pilgrammed-progression-guide",
+        "file": "pilgrammed-progression-guide"
+      },
+      {
+        "slug": "pilgrammed-quest-guide",
+        "file": "pilgrammed-quest-guide"
+      },
+      {
+        "slug": "pilgrammed-quests-in-order",
+        "file": "pilgrammed-quests-in-order"
+      },
+      {
+        "slug": "pilgrammed-scurry-boots",
+        "file": "pilgrammed-scurry-boots"
+      },
+      {
+        "slug": "pilgrammed-soul-level",
+        "file": "pilgrammed-soul-level"
+      },
+      {
+        "slug": "pilgrammed-spark-scale",
+        "file": "pilgrammed-spark-scale"
+      },
+      {
+        "slug": "pilgrammed-tips-and-tricks",
+        "file": "pilgrammed-tips-and-tricks"
+      },
+      {
+        "slug": "pilgrammed-trading",
+        "file": "pilgrammed-trading"
+      },
+      {
+        "slug": "pilgrammed-updates",
+        "file": "pilgrammed-updates"
+      },
+      {
+        "slug": "pilgrammed-upgrades",
+        "file": "pilgrammed-upgrades"
+      },
+      {
+        "slug": "poise-damage-pilgrammed",
+        "file": "poise-damage-pilgrammed"
+      },
+      {
+        "slug": "reforge-pilgrammed",
+        "file": "reforge-pilgrammed"
+      },
+      {
+        "slug": "roblox-pilgrammed-reforge",
+        "file": "roblox-pilgrammed-reforge"
+      },
+      {
+        "slug": "scrap-lance-pilgrammed",
+        "file": "scrap-lance-pilgrammed"
+      },
+      {
+        "slug": "soul-fragment-pilgrammed",
+        "file": "soul-fragment-pilgrammed"
+      },
+      {
+        "slug": "soul-level-pilgrammed",
+        "file": "soul-level-pilgrammed"
+      },
+      {
+        "slug": "soul-levels-pilgrammed",
+        "file": "soul-levels-pilgrammed"
+      },
+      {
+        "slug": "spark-scale-pilgrammed",
+        "file": "spark-scale-pilgrammed"
+      },
+      {
+        "slug": "toolmark-pilgrammed",
+        "file": "toolmark-pilgrammed"
+      },
+      {
+        "slug": "upgrades-pilgrammed",
+        "file": "upgrades-pilgrammed"
+      },
+      {
+        "slug": "vine-wand-build-pilgrammed",
+        "file": "vine-wand-build-pilgrammed"
+      }
+    ],
+    "items": [
+      {
+        "slug": "elf-blade-pilgrammed",
+        "file": "elf-blade-pilgrammed"
+      },
+      {
+        "slug": "great-red-feather-pilgrammed",
+        "file": "great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "great-redfeather-pilgrammed",
+        "file": "great-redfeather-pilgrammed"
+      },
+      {
+        "slug": "lance-fragment-pilgrammed",
+        "file": "lance-fragment-pilgrammed"
+      },
+      {
+        "slug": "magic-token-pilgrammed",
+        "file": "magic-token-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-accessories",
+        "file": "pilgrammed-accessories"
+      },
+      {
+        "slug": "pilgrammed-armor",
+        "file": "pilgrammed-armor"
+      },
+      {
+        "slug": "pilgrammed-diamond-ring",
+        "file": "pilgrammed-diamond-ring"
+      },
+      {
+        "slug": "pilgrammed-elf-blade",
+        "file": "pilgrammed-elf-blade"
+      },
+      {
+        "slug": "pilgrammed-elite-shield",
+        "file": "pilgrammed-elite-shield"
+      },
+      {
+        "slug": "pilgrammed-explosive-gem",
+        "file": "pilgrammed-explosive-gem"
+      },
+      {
+        "slug": "pilgrammed-gelatinous-sludge",
+        "file": "pilgrammed-gelatinous-sludge"
+      },
+      {
+        "slug": "pilgrammed-gems",
+        "file": "pilgrammed-gems"
+      },
+      {
+        "slug": "pilgrammed-great-red-feather",
+        "file": "pilgrammed-great-red-feather"
+      },
+      {
+        "slug": "pilgrammed-great-redfeather",
+        "file": "pilgrammed-great-redfeather"
+      },
+      {
+        "slug": "pilgrammed-insignia-gem",
+        "file": "pilgrammed-insignia-gem"
+      },
+      {
+        "slug": "pilgrammed-lance-fragment",
+        "file": "pilgrammed-lance-fragment"
+      },
+      {
+        "slug": "pilgrammed-lantern",
+        "file": "pilgrammed-lantern"
+      },
+      {
+        "slug": "pilgrammed-magic-token",
+        "file": "pilgrammed-magic-token"
+      },
+      {
+        "slug": "pilgrammed-pocket-mirror",
+        "file": "pilgrammed-pocket-mirror"
+      },
+      {
+        "slug": "pilgrammed-potions",
+        "file": "pilgrammed-potions"
+      },
+      {
+        "slug": "pilgrammed-redfeather",
+        "file": "pilgrammed-redfeather"
+      },
+      {
+        "slug": "pilgrammed-titan-brace",
+        "file": "pilgrammed-titan-brace"
+      },
+      {
+        "slug": "venom-gland-pilgrammed",
+        "file": "venom-gland-pilgrammed"
+      }
+    ],
+    "locations": [
+      {
+        "slug": "pilgrammed-catacombs",
+        "file": "pilgrammed-catacombs"
+      },
+      {
+        "slug": "pilgrammed-dark-green-retreat",
+        "file": "pilgrammed-dark-green-retreat"
+      },
+      {
+        "slug": "pilgrammed-junk-pits",
+        "file": "pilgrammed-junk-pits"
+      },
+      {
+        "slug": "pilgrammed-kings-den",
+        "file": "pilgrammed-kings-den"
+      },
+      {
+        "slug": "pilgrammed-map",
+        "file": "pilgrammed-map"
+      },
+      {
+        "slug": "pilgrammed-strange-chasm",
+        "file": "pilgrammed-strange-chasm"
+      },
+      {
+        "slug": "pilgrammed-tailfish-island",
+        "file": "pilgrammed-tailfish-island"
+      },
+      {
+        "slug": "pilgrammed-volcano",
+        "file": "pilgrammed-volcano"
+      },
+      {
+        "slug": "pilgrammed-waypoint",
+        "file": "pilgrammed-waypoint"
+      },
+      {
+        "slug": "tailfish-island-pilgrammed",
+        "file": "tailfish-island-pilgrammed"
+      }
+    ],
+    "weapons": [
+      {
+        "slug": "pilgrammed-all-weapons",
+        "file": "pilgrammed-all-weapons"
+      },
+      {
+        "slug": "pilgrammed-best-weapons",
+        "file": "pilgrammed-best-weapons"
+      },
+      {
+        "slug": "pilgrammed-blunderbuss",
+        "file": "pilgrammed-blunderbuss"
+      },
+      {
+        "slug": "pilgrammed-bows",
+        "file": "pilgrammed-bows"
+      },
+      {
+        "slug": "pilgrammed-catatome",
+        "file": "pilgrammed-catatome"
+      },
+      {
+        "slug": "pilgrammed-coffinhilt",
+        "file": "pilgrammed-coffinhilt"
+      },
+      {
+        "slug": "pilgrammed-daggers",
+        "file": "pilgrammed-daggers"
+      },
+      {
+        "slug": "pilgrammed-early-game-weapons",
+        "file": "pilgrammed-early-game-weapons"
+      },
+      {
+        "slug": "pilgrammed-kai-fist",
+        "file": "pilgrammed-kai-fist"
+      },
+      {
+        "slug": "pilgrammed-nos-dywyll",
+        "file": "pilgrammed-nos-dywyll"
+      },
+      {
+        "slug": "pilgrammed-prism-bow",
+        "file": "pilgrammed-prism-bow"
+      },
+      {
+        "slug": "pilgrammed-vine-wand",
+        "file": "pilgrammed-vine-wand"
+      },
+      {
+        "slug": "pilgrammed-weapon-tier-list",
+        "file": "pilgrammed-weapon-tier-list"
+      },
+      {
+        "slug": "pilgrammed-weapons",
+        "file": "pilgrammed-weapons"
+      }
+    ]
+  },
+  "ru": {
+    "bosses": [
+      {
+        "slug": "pilgrammed-granny",
+        "file": "pilgrammed-granny"
+      },
+      {
+        "slug": "pilgrammed-highway-son",
+        "file": "pilgrammed-highway-son"
+      },
+      {
+        "slug": "pilgrammed-old-fart",
+        "file": "pilgrammed-old-fart"
+      },
+      {
+        "slug": "pilgrammed-prism-troll",
+        "file": "pilgrammed-prism-troll"
+      },
+      {
+        "slug": "pilgrammed-shock-marauder",
+        "file": "pilgrammed-shock-marauder"
+      },
+      {
+        "slug": "pilgrammed-snow-cultist",
+        "file": "pilgrammed-snow-cultist"
+      }
+    ],
+    "build": [
+      {
+        "slug": "pilgrammed-agility",
+        "file": "pilgrammed-agility"
+      },
+      {
+        "slug": "pilgrammed-classes",
+        "file": "pilgrammed-classes"
+      },
+      {
+        "slug": "pilgrammed-dexterity",
+        "file": "pilgrammed-dexterity"
+      },
+      {
+        "slug": "pilgrammed-elements",
+        "file": "pilgrammed-elements"
+      },
+      {
+        "slug": "pilgrammed-healer-build",
+        "file": "pilgrammed-healer-build"
+      },
+      {
+        "slug": "pilgrammed-intellect",
+        "file": "pilgrammed-intellect"
+      },
+      {
+        "slug": "pilgrammed-mage-build",
+        "file": "pilgrammed-mage-build"
+      },
+      {
+        "slug": "pilgrammed-reforge",
+        "file": "pilgrammed-reforge"
+      },
+      {
+        "slug": "pilgrammed-stats",
+        "file": "pilgrammed-stats"
+      },
+      {
+        "slug": "pilgrammed-tank-build",
+        "file": "pilgrammed-tank-build"
+      },
+      {
+        "slug": "pilgrammed-techniques",
+        "file": "pilgrammed-techniques"
+      },
+      {
+        "slug": "pilgrammed-vampire-race",
+        "file": "pilgrammed-vampire-race"
+      }
+    ],
+    "community": [
+      {
+        "slug": "pilgramed-wiki",
+        "file": "pilgramed-wiki"
+      },
+      {
+        "slug": "pilgrammed-direct",
+        "file": "pilgrammed-direct"
+      },
+      {
+        "slug": "pilgrammed-discord",
+        "file": "pilgrammed-discord"
+      },
+      {
+        "slug": "pilgrammed-new-update",
+        "file": "pilgrammed-new-update"
+      },
+      {
+        "slug": "pilgrammed-next-update",
+        "file": "pilgrammed-next-update"
+      },
+      {
+        "slug": "pilgrammed-reddit",
+        "file": "pilgrammed-reddit"
+      },
+      {
+        "slug": "pilgrammed-roblox-wiki",
+        "file": "pilgrammed-roblox-wiki"
+      },
+      {
+        "slug": "pilgrammed-sound-effects",
+        "file": "pilgrammed-sound-effects"
+      },
+      {
+        "slug": "pilgrammed-update-log",
+        "file": "pilgrammed-update-log"
+      },
+      {
+        "slug": "pilgrammed-update",
+        "file": "pilgrammed-update"
+      },
+      {
+        "slug": "pilgrammed-wallpaper",
+        "file": "pilgrammed-wallpaper"
+      },
+      {
+        "slug": "pilgrammed-x-fantastic-frontier",
+        "file": "pilgrammed-x-fantastic-frontier"
+      },
+      {
+        "slug": "pillgrammed-wiki",
+        "file": "pillgrammed-wiki"
+      }
+    ],
+    "guide": [
+      {
+        "slug": "adagio-pilgrammed",
+        "file": "adagio-pilgrammed"
+      },
+      {
+        "slug": "ammo-box-pilgrammed",
+        "file": "ammo-box-pilgrammed"
+      },
+      {
+        "slug": "blackbird-pilgrammed",
+        "file": "blackbird-pilgrammed"
+      },
+      {
+        "slug": "climbmaster-pilgrammed",
+        "file": "climbmaster-pilgrammed"
+      },
+      {
+        "slug": "cloud-boots-pilgrammed",
+        "file": "cloud-boots-pilgrammed"
+      },
+      {
+        "slug": "copper-glove-pilgrammed",
+        "file": "copper-glove-pilgrammed"
+      },
+      {
+        "slug": "dashmaster-pilgrammed",
+        "file": "dashmaster-pilgrammed"
+      },
+      {
+        "slug": "fiberglass-pilgrammed",
+        "file": "fiberglass-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-great-red-feather-pilgrammed",
+        "file": "how-to-get-great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-in-pilgrammed",
+        "file": "how-to-get-vine-wand-in-pilgrammed"
+      },
+      {
+        "slug": "how-to-get-vine-wand-pilgrammed",
+        "file": "how-to-get-vine-wand-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster-pilgrammed",
+        "file": "jumpmaster-pilgrammed"
+      },
+      {
+        "slug": "jumpmaster",
+        "file": "jumpmaster"
+      },
+      {
+        "slug": "lets-fly-quest-pilgrammed",
+        "file": "lets-fly-quest-pilgrammed"
+      },
+      {
+        "slug": "mana-feather-pilgrammed",
+        "file": "mana-feather-pilgrammed"
+      },
+      {
+        "slug": "max-soul-level-pilgrammed",
+        "file": "max-soul-level-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-baghead",
+        "file": "pilgrammed-baghead"
+      },
+      {
+        "slug": "pilgrammed-build",
+        "file": "pilgrammed-build"
+      },
+      {
+        "slug": "pilgrammed-builds-2026",
+        "file": "pilgrammed-builds-2026"
+      },
+      {
+        "slug": "pilgrammed-can-you-trade",
+        "file": "pilgrammed-can-you-trade"
+      },
+      {
+        "slug": "pilgrammed-cloud-boots",
+        "file": "pilgrammed-cloud-boots"
+      },
+      {
+        "slug": "pilgrammed-dagger-sheath",
+        "file": "pilgrammed-dagger-sheath"
+      },
+      {
+        "slug": "pilgrammed-dash",
+        "file": "pilgrammed-dash"
+      },
+      {
+        "slug": "pilgrammed-dashmaster",
+        "file": "pilgrammed-dashmaster"
+      },
+      {
+        "slug": "pilgrammed-fishing",
+        "file": "pilgrammed-fishing"
+      },
+      {
+        "slug": "pilgrammed-guide",
+        "file": "pilgrammed-guide"
+      },
+      {
+        "slug": "pilgrammed-guilds",
+        "file": "pilgrammed-guilds"
+      },
+      {
+        "slug": "pilgrammed-inventory",
+        "file": "pilgrammed-inventory"
+      },
+      {
+        "slug": "pilgrammed-lance",
+        "file": "pilgrammed-lance"
+      },
+      {
+        "slug": "pilgrammed-loadout",
+        "file": "pilgrammed-loadout"
+      },
+      {
+        "slug": "pilgrammed-mana-feather",
+        "file": "pilgrammed-mana-feather"
+      },
+      {
+        "slug": "pilgrammed-max-level",
+        "file": "pilgrammed-max-level"
+      },
+      {
+        "slug": "pilgrammed-modifiers",
+        "file": "pilgrammed-modifiers"
+      },
+      {
+        "slug": "pilgrammed-parrying",
+        "file": "pilgrammed-parrying"
+      },
+      {
+        "slug": "pilgrammed-progression-guide",
+        "file": "pilgrammed-progression-guide"
+      },
+      {
+        "slug": "pilgrammed-quest-guide",
+        "file": "pilgrammed-quest-guide"
+      },
+      {
+        "slug": "pilgrammed-quests-in-order",
+        "file": "pilgrammed-quests-in-order"
+      },
+      {
+        "slug": "pilgrammed-scurry-boots",
+        "file": "pilgrammed-scurry-boots"
+      },
+      {
+        "slug": "pilgrammed-soul-level",
+        "file": "pilgrammed-soul-level"
+      },
+      {
+        "slug": "pilgrammed-spark-scale",
+        "file": "pilgrammed-spark-scale"
+      },
+      {
+        "slug": "pilgrammed-tips-and-tricks",
+        "file": "pilgrammed-tips-and-tricks"
+      },
+      {
+        "slug": "pilgrammed-trading",
+        "file": "pilgrammed-trading"
+      },
+      {
+        "slug": "pilgrammed-updates",
+        "file": "pilgrammed-updates"
+      },
+      {
+        "slug": "pilgrammed-upgrades",
+        "file": "pilgrammed-upgrades"
+      },
+      {
+        "slug": "poise-damage-pilgrammed",
+        "file": "poise-damage-pilgrammed"
+      },
+      {
+        "slug": "reforge-pilgrammed",
+        "file": "reforge-pilgrammed"
+      },
+      {
+        "slug": "roblox-pilgrammed-reforge",
+        "file": "roblox-pilgrammed-reforge"
+      },
+      {
+        "slug": "scrap-lance-pilgrammed",
+        "file": "scrap-lance-pilgrammed"
+      },
+      {
+        "slug": "soul-fragment-pilgrammed",
+        "file": "soul-fragment-pilgrammed"
+      },
+      {
+        "slug": "soul-level-pilgrammed",
+        "file": "soul-level-pilgrammed"
+      },
+      {
+        "slug": "soul-levels-pilgrammed",
+        "file": "soul-levels-pilgrammed"
+      },
+      {
+        "slug": "spark-scale-pilgrammed",
+        "file": "spark-scale-pilgrammed"
+      },
+      {
+        "slug": "toolmark-pilgrammed",
+        "file": "toolmark-pilgrammed"
+      },
+      {
+        "slug": "upgrades-pilgrammed",
+        "file": "upgrades-pilgrammed"
+      },
+      {
+        "slug": "vine-wand-build-pilgrammed",
+        "file": "vine-wand-build-pilgrammed"
+      }
+    ],
+    "items": [
+      {
+        "slug": "elf-blade-pilgrammed",
+        "file": "elf-blade-pilgrammed"
+      },
+      {
+        "slug": "great-red-feather-pilgrammed",
+        "file": "great-red-feather-pilgrammed"
+      },
+      {
+        "slug": "great-redfeather-pilgrammed",
+        "file": "great-redfeather-pilgrammed"
+      },
+      {
+        "slug": "lance-fragment-pilgrammed",
+        "file": "lance-fragment-pilgrammed"
+      },
+      {
+        "slug": "magic-token-pilgrammed",
+        "file": "magic-token-pilgrammed"
+      },
+      {
+        "slug": "pilgrammed-accessories",
+        "file": "pilgrammed-accessories"
+      },
+      {
+        "slug": "pilgrammed-armor",
+        "file": "pilgrammed-armor"
+      },
+      {
+        "slug": "pilgrammed-diamond-ring",
+        "file": "pilgrammed-diamond-ring"
+      },
+      {
+        "slug": "pilgrammed-elf-blade",
+        "file": "pilgrammed-elf-blade"
+      },
+      {
+        "slug": "pilgrammed-elite-shield",
+        "file": "pilgrammed-elite-shield"
+      },
+      {
+        "slug": "pilgrammed-explosive-gem",
+        "file": "pilgrammed-explosive-gem"
+      },
+      {
+        "slug": "pilgrammed-gelatinous-sludge",
+        "file": "pilgrammed-gelatinous-sludge"
+      },
+      {
+        "slug": "pilgrammed-gems",
+        "file": "pilgrammed-gems"
+      },
+      {
+        "slug": "pilgrammed-great-red-feather",
+        "file": "pilgrammed-great-red-feather"
+      },
+      {
+        "slug": "pilgrammed-great-redfeather",
+        "file": "pilgrammed-great-redfeather"
+      },
+      {
+        "slug": "pilgrammed-insignia-gem",
+        "file": "pilgrammed-insignia-gem"
+      },
+      {
+        "slug": "pilgrammed-lance-fragment",
+        "file": "pilgrammed-lance-fragment"
+      },
+      {
+        "slug": "pilgrammed-lantern",
+        "file": "pilgrammed-lantern"
+      },
+      {
+        "slug": "pilgrammed-magic-token",
+        "file": "pilgrammed-magic-token"
+      },
+      {
+        "slug": "pilgrammed-pocket-mirror",
+        "file": "pilgrammed-pocket-mirror"
+      },
+      {
+        "slug": "pilgrammed-potions",
+        "file": "pilgrammed-potions"
+      },
+      {
+        "slug": "pilgrammed-redfeather",
+        "file": "pilgrammed-redfeather"
+      },
+      {
+        "slug": "pilgrammed-titan-brace",
+        "file": "pilgrammed-titan-brace"
+      },
+      {
+        "slug": "venom-gland-pilgrammed",
+        "file": "venom-gland-pilgrammed"
+      }
+    ],
+    "locations": [
+      {
+        "slug": "pilgrammed-catacombs",
+        "file": "pilgrammed-catacombs"
+      },
+      {
+        "slug": "pilgrammed-dark-green-retreat",
+        "file": "pilgrammed-dark-green-retreat"
+      },
+      {
+        "slug": "pilgrammed-junk-pits",
+        "file": "pilgrammed-junk-pits"
+      },
+      {
+        "slug": "pilgrammed-kings-den",
+        "file": "pilgrammed-kings-den"
+      },
+      {
+        "slug": "pilgrammed-map",
+        "file": "pilgrammed-map"
+      },
+      {
+        "slug": "pilgrammed-strange-chasm",
+        "file": "pilgrammed-strange-chasm"
+      },
+      {
+        "slug": "pilgrammed-tailfish-island",
+        "file": "pilgrammed-tailfish-island"
+      },
+      {
+        "slug": "pilgrammed-volcano",
+        "file": "pilgrammed-volcano"
+      },
+      {
+        "slug": "pilgrammed-waypoint",
+        "file": "pilgrammed-waypoint"
+      },
+      {
+        "slug": "tailfish-island-pilgrammed",
+        "file": "tailfish-island-pilgrammed"
+      }
+    ],
+    "weapons": [
+      {
+        "slug": "pilgrammed-all-weapons",
+        "file": "pilgrammed-all-weapons"
+      },
+      {
+        "slug": "pilgrammed-best-weapons",
+        "file": "pilgrammed-best-weapons"
+      },
+      {
+        "slug": "pilgrammed-blunderbuss",
+        "file": "pilgrammed-blunderbuss"
+      },
+      {
+        "slug": "pilgrammed-bows",
+        "file": "pilgrammed-bows"
+      },
+      {
+        "slug": "pilgrammed-catatome",
+        "file": "pilgrammed-catatome"
+      },
+      {
+        "slug": "pilgrammed-coffinhilt",
+        "file": "pilgrammed-coffinhilt"
+      },
+      {
+        "slug": "pilgrammed-daggers",
+        "file": "pilgrammed-daggers"
+      },
+      {
+        "slug": "pilgrammed-early-game-weapons",
+        "file": "pilgrammed-early-game-weapons"
+      },
+      {
+        "slug": "pilgrammed-kai-fist",
+        "file": "pilgrammed-kai-fist"
+      },
+      {
+        "slug": "pilgrammed-nos-dywyll",
+        "file": "pilgrammed-nos-dywyll"
+      },
+      {
+        "slug": "pilgrammed-prism-bow",
+        "file": "pilgrammed-prism-bow"
+      },
+      {
+        "slug": "pilgrammed-vine-wand",
+        "file": "pilgrammed-vine-wand"
+      },
+      {
+        "slug": "pilgrammed-weapon-tier-list",
+        "file": "pilgrammed-weapon-tier-list"
+      },
+      {
+        "slug": "pilgrammed-weapons",
+        "file": "pilgrammed-weapons"
+      }
+    ]
+  }
+}
